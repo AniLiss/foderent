@@ -1177,6 +1177,26 @@
 			&.percents {font-size: 20px; font-weight: 300;}
 		}
 	}
+	&__messages {padding-top: 15px;
+		.button {width: 100%;}
+		select {border: 1px solid #d1d1d1; height: 45px; width: 100%; font-size: 16px; color: $green; background-image: url('../img/icon_select_arrow.svg'); background-repeat: no-repeat; background-size: 11px 7px; background-position: top 50% right 12px; margin-top: 19px; padding: 0 15px;}
+	}
+	&__message-listhead {background-color: $darkgreen; color: #fff; text-align: justify; margin-top: 19px; padding: 2px 0;
+		p:first-child {display: inline-block; width: $eight-col;}
+		p:last-child {display: inline-block; width: $four-col; float: right;}
+	}
+	&__message-list {
+		p {font-size: 12px;}
+		li {text-align: justify; border-bottom: 1px solid #f2f2f2; padding: 16px 0;}
+	}
+	&__message-theme {display: inline-block; color: $green; width: 65%;
+		a {text-decoration: underline;}
+	}
+	&__message-number {color: #000; text-decoration: none; margin-right: 8px;}
+	&__message-status {display: inline-block; width: $four-col; float: right;}
+	&__message-status_red {color: $red;}
+	&__message-status_grey {color: #999999;}
+	&__message-count {float: right; color: #fff; background-color: $red; padding: 0 6px;}
 }
 
 
