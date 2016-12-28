@@ -4146,7 +4146,8 @@ input[type="checkbox"]:not(old), input[type="radio"]:not(old) {
 
 /* line 1180, C:/wamp64/www/foderent/css/default.scss */
 .account__messages {
-  padding-top: 15px; }
+  padding-top: 15px;
+  display: none; }
   /* line 1181, C:/wamp64/www/foderent/css/default.scss */
   .account__messages .button {
     width: 100%; }
