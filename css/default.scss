@@ -1137,6 +1137,7 @@
  /* НОВОЕ ###################### */
 
 .account {
+	&__orderinfo {display: none;}
 	&__orderinfo .button {margin-top: 16px; width: 100%;}
 	&__orders-list_info {
 		.searchform__field_date {margin-top: 17px;
@@ -1150,7 +1151,7 @@
 		li {padding-bottom: 1px;}
 	}
 	&__order-fullpayment {margin-top: 17px;}
-	&__order-partpayment {margin-top: 17px;
+	&__order-partpayment {margin-top: 17px; display: none;
 		.button {margin-top: 25px;}
 	}
 	&__order-cost_total {text-align: center; font-size: 20px; color: #666666; line-height: 1em;
@@ -1197,6 +1198,32 @@
 	&__message-status_red {color: $red;}
 	&__message-status_grey {color: #999999;}
 	&__message-count {float: right; color: #fff; background-color: $red; padding: 0 6px;}
+	&__message-info {text-align: left; display: none;
+		p.toptext {margin-bottom: 0;}
+	}
+	&__message-detailsheading {font-size: 20px; font-weight: 500; padding-top: 0 !important;}
+	&__message-details {margin-top: 11px;
+		p {border-bottom: 1px solid #f2f2f2; line-height: 1.45em; padding-top: 8px; padding-bottom: 6px;}
+		span {display: block; color: #999999;
+			&.number {color: #000;}
+		}
+	}
+	&__close-dialogue {display: block; font-size: 16px; color: $green; text-transform: uppercase; margin-top: 9px;
+		img {vertical-align: middle; margin-right: 10px;}
+	}
+	&__add-answer {display: block; border: 1px solid $green; position: relative; height: 45px; font-size: 16px; line-height: 42px; color: $green; text-transform: uppercase; font-weight: 300; margin-top: 23px; padding-left: 60px;
+		span {position: absolute; left: 0; top: 0; width: 45px; height: 100%; background-color: $green; color: #fff; font-size: 24px; text-align: center; font-weight: 400;}
+		& + textarea {resize: none; border: 1px solid #b7cfbc; height: 146px; width: 100%; padding: 5px; margin-top: 18px; display: none;}
+	}
+	&__message-answer {border: 1px solid rgba(#2a2c28, 0.2); margin-top: 17px;}
+	&__message-answerhead {background-color: #2a2c28; padding: 2px 22px 11px;
+		p {font-size: 12px; color: #666666; line-height: 1.5em;
+			&.name {font-size: 20px; font-weight: 500; color: #fff;}
+		}
+	}
+	&__message-answerbody {border: 1px solid rgba(#2a2c28, 0.2); border-top: 0; padding: 12px 21px 10px;
+		p {line-height: 1.6em;}
+	}
 }
 
 
