@@ -37,6 +37,51 @@
 	<a href="" class="button button_grey"><span class="button__border-top"></span>Отказать<span class="button__border-bottom"></span></a>
 </div>
 
+<!-- Окно "порверить наличие" !-->
+<div class="popup checkpopup" id="check-for-available">
+	<p class="huge">Проверить наличие</p>
+	<p>После начала проверки наличия техники у Вас будет 24 часа на её оплату. В течении этого времени техника гарантировано закреплена за Вами. В случае, если Вы не успеваете по какой либо причине оплатить Ваш заказ, то вы можете запросить продление данного времени, перейдя по соответствующей ссылке в личном кабинете в разделе "Заказы", указав причину по которой Вы хотите продлить время, позвонить по телефону горячей линии, и указать номер заказа,  либо отменить бронь досрочно. Оставшееся время будет указано в заказе. По истечению 24 часов заказ автоматически будет удален.</p>
+	<div class="checkdiv">
+		<input type="checkbox" id="infocheck1">
+		<label for="infocheck1"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+		<p>С указанной выше информацией ознакомлен</p>
+	</div>
+	<a href="#" class="button button_green"><span class="button__border-top"></span>Отправить<span class="button__border-bottom"></span></a>
+</div>
+
+<!-- Окно "Оплата заказа" !-->
+<form class="popup paymentpopup" id="full-payment">
+	<div class="container">
+		<p class="formheading">Оплата заказа</p>
+		<div class="formpart">
+			<p>Сумма оплаты</p>
+			<p class="total">210 000 руб.</p>
+		</div>
+		<div class="formpart">
+			<p>Введите сумму оплаты (предоплаты)</p>
+			<input type="text">
+			<p class="small">Не менее суммы N</p>
+		</div>
+		<div class="formpart">
+			<p>Выберите тип оплаты</p>
+			<div class="radiodiv">
+				<input type="radio" id="radio1">
+				<label for="radio1"><span></span></label>
+				<p>Онлайн</p>
+			</div>
+			<div class="radiodiv">
+				<input type="radio" id="radio2">
+				<label for="radio2"><span></span></label>
+				<p>Получить счет</p>
+			</div>
+		</div>
+		<p class="small mobile">*Фактом оплаты вы подтверждаете то, <br>
+		что вы ознакомились и согласны с условиями <br>
+		публичной оферты</p>
+		<button class="button button_green"><span class="button__border-top"></span>Оплатить<span class="button__border-bottom"></span></button>
+	</div>
+</form>
+
 
 <!-- Авторизация -->
 <div class="authorization">

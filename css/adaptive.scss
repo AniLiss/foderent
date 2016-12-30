@@ -681,6 +681,43 @@ $twelve-col:$col*12+$col-m*11;
 	.about__formfields {margin-top: 27px;}
 	.about__formbutton {width: auto; margin-top: 29px;}
 	.about__formfield_file p.small {margin-top: 9px;}
+	
+	/*-----------SHOPPING BAGS--------------*/
+	.shoppingbag__order-forcheck {background-color: transparent; margin-top: -59px; padding-top: 0;}
+	.shoppingbag .heading {padding: 47px 0 102px;}
+	.shoppingbag__order-forcheck .container {box-shadow: 0px -5px 50px 0px rgba(35, 41, 50, 0.5); display: flex;}
+	.shoppingbag__technicblock {width: 25.8%;}
+	.shoppingbag__orders-list li .deleteicon {right: 15px; top: 15px;}
+	.shoppingbag__orders-list li {padding-top: 19px; border-top: 1px solid rgba($darkgreen, 0.15); padding-bottom: 21px; margin-top: 0;}
+	.shoppingbag__orders-list li:first-child {border-top: 0;}
+	.shoppingbag__orders-list li p {padding-left: 20px;}
+	.shoppingbag__orders-list li .searchform__field_date {display: none;}
+	.shoppingbag__notavailabletext a {margin-left: 20px;}
+	.shoppingbag__topay .container {display: flex; justify-content: space-between; align-items: center;}
+	.shoppingbag__actions {margin-top: 0; display: flex; justify-content: space-between; align-items: center; width: $nine-col;}
+	.shoppingbag__cost-total {font-size: 18px; width: $three-col;}
+	.shoppingbag__topay .button {width: auto; min-width: 31%; margin-top: 0;}
+	.shoppingbag__actions p {margin-top: 0 !important;}
+	.shoppingbag__topay {margin-top: 24px; padding-bottom: 45px;}
+	.shoppingbag__notavailable {padding-bottom: 16px !important;}
+	.shoppingbag__pay .shoppingbag__actions {justify-content: flex-start;}
+	.shoppingbag__pay .shoppingbag__actions p {margin-left: 35px;}
+	.shoppingbag__formheading {font-size: 36px;}
+	.shoppingbag__order-payment .container {width: 760px;}
+	.shoppingbag__formparts {display: flex; flex-wrap: wrap; justify-content: space-between; margin-top: 47px;}
+	.shoppingbag__formpart {width: 48%; margin-top: 38px;}
+	.shoppingbag__order-payment p.mobile {display: none;}
+	.shoppingbag__order-payment {padding-top: 15px; padding-bottom: 36px;}
+	.shoppingbag__formpart p {font-size: 18px;}
+	.shoppingbag__formpart p.shoppingbag__total {font-size: 44px;}
+	.shoppingbag__formpart:first-of-type {margin-top: 0;}
+	.shoppingbag__formpart:nth-of-type(2) {margin-top: 0;}
+	.shoppingbag__formpart:nth-of-type(3) {margin-top: 39px;}
+	.shoppingbag__formpart:last-child p.small {line-height: 1.4em;}
+	.shoppingbag__formpart .radiodiv {margin-top: 15px;}
+	.shoppingbag__formpart .radiodiv:last-child {float: right;}
+	.shoppingbag__formpart .radiodiv p {font-size: 16px;}
+	.shoppingbag__order-payment .button {width: auto; margin-top: 54px; padding: 12px 40px 14px;}
 }
 
 @media (max-width:1023px) {
@@ -747,8 +784,9 @@ $twelve-col:$col*12+$col-m*11;
 	/*-----------RECLAMNIE MATERIALS--------------*/
 	.reclame__bannerblock .container div:nth-of-type(-n+3) {display: none;}
 	
-	/*-----------ABOUT--------------*/
-
+	/*-----------SHOPPING BAG--------------*/
+	.shoppingbag__listheading {display: none;}
+	.shoppingbag__order-payment p.desktop {display: none;}
 }
 
 @media (min-width:1170px) {
@@ -1046,6 +1084,20 @@ $twelve-col:$col*12+$col-m*11;
 	.about__contacts .container div {width: 22%;}
 	.about__contacts {padding-bottom: 47px;}
 	.about__map {height: 415px;}
+	
+	/*-----------SHOPPING BAG--------------*/
+	.shoppingbag .heading {padding: 38px 0 96px;}
+	.shoppingbag__technicblock {width: $three-col;}
+	.shoppingbag__cost-total {width: $three-col;}
+	.shoppingbag__topay .container {justify-content: flex-start;}
+	.shoppingbag__topay .button {min-width: 23%;}
+	.shoppingbag__actions {justify-content: flex-start;}
+	.shoppingbag__actions p {margin-left: 100px;}
+	.shoppingbag__pay .shoppingbag__actions p {margin-left: 100px;}
+	.shoppingbag__order-payment {padding-top: 46px; padding-bottom: 49px;}
+	.shoppingbag__formparts {margin-top: 58px;}
+	.shoppingbag__order-payment .button {margin-top: 50px;}
+	
 }
 
 @media (max-width:1599px) {
