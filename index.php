@@ -118,18 +118,21 @@
 		<div class="container">
 			<div class="sale__bg">
 				<!-- Mobile -->
-				<div class="sale__mobileblock">
+				<a class="sale__mobileblock" href="#">
 					<p class="small">с 16/09/16 по 30/09/16</p>
 					<p>Быстрая аренда спецтехники <br> по оптовым ценам</p>
-				</div>
+				</a>
 				<!-- Desktop -->
 				<div class="sale__desktopblock">
 					<p class="heading">Аренда спецтехники</p>
 					<p>При заказе свыше пяти смен <br>предоставляется скидка!</p>
 					<a href="#" class="button button_green"><span class="button__border-top"></span>Подробнее<span class="button__border-bottom"></span></a>
 				</div>
+				
+				<div class="sale__bg-gradients"><span></span><span></span></div>
+				<img src="img/bg_sale.jpg" alt="@@">
 			</div>
-			<p class="sale__link"><a href="#">Все акции <img src="img/icon_arrow_right_2.svg" alt="@@" width="31" class="bounce"></a></p>
+			<p class="sale__link"><a href="#">Все акции <img src="img/icon_arrow_right_2.svg" alt="@@" width="31"></a></p>
 		</div>
 	</section>
 	

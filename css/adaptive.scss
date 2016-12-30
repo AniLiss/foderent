@@ -22,7 +22,9 @@ $twelve-col:$col*12+$col-m*11;
 @media (min-width:480px) {
 	/*-----------MAIN--------------*/
 	.container {width: 450px;}
-	.sale .container {width: 480px;}
+    .sale__mobileblock {width:450px;}
+    
+	.sale .container {width: 100%;}
 	.sale__bg {min-height: 210px;}
 	.newsblocks div {min-height: 240px;}
 	.newsblocks div .bg:before {height: 120%; left: -117px; bottom: -100px;}
@@ -62,11 +64,10 @@ $twelve-col:$col*12+$col-m*11;
 
 @media (min-width:769px) {
 	/*-----------MAIN--------------*/
-	.container {width: 755px;}
+	.container, .sale__mobileblock {width: 755px;}
 	.container.small {width: 555px;}
 	.firstscreen {text-align: left; background-position: center;}
 	.advantages__list li {width: $three-col;}
-	.advantages__list li:nth-child(n+3) {margin-top: 0;}
 	.news .newsblocks {justify-content: flex-end;}
 	.news .newsblocks div {width: 280px; margin-top: 0; min-height: 175px;}
 	.news .newsblocks div:last-child {margin-left: 122px;}
@@ -154,7 +155,7 @@ $twelve-col:$col*12+$col-m*11;
 	.pagesales p.toptext {display: none;}
 }
 
-@media (min-width:1024px) {
+@media (min-width:  1024px) {
 	$col-m:2.63%; // Расстояние между колонками
 	$col:(100-($col-m*11))/12; // Ширина колонки
 
@@ -176,22 +177,26 @@ $twelve-col:$col*12+$col-m*11;
 	.container.small {width: 790px;}
 	h1 {font-size: 62px; line-height: 1em;}
 	h2 {font-size: 32px;}
-	.toup_button {width: 35px; height: 35px; top: -36px; right: 30px; bottom: auto; left: auto; background-color: transparent; border: 1px solid $green; background-image: url('../img/arrow_up_green.png'); border-bottom: 0;}
+	.toup_button {width: 35px; height: 35px; top: -35px; right: 30px; bottom: auto; left: auto; background-color: transparent; border: 1px solid $green; border-bottom: 0;
+        svg line {transition:all .25s ease-in-out; stroke:$green;}
+        &:hover {background-color:$green;
+            svg line {stroke:white}
+        }
+    }
 	
 	.header {height: 60px;}
-	.header__menubutton {width: 80px; padding-left: 21px;}
-	.header__menubutton:after {right: -42px; bottom: -42px; width: 84px; height: 84px;}
-	.header__menubutton .burger div {width: 24px; height: 3px;}
-	.header__menubutton .burger {top: -6px;}
-	.header__menubutton .burger div:first-child {transform: translateY(9px);}
-	.header__menubutton .burger div:last-child {transform: translateY(-9px);}
-	.header__menubutton:hover .burger div:first-child {transform: translateY(6px);}
-	.header__menubutton:hover .burger div:last-child {transform: translateY(-6px);}
-	.header__logo {top: -5px;}
+    .header__menubutton {width:95px; padding-left:21px; padding-bottom:11px;}
+    .header__menubutton span:before {top:-9px;}
+    .header__menubutton span:after {top:9px;}
+    .header__menubutton span {width:24px; height:3px;}
+    .header__menubutton:after {bottom:13px;}
+    .header__menubutton:hover span:before {transform: translateY(2px);}
+    .header__menubutton:hover span:after {transform: translateY(-2px);}
 	.header__logo img {width: 193px;}
+    .header__logo {margin: -15px 0 0 -96.5px;}
 	.header__icons {padding-right: 30px;}
 	.header__icons img {height: 20px;}
-	.header__icons a {margin-right: 28px;}
+	.header__icons a {margin-right: 30px;}
 	
 	header .searchform > * {display: inline-block; border: 0; border-right: 1px solid rgba(#b7cfbc, .35); background-color: transparent; margin-top: 0; height: 54px; vertical-align: top;}
 	header .searchform div {padding: 13px 18px;}
@@ -225,14 +230,19 @@ $twelve-col:$col*12+$col-m*11;
 	.firstscreen .searchform select, .firstscreen .searchform input {font-size: 20px; height: 100%;}
 	.advantages {padding-top: 79px; padding-bottom: 73px;}
 	.advantages__list {margin-top: 90px;}
-	.advantages__list li {width: $three-col;}
+	.advantages__list li {width: $three-col; margin-top:0;}
 	.advantages__list li .image {height: 69px;}
 	.advantages__list li p {font-size: 14px; margin-top: 22px;}
-	.advantages__list li:nth-child(n+3) {margin-top: 0;}
 	.sale .container {width: 990px;}
 	.sale__bg {min-height: 450px; background-image: url('../img/bg_sale_medium.jpg'); background-position: bottom 172px left -34px; background-size: auto; padding: 0;}
 	.sale__mobileblock {display: none;}
-	.sale__link {text-align: right; margin-top: 14px;}
+	.sale__link {text-align: right; margin-top: 11px;}
+    
+    .sale__bg-gradients:before, .sale__bg-gradients:after {display:none}
+    .sale__bg-gradients span:nth-of-type(1):before, .sale__bg-gradients span:nth-of-type(2):before {right:735px;}
+    .sale__bg-gradients span:nth-of-type(2):before {height:540px}
+    .sale__bg-gradients span:nth-of-type(1):after {right:800px;}
+    
 	.news {padding-top: 48px;}
 	.news .newsblocks {justify-content: flex-end; margin-top: 70px;}
 	.news .newsblocks div {width: 410px; margin-top: 0; min-height: 271px; padding: 18px 23px;}
@@ -251,11 +261,16 @@ $twelve-col:$col*12+$col-m*11;
 	.accordion {padding: 50px 0 47px;}
 	.accordion p {font-size: 26px; font-weight: 300; text-align: center;}
 	.accordion p img {position: static; vertical-align: middle; margin-left: 45px; width: 27px; padding: 17px 12px;}
-	.footer__top-part {margin-top: 33px; display: flex; justify-content: space-between; align-items: center;}
-	.footer__top-part img {padding-right: 142px; position: relative; top: -7px;}
+    
+    .footer {padding-top:41px;}
+	.footer__top-part {display: flex; justify-content: space-between; align-items: center;}
+	.footer__top-part img {position: relative;}
+    .footer__buttonblock {width:$seven-col; display:flex; justify-content: space-between}
 	.footer .button {margin-top: 0 !important; width: 262px;}
-	.footer__middle-part {border-top: 1px solid rgba(#b7cfbc, 0.15); border-bottom: 1px solid rgba(#b7cfbc, 0.15); display: flex; justify-content: space-between; margin-top: 33px; padding-top: 22px; padding-bottom: 31px;}
-	.footer__form {width: $four-col; padding-left: 30px;}
+	.footer__middle-part {border-top: 1px solid rgba(#b7cfbc, 0.15); border-bottom: 1px solid rgba(#b7cfbc, 0.15); display: flex; justify-content: space-between; margin-top: 41px; padding-top: 22px; padding-bottom: 31px;}
+	.footer__form {width: $four-col;}
+    .footer__listsblock {width:$eight-col; display: flex; justify-content: space-between;}
+    .footer__list:last-child {width:($three-col/$eight-col)*100%;}
 	.footer__form p.big {font-size: 20px; font-weight: 500;}
 	.footer__form input {margin-top: 32px;}
 	.footer__form button {bottom: 64px;}
@@ -264,6 +279,8 @@ $twelve-col:$col*12+$col-m*11;
 	.footer__bottom-part p {font-size: 13px;}
 	.footer__bottom-part p:last-child {font-size: 12px;}
 	.footer__bottom-part p img {width: 93px;}
+    .footer__button-container + .footer__button-container {margin-top:0}
+    .footer__button-container {width:auto}
 	
 	.authorization {top: 0; padding: 62px 0 120px;}
 	.authorization .container {width: 360px;}
@@ -833,7 +850,7 @@ $twelve-col:$col*12+$col-m*11;
 }
 
 @media (min-width:1600px) {
-	$col-m:1.96%; // Расстояние между колонками
+	$col-m:(30/1530)*100%; // Расстояние между колонками
 	$col:(100-($col-m*11))/12; // Ширина колонки
 
 	$one-col:$col;
@@ -867,15 +884,15 @@ $twelve-col:$col*12+$col-m*11;
 	.firstscreen .searchform button {width: 7.9%;}
 	.firstscreen .searchform__field_date a {right: 41px;}
 	.technics {height: 900px;}
-	.advantages {padding-top: 88px; padding-bottom: 149px;}
+	.advantages {padding-top: 88px; padding-bottom: 150px;}
 	.advantages__list li .image {height: 107px;}
 	.advantages__list {margin-top: 145px;}
 	.advantages__list li p {font-size: 16px; margin-top: 45px;}
 	.advantages__list li {width: $three-col; box-sizing: border-box; padding: 0 19px;}
 	.sale .container {width: 1530px;}
-	.sale__bg {min-height: 602px; background-position: center bottom;}
-	.sale__desktopblock {right: 55px; bottom: 72px;}
-	.sale__link {font-size: 18px; margin-top: 23px;}
+	.sale__bg {min-height: 603px; background-position: center bottom;}
+	.sale__desktopblock {right: 58px; bottom: 72px;}
+	.sale__link {font-size: 18px; margin-top: 19px;}
 	.news {padding-top: 67px;}
 	.news .newsblocks {margin-top: 80px;}
 	.news .newsblocks div {width: 619px; min-height: 345px; padding: 20px 28px;}
@@ -892,15 +909,27 @@ $twelve-col:$col*12+$col-m*11;
 	.banners__block:last-child img {height: 108px;}
 	.accordion p img {margin-left: 65px;}
 	.accordion {padding: 50px 0 55px;}
-	.footer__top-part {justify-content: flex-start;}
 	.footer__top-part img {padding-right: 0;}
-	.footer__top-part .button {margin-left: 129px;}
-	.footer__top-part .button:first-of-type {margin-left: 173px;}
-	.footer__list {width: $three-col;}
+	.footer__list, .footer__list:last-child {width: (360/1140)*100%;}
 	.footer__form {padding-left: 0; width: $three-col;}
 	.footer__form p.big {font-size: 16px;}
 	.footer__bottom-part .container {width: 1530px;}
+    .footer__listsblock {width:$nine-col}
+    .footer__form input {margin-top:35px;}
+    .footer__form button {bottom:68px;}
+    .footer__form p.big {letter-spacing: 0.06em;}
+    .footer__buttonblock {width:$nine-col}
+    .footer__logo {width:$three-col}
+    .footer__button-container {width:(360/1140)*100%;
+        &:last-child {width:(750/1140)*100%}
+    }
+    
+    
+    .sale__bg-gradients span:nth-of-type(1):before, .sale__bg-gradients span:nth-of-type(2):before {right:984px;}
+    .sale__bg-gradients span:nth-of-type(2):before {height:700px}
+    .sale__bg-gradients span:nth-of-type(1):after {right:1065px;}
 	
+    
 	.burgermenu {padding: 20px 0 236px;}
 	
 	/*-----------NEWS--------------*/
