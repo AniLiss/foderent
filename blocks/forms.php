@@ -65,13 +65,13 @@
 		<div class="formpart">
 			<p>Выберите тип оплаты</p>
 			<div class="radiodiv">
-				<input type="radio" id="radio1">
-				<label for="radio1"><span></span></label>
+				<input name="paymenttype" type="radio" id="popupradio1" value="online">
+				<label for="popupradio1"><span></span></label>
 				<p>Онлайн</p>
 			</div>
 			<div class="radiodiv">
-				<input type="radio" id="radio2">
-				<label for="radio2"><span></span></label>
+				<input name="paymenttype" type="radio" id="popupradio2" value="count">
+				<label for="popupradio2"><span></span></label>
 				<p>Получить счет</p>
 			</div>
 		</div>
@@ -82,6 +82,87 @@
 	</div>
 </form>
 
+<!-- Окно "Оплата заказа (остаток)" !-->
+<form class="popup paymentpopup" id="part-payment">
+	<div class="container">
+		<p class="formheading">Оплата заказа</p>
+		<div class="formpart">
+			<p>Сумма оплаты</p>
+			<p class="total">105 000 руб.</p>
+		</div>
+		<div class="formpart">
+			<p>Выберите тип оплаты</p>
+			<div class="radiodiv">
+				<input name="paymenttype" type="radio" id="popupradio3" value="online">
+				<label for="popupradio3"><span></span></label>
+				<p>Онлайн</p>
+			</div>
+			<div class="radiodiv">
+				<input name="paymenttype" type="radio" id="popupradio4" value="count">
+				<label for="popupradio4"><span></span></label>
+				<p>Получить счет</p>
+			</div>
+		</div>
+		<p class="small mobile">*Фактом оплаты вы подтверждаете то, <br>
+		что вы ознакомились и согласны с условиями <br>
+		публичной оферты</p>
+		<button class="button button_green"><span class="button__border-top"></span>Оплатить<span class="button__border-bottom"></span></button>
+	</div>
+</form>
+
+<!-- Окно "Продлить бронь" !-->
+<div class="popup extendpopup" id="extend-reserve">
+	<div class="container">
+		<p class="heading">Продлить бронь</p>
+		<p>Вы можете оставить запрос на продление времени оплаты. <br>
+		Для этого укажите предпочтительное время, в течении которого вы сможете оплатить счет. Если счет уже оплачен, но статус заказа не изменился вы можете прикрепить копию платежного поручения или позвоните нам по телефону: </p>
+		<p class="phone">8 800 349 01 78</p>
+		<form action="">
+			<div class="formfield">
+				<p>На сколько продлить бронирование</p>
+				<select name="" id="">
+					<option value=""></option>
+				</select>
+			</div>
+			<div class="formfield">
+				<p>Причина</p>
+				<input type="text">
+			</div>
+			<div class="formfield">
+				<p>Платежное поручение</p>
+				<p class="formfile">Выберите файл<a href="#"></a></p>
+				<p class="small">Или другой подтверждающий документ, при необходимости</p>
+			</div>
+			<button class="button button_green"><span class="button__border-top"></span>Продлить<span class="button__border-bottom"></span></button>
+		</form>
+	</div>
+</div>
+
+<!-- Окно "Продлить время работ" !-->
+<div class="popup extendpopup worktime" id="extend-worktime">
+	<div class="container">
+		<p class="heading">Продлить время работ</p>
+		<p>Вы можете оставить запрос на продление времени работы техники. Для этого укажите новое время окончания работы единицы и дождитесь подтверждения или позвоните нам по телефону </p>
+		<p class="phone">8 800 349 01 78</p>
+		<form action="">
+			<div class="formfield">
+				<p>Желаемое время окончания работ</p>
+				<p class="date"><a href=""></a></p>
+			</div>
+			<div class="formfield">
+				<p>Техника, которую нужно продлить</p>
+				<select name="" id="">
+					<option value=""></option>
+				</select>
+			</div>
+			<div class="formfield">
+				<p>Примечание</p>
+				<textarea></textarea>
+			</div>
+			<button class="button button_green"><span class="button__border-top"></span>Запросить<span class="button__border-bottom"></span></button>
+		</form>
+	</div>
+</div>
 
 <!-- Авторизация -->
 <div class="authorization">

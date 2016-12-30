@@ -1334,8 +1334,8 @@
 		input[type="text"] {background-color: rgba(#fff, 0.15); border: 1px solid #b7cfbc; width: 100%; margin-top: 14px; height: 45px;}
 		.radiodiv {display: inline-block; min-width: 45%; margin-top: 18px;
 			p {font-weight: 400; display: inline-block; vertical-align: middle; margin-left: 6px;}
-			label {width: 20px; height: 20px; border: 1px solid #b7cfbc; border-radius: 1000px; display: inline-block; vertical-align: middle; position: relative;
-				span {width: 12px; height: 12px; border-radius: 1000px; background-color: $green; display: inline-block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; opacity: 0; pointer-events: none;}
+			label {width: 20px; height: 20px; border: 1px solid #b7cfbc; border-radius: 1000px; display: inline-block; vertical-align: middle; position: relative; cursor: pointer; transition: all 0.25s ease-in-out;
+				span {width: 12px; height: 12px; border-radius: 1000px; background-color: $green; display: inline-block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;}
 			}
 			input:checked + label {border-color: $green;
 				span {opacity: 1;}
@@ -1450,8 +1450,8 @@
 		.radiodiv {display: inline-block; min-width: 45%; margin-top: 15px;
 			&:last-child {float: right;}
 			p {font-weight: 400; display: inline-block; vertical-align: middle; margin-left: 6px; font-size: 16px; color: #999999;}
-			label {width: 20px; height: 20px; border: 1px solid #b7cfbc; border-radius: 1000px; display: inline-block; vertical-align: middle; position: relative;
-				span {width: 12px; height: 12px; border-radius: 1000px; background-color: $green; display: inline-block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; opacity: 0; pointer-events: none;}
+			label {width: 20px; height: 20px; border: 1px solid #b7cfbc; border-radius: 1000px; display: inline-block; vertical-align: middle; position: relative; cursor: pointer; transition: all 0.25s ease-in-out;
+				span {width: 12px; height: 12px; border-radius: 1000px; background-color: $green; display: inline-block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;}
 			}
 			input:checked + label {border-color: $green;
 				span {opacity: 1;}
@@ -1460,6 +1460,41 @@
 		}
 	}
 	.button {margin-top: 30px; padding: 12px 40px 14px;}
+}
+
+.extendpopup {padding: 53px 0 60px;
+	.container {width: 555px;}
+	p {margin-top: 0;}
+	p.heading {color: $darkgreen; font-size: 36px; font-weight: 600; margin-top: 0;
+		& + p {margin-top: 33px; line-height: 1.4em;}
+	}
+	p.phone {font-size: 24px; font-weight: 600; margin-top: 6px;}
+	form {width: 360px; margin: 33px auto 0; text-align: left;}
+	select, input, textarea, p.date {border: 1px solid #b7cfbc; width: 100%; margin-top: 9px; padding: 0 10px; box-sizing: border-box;}
+	select {background-image: url('../img/icon_select_arrow.svg'); background-size: 19px 11px; background-position: top 50% right 15px; background-repeat: no-repeat; height: 50px;}
+	input {height: 45px;}
+	textarea {resize: none; height: 105px;}
+	.formfield {margin-top: 27px;
+		&:first-of-type {margin-top: 0;}
+		&:last-of-type {margin-top: 30px;}
+	}
+	.forfmfield p {font-size: 16px;}
+	.formfile {border: 1px dashed #b7cfbc; line-height: 43px; position: relative; margin-top: 9px; padding: 0 18px;
+		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
+			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
+		}
+	}
+	p.small {font-size: 12px; color: #999999; margin-top: 5px;}
+	.button {display: block; margin: 74px auto 0; padding: 12px 39px 14px;}
+	&.worktime {padding: 53px 0 51px;
+		form {margin-top: 39px;}
+		input {height: 50px;}
+		p.date {height: 50px; line-height: 50px; position: relative;
+			a {position: absolute; width: 31px; height: 27px; top: 0; bottom: 0; right: 12px; margin: auto; background-image: url('../img/icon_calendar.svg'); background-repeat: no-repeat; background-size: 31px 27px;}
+		}
+		.formfield {margin-top: 37px;}
+		.button {margin-top: 40px; padding: 12px 35px 14px;}
+	}
 }
 
 .authorization {position: absolute; left: 0; top: 42px; width: 100%; background-color: $darkgreen; text-align: center; z-index: 10; color: #fff; padding: 25px 0 97px; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;

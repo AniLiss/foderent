@@ -109,7 +109,7 @@
 		<div class="container">
 			<p class="shoppingbag__cost-total">Сумма: <span>210 000 руб.</span></p>
 			<div class="shoppingbag__actions">
-				<a href="#full-payment" class="button button_green fancybox"><span class="button__border-top"></span>Оплатить<span class="button__border-bottom"></span></a>
+				<a href="#extend-worktime" class="button button_green fancybox"><span class="button__border-top"></span>Оплатить<span class="button__border-bottom"></span></a>
 				<p><img src="img/icon_extend.svg" alt="@@" width="29"><a href="#">Продлить бронь</a></p>
 				<p class="red"><img src="img/icon_trash.svg" alt="@@" width="16"><a href="#">Отменить бронь</a></p>
 			</div>
@@ -132,12 +132,12 @@
 					<div class="shoppingbag__formpart">
 						<p>Выберите тип оплаты</p>
 						<div class="radiodiv">
-							<input type="radio" id="radio1">
+							<input name="paymenttype" type="radio" id="radio1" value="online">
 							<label for="radio1"><span></span></label>
 							<p>Онлайн</p>
 						</div>
 						<div class="radiodiv">
-							<input type="radio" id="radio2">
+							<input name="paymenttype" type="radio" id="radio2" value="count">
 							<label for="radio2"><span></span></label>
 							<p>Получить счет</p>
 						</div>
