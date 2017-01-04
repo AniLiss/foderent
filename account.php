@@ -209,6 +209,307 @@
 			</div>
 		</div>
 	</div>
+	<div class="account__settings account__settings_jur">
+		<div class="container">
+			<form action="" class="account__settings-form">
+				<div class="account__settings-infoblock">
+					<p class="account__settings-infoheading">Сведения об организации:</p>
+					<div class="account__settings-infofield">
+						<p>Название компании <br>
+						на русском языке</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Свидетельство о внесении <br>
+						в Единый государственный реестр <br>
+						юр. лиц (дата, №, кем выдано)</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>ОГРН</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>ИНН</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>КПП</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>ОКПО</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Расчетный счет -№</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Корреспондентский <br>
+						счет-№</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Код БИК</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Наименование и адрес <br>
+						обслуживающего банка</p>
+						<input type="text">
+					</div>
+				</div>
+				<div class="account__settings-infoblock account__settings-infoblock_address">
+					<p class="account__settings-infoheading">Адресные данные:</p>
+					<div class="account__settings-infofield account__settings-infofield_file">
+						<p>Добавить файл</p>
+						<p class="account__settings-file">Выберите файл<a href="#"></a></p>
+						<p class="small">Если необходимо, прикрепите подтверждающие <br>
+						документы</p>
+					</div>
+					<div class="account__settings-infofield">
+						<p>Юридический адрес</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Фактический адрес</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Телефон</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Email</p>
+						<input type="text">
+					</div>
+				</div>
+				<div class="account__settings-infoblock account__settings-infoblock_manager">
+					<p class="account__settings-infoheading">Сведения о руководителе, <br>
+					от имени которого <br>
+					заключается договор:</p>
+					<div class="account__settings-infofield">
+						<p>ФИО</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Должность</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>На основании <br>
+						чего действует</p>
+						<input type="text">
+					</div>
+				</div>
+				<div class="checkdiv">
+					<input type="checkbox" id="settingscheck1" value="Да">
+					<label for="settingscheck1"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+					<p>Получать уведомления по смс</p>
+				</div>
+				<div class="checkdiv">
+					<input type="checkbox" id="settingscheck2" value="Да">
+					<label for="settingscheck2"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+					<p>Получать уведомления по email</p>
+				</div>
+				<button class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></button>
+			</form>
+		</div>
+	</div>
+	<div class="account__settings account__settings_fiz">
+		<div class="container">
+			<form action="" class="account__settings-form">
+				<div class="account__settings-infoblock">
+					<div class="account__settings-infofield">
+						<p>ФИО</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Дата рождения</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield account__settings-infofield_passport">
+						<p>Паспорт</p>
+						<input type="text" placeholder="Серия" name="series">
+						<input type="text" placeholder="Номер" name="number">
+						<input type="text" placeholder="Кем выдан" name="issuedby">
+						<input type="text" placeholder="Код подразделения" name="departmentcode">
+						<input type="text" placeholder="Дата выдачи" name="dateofissue">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Адрес регистрации</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Номер телефона</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield">
+						<p>Email</p>
+						<input type="text">
+					</div>
+					<div class="account__settings-infofield account__settings-infofield_file">
+						<p>Добавить файл</p>
+						<p class="account__settings-file">Выберите файл<a href="#"></a></p>
+						<p class="small">Добавить сканкопию паспорта</p>
+					</div>
+				</div>
+				<div class="checkdiv">
+					<input type="checkbox" id="settingscheck1" value="Да">
+					<label for="settingscheck1"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+					<p>Получать уведомления по смс</p>
+				</div>
+				<div class="checkdiv">
+					<input type="checkbox" id="settingscheck2" value="Да">
+					<label for="settingscheck2"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+					<p>Получать уведомления по email</p>
+				</div>
+				<button class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></button>
+			</form>
+		</div>
+	</div>
+	<div class="account__technics">
+		<div class="container">
+			<a href="#" class="button button_green"><span class="button__border-top"></span>Оплатить<span class="button__border-bottom"></span></a>
+			<div class="account__technics-searchfield">
+				<input type="text" value="VIN">
+				<a href="#"><img src="img/icon_loupe.svg" alt="@@" width="22"></a>
+			</div>
+			<select name="" id="">
+				<option value="">Тип техники</option>
+			</select>
+		</div>
+		<div class="account__technics-cards">
+			<div class="container">
+				<ul class="account__technics-list">
+					<li class="account__technics-card">
+						<a href="#" class="sideicon"></a>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__technics-vin">VIN 2354659864</p>
+						<div class="account__technics-card-edit">
+							<p><a href="#">Редактировать</a></p>
+							<p><a href="#">+ Оператор</a></p>
+						</div>
+						<div class="account__technics-note-reserve">
+							<p><img src="img/icon_calendar.svg" alt="@@" width="31">Отметить бронь</p>
+						</div>
+					</li>
+					<li class="account__technics-card">
+						<a href="#" class="sideicon"></a>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__technics-vin">VIN 2354659864</p>
+						<div class="account__technics-card-edit">
+							<p><a href="#">Редактировать</a></p>
+							<p><a href="#"><img src="img/icon_edit.svg" alt="@@" width="15">Виталий Валерьевич</a></p>
+						</div>
+						<div class="account__technics-note-reserve">
+							<p><img src="img/icon_calendar.svg" alt="@@" width="31">Отметить бронь</p>
+						</div>
+					</li>
+					<li class="account__technics-card account__technics-card_ready">
+						<a href="#" class="sideicon"></a>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__technics-vin">VIN 2354659864</p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="account__technics-info">
+		<div class="container">
+			<p class="toptext"><a href="#"><img src="img/arrow_green_left.svg" alt="@@" width="31" class="bounce">Вся техника</a></p>
+			<div class="account__technics-infofield">
+				<p>Тип техники</p>
+				<select name="" id="">
+					<option value=""></option>
+				</select>
+			</div>
+			<div class="account__technics-infofield">
+				<p>Категория допуска</p>
+				<input type="text">
+			</div>
+			<div class="account__technics-infofield">
+				<p>Марка</p>
+				<input type="text">
+			</div>
+			<div class="account__technics-infofield">
+				<p>Модель</p>
+				<input type="text">
+			</div>
+			<div class="account__technics-infofield">
+				<p>VIN</p>
+				<input type="text">
+			</div>
+			<div class="account__technics-infofield">
+				<p>Год выпуска</p>
+				<input type="text">
+			</div>
+			<div class="account__technics-infofield">
+				<p>Эксплуатационная масса (кг)</p>
+				<input type="text">
+			</div>
+			<div class="account__technics-infofield">
+				<p>Мощьность двигателя (л. с.)</p>
+				<input type="text">
+			</div>
+			<div class="account__technics-infofield">
+				<p>Тип отвала</p>
+				<input type="text">
+			</div>
+			<div class="account__technics-infofield account__technics-infofield_mod">
+				<p>Модификации</p>
+				<select>
+					<option value=""></option>
+				</select>
+				<a href="#" class="plusicon">+</a>
+			</div>
+			<div class="account__technics-infofield account__technics-infofield_file">
+				<p>Добавить фото</p>
+				<p class="account__technics-file">Выберите файл<a href="#"></a></p>
+				<p class="small">Необходимо загрузка фотографий техники с 4-х сторон, кабины изнутри и счетчика моточасов. Разрешение изображений должно быть не менее 1200х900 px</p>
+			</div>
+			<div class="account__technics-photos">
+				<div>
+					<a href="#" class="closeicon"></a>
+					<img src="img/account_technics_1.jpg" alt="@@">
+				</div>
+				<div>
+					<a href="#" class="closeicon"></a>
+					<img src="img/account_technics_2.jpg" alt="@@">
+				</div>
+				<div>
+					<a href="#" class="closeicon"></a>
+					<img src="img/account_technics_2.jpg" alt="@@">
+				</div>
+				<div>
+					<a href="#" class="closeicon"></a>
+					<img src="img/account_technics_1.jpg" alt="@@">
+				</div>
+			</div>
+			<div class="account__technics-infofield account__technics-infofield_file">
+				<p>Добавить файл</p>
+				<p class="account__technics-file">Выберите файл<a href="#"></a></p>
+				<p class="small">Прикрепите скан паспорта самоходной машины и свидетельства о регистрации в технадзоре</p>
+			</div>
+			<div class="account__technics-infofield">
+				<p>Описание</p>
+				<textarea></textarea>
+			</div>
+		</div>
+		<div class="account__technics-infomap">
+			<p>Задайте местоположение <br>
+			техники</p>
+			<input type="text">
+			<div class="account__technics-map" id="accountmap"></div>
+		</div>
+		<div class="container">
+			<a href="#" class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></a>
+		</div>
+	</div>
 	<ul class="account__navigation">
 		<li class="active"><a href="#orders"><svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 511.99 352.24"><defs><style>.cls-1{fill:#fff;}</style></defs><title>icon_account_nav_1</title><path class="cls-1" d="M512,261.2l-30.94-20.89L437.31,165.2l-107.37.1L132.19,80.74A10.66,10.66,0,0,0,120.46,83L99.13,104.33l0,0c-0.21.21-.41,0.43-0.59,0.66l-0.14.16c-0.19.23-.36,0.46-0.52,0.7l-0.1.16c-0.13.2-.27,0.41-0.38,0.63l-0.12.21c-0.12.24-.24,0.48-0.35,0.73a2.15,2.15,0,0,0-.12.28c-0.1.24-.19,0.49-0.27,0.73l-0.07.26a7.16,7.16,0,0,0-.18.69,2.55,2.55,0,0,0-.06.25,8.06,8.06,0,0,0-.13.87c0,0.07,0,.14,0,0.22,0,0.31,0,.63,0,0.94v64a10.66,10.66,0,1,0,21.33,0V128.68L226.7,180.15,277.33,285v29.56H10.67a10.67,10.67,0,0,0,0,21.34H21.34V378.8A10.67,10.67,0,0,0,32,389.47H65.06a53.33,53.33,0,0,0,104.62-.53H363.62a53.32,53.32,0,0,0,104.7,0h43.45Zm-55.87-21.34H384V186.59l41.06,0Zm-93.47-53.26v53.26H341.4l0-53.24h21.22Zm-105.29,8,20,9.39v32Zm35.17-7L124.94,108.68l5.5-5.49L320,184.24V314.53H298.65V197.2A10.64,10.64,0,0,0,292.53,187.56ZM65.06,368.12H42.67V335.87h43A53.32,53.32,0,0,0,65.06,368.12Zm52.26,42.67a32,32,0,1,1,32-32A32,32,0,0,1,117.32,410.79Zm52.15-43.2A53.31,53.31,0,0,0,149,335.87H320v31.72H169.46ZM416,410.79a32,32,0,1,1,32-32A32,32,0,0,1,416,410.79Zm52.16-43.2a53.34,53.34,0,0,0-104.3,0H341.31l0.08-106.39H473.87l16.78,11.33-0.06,31.06H480a10.67,10.67,0,1,0,0,21.34h10.58l-0.08,42.66H468.12Z" transform="translate(-0.01 -79.88)"/><path class="cls-1" d="M416,368.12a10.67,10.67,0,1,0,10.67,10.67A10.66,10.66,0,0,0,416,368.12Z" transform="translate(-0.01 -79.88)"/><path class="cls-1" d="M117.32,368.12A10.67,10.67,0,1,0,128,378.79,10.67,10.67,0,0,0,117.32,368.12Z" transform="translate(-0.01 -79.88)"/><path class="cls-1" d="M53.43,250.75c0,1.39,0,13.8,8.91,22.94,4,4,11.15,8.84,23,8.84s18.92-4.81,22.87-8.84c8.8-9,9.05-21.2,9-23.22v-42.6a10.66,10.66,0,0,0-21.33,0V250.7a15.3,15.3,0,0,1-1.61,6.22c-1.14,2.12-3.1,4.28-9,4.28s-7.92-2.21-9-4.14a14.41,14.41,0,0,1-1.58-6v0.14h0c0-.22,0-0.45,0-0.67a10.66,10.66,0,0,0-21.33,0c0,0.08,0,.15,0,0.22h0Z" transform="translate(-0.01 -79.88)"/></svg></a></li>
 		<li><a href="#messages"><svg id="Слой_1" data-name="Слой 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 23.45 17.8"><defs><style>.cls-1{fill:#fff;}</style></defs><title>icon_account_nav_2</title><path class="cls-1" d="M491,271.22H467.59V289H491v-17.8Zm-1.12,16.68H468.72V272.35h21.21V287.9Z" transform="translate(-467.59 -271.22)"/><path class="cls-1" d="M488.15,285.56L482.26,280l0.08-.07,5.78-5.19-0.75-.83-8,7.22-1.66-1.49-0.08-.06-6.34-5.67-0.75.84,5.94,5.3-0.08.08-5.83,5.46,0.77,0.82,6-5.6,0.07,0.06,1.6,1.43a0.58,0.58,0,0,0,.75,0l1.72-1.54,0.07,0.06,5.88,5.59Z" transform="translate(-467.59 -271.22)"/></svg></a></li>
@@ -226,5 +527,40 @@
 
 <?php include "blocks/forms.php"; ?>
 <?php include "blocks/scripts.php"; ?>
+
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUaCNfcDZQL7nZK07DQmAHsEetCCMIQ5w&callback=initMap" async defer></script>
+       
+        <script type="text/javascript">
+            // When the window has finished loading create our google map below
+            google.maps.event.addDomListener(window, 'load', init);
+        
+            function initMap() {
+                // Basic options for a simple Google Map
+                // For more options see: https://developers.google.com/maps/documentation/javascript/reference#MapOptions
+                var mapOptions = {
+                    // How zoomed in you want the map to start at (always required)
+                    zoom: 11,
+
+                    // The latitude and longitude to center the map (always required)
+                    center: new google.maps.LatLng(40.6700, -73.9400), // New York
+					
+					mapTypeControl: false,
+					scrollwheel: false,
+
+                    // How you would like to style the map. 
+                    // This is where you would paste any style found on Snazzy Maps.
+                    styles: [{"featureType":"all","elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"featureType":"all","elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"featureType":"all","elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#0f9324"},{"lightness":20},{"visibility":"on"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#00700a"},{"lightness":17},{"weight":1.2},{"visibility":"on"}]},{"featureType":"administrative","elementType":"labels.text","stylers":[{"color":"#93c991"},{"visibility":"simplified"}]},{"featureType":"landscape","elementType":"all","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20},{"visibility":"on"}]},{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape.natural.landcover","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"landscape.natural.terrain","elementType":"geometry.stroke","stylers":[{"visibility":"on"},{"color":"#000000"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"featureType":"poi","elementType":"labels.icon","stylers":[{"visibility":"on"}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]}]
+                };
+
+                // Get the HTML DOM element that will contain your map 
+                // We are using a div with id="map" seen below in the <body>
+                var mapElement = document.getElementById('accountmap');
+
+                // Create the Google Map using our element and options defined above
+                var map = new google.maps.Map(mapElement, mapOptions);
+
+            }
+        </script>
+
 </body>
 </html>

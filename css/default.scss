@@ -1138,7 +1138,7 @@
 	&__order-date {float: right; color: #333333; padding-right: 9px; position: relative;
 		&:before {content: ""; display: block; width: 1px; height: 13px; background-color: #cccccc; position: absolute; left: -20px; top: 0; bottom: 0; margin: auto;}
 	}
-	&__navigation {display: flex; margin-top: 50px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4); align-items: center; background-color: $darkgreen;
+	&__navigation {display: flex; margin-top: 21px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4); align-items: center; background-color: $darkgreen;
 		li {background-color: $darkgreen; width: 33.3333%; height: 24px; display: inline-flex; justify-content: center; align-items: center; border-left: 1px solid rgba(#000, 0.15); border-right: 1px solid rgba(#000, 0.15);
 			&.active {background-color: #fff; height: 40px; box-shadow: 0 3px 0 3px $darkgreen;
 				svg path {fill: $darkgreen;}
@@ -1262,6 +1262,121 @@
 	&__message-answerbody {border: 1px solid rgba(#2a2c28, 0.2); border-top: 0; padding: 12px 21px 10px;
 		p {line-height: 1.6em;}
 	}
+	&__settings {text-align: left; display: none;
+		&_jur {display: none; padding-top: 7px;}
+		&_fiz {padding-top: 10px;}
+	}
+	&__settings-infoblock {margin-top: 44px;
+		&:first-child {margin-top: 0;}
+		&_address {
+			.account__settings-infoheading {margin-bottom: 38px;}
+		}
+		p.small {margin-top: 8px; color: #999999;}
+		&_manager {
+			.account__settings-infoheading {line-height: 1.3em;}
+		}
+	}
+	&__settings-infoheading {font-size: 16px; font-weight: 600; color: $darkgreen; margin-bottom: 34px;
+		&:after {content: ""; display: block; height: 1px; width: 120%; position: relative; top: 8px; left: 50%; transform: translateX(-50%); background-color: #2a2c28; opacity: 0.7;}
+	}
+	&__settings-infofield {margin-top: 16px;
+		&:first-of-type {margin-top: 0;}
+		p {line-height: 1.3em;}
+		input {border: 1px solid #b7cfbc; width: 100%; height: 45px; padding: 0 15px; margin-top: 9px;}
+		&_passport {display: flex; justify-content: space-between; flex-wrap: wrap;
+			::-webkit-input-placeholder {color:#999999}
+			::-moz-placeholder {color:#999999}
+			:-ms-input-placeholder {color:#999999}
+			:-moz-placeholder {color:#999999}
+			p {width: 100%;}
+			input {margin-top: 19px;}
+			input:first-of-type {width: 27%; margin-top: 9px;}
+			input:nth-of-type(2) {width: 68%; margin-top: 9px;}
+		}
+	}
+	&__settings-form {
+		.checkdiv {position: relative; margin-top: 19px;
+			input[type="checkbox"]:not(old) {left:0; top:0;
+				& + label {width: 18px; height: 18px; border: 1px solid #b7cfbc; display: inline-block; vertical-align: middle; transition: all 0.25s ease-in-out; position: relative;}
+				&:checked + label {border-color: $green;
+					img {opacity: 1; pointer-events: all;}
+				}
+			}
+			p {display: inline-block; vertical-align: middle; margin-left: 10px;}
+			img {opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
+		}
+		.button {margin-top: 18px; width: 100%;}
+	}
+	&__settings-file {border: 1px dashed #b7cfbc; line-height: 43px !important; position: relative; margin-top: 9px; padding: 0 18px;
+		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
+			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
+		}
+	}
+	&__settings-infofield_file + .account__settings-infofield {margin-top: 48px;}
+	&__orders {display: none;}
+	&__technics {display: none;
+		.button {width: 100%; margin-top: 20px;}
+		select {width: 100%; height: 45px; border: 1px solid #b7cfbc; background-image: url('../img/icon_select_arrow.svg'); background-repeat: no-repeat; background-size: 11px 7px; background-position: top 50% right 10px; margin-top: 20px; padding: 0 13px;}
+	}
+	&__technics-searchfield {position: relative; margin-top: 20px;
+		input {width: 100%; height: 45px; border: 1px solid #b7cfbc; padding: 0 13px;}
+		a {position: absolute; right: 9px; top: 0; bottom: 0; margin: auto; width: 22px; height: 21px;}
+	}
+	&__technics-cards {background-color: $darkgreen; margin-top: 20px; padding-top: 14px; padding-bottom: 15px;}
+	&__technics-card {background-color: #fff; text-align: left; position: relative; padding: 11px 11px 7px; margin-top: 14px;
+		&:first-child {margin-top: 0;}
+		p {font-size: 16px; font-weight: 600; line-height: 1.3em;}
+		p.account__technics-vin {font-weight: 400; color: #333333; margin-top: 4px;}
+		a.sideicon {position: absolute; width: 12px; height: 12px; right: 9px; top: 11px; background-image: url('../img/icon_close_popup.svg'); background-repeat: no-repeat;}
+		&_ready {padding-bottom: 13px;
+			a.sideicon {background-image: url('../img/icon_tick.svg');}
+			p {opacity: 0.4;}
+		}
+	}
+	&__technics-card-edit {margin-top: 6px;
+		p {font-size: 14px; font-weight: 400; color: $green; display: inline-flex; justify-content: center;
+			a {vertical-align: middle;}
+			img {vertical-align: middle;}
+			&:first-child {border-right: 1px solid #b7cfbc; padding-right: 11px; margin-right: 3px;
+				a {border-bottom: 1px solid #b7cfbc;}
+			}
+		}
+	}
+	&__technics-note-reserve {margin-top: 13px;
+		&:before {content: ""; display: block; height: 1px; width: 120%; position: relative; left: 50%; transform: translateX(-50%); background-color: $darkgreen; opacity: 0.15;}
+		p {text-transform: uppercase; color: $green; font-size: 16px; font-weight: 400; letter-spacing: 0.035em; margin-top: 10px;}
+		img {vertical-align: middle; margin-right: 10px;}
+	}
+	&__technics-info {text-align: left;
+		.button {width: 100%; margin-top: 16px;}
+	}
+	&__technics-infofield {margin-top: 12px;
+		select, input, textarea {width: 100%; height: 45px; border: 1px solid #b7cfbc; margin-top: 7px;}
+		select {background-image: url('../img/icon_select_arrow.svg'); background-size: 11px 7px; background-position: top 50% right 10px; background-repeat: no-repeat;}
+		textarea {resize: none; height: 136px;}
+		p.small {color: #999999; margin-top: 4px; line-height: 1.35em;}
+		&_mod {
+			select {width: 80%;}
+			a.plusicon {float: right; width: 45px; height: 45px; border: 1px solid $green; margin-top: 7px; font-size: 34px; font-weight: 300; color: $green; line-height: 35px; text-align: center;}
+		}
+	}
+	&__technics-file {border: 1px dashed #b7cfbc; line-height: 43px !important; position: relative; margin-top: 9px; padding: 0 18px;
+		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
+			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
+		}
+	}
+	&__technics-photos {display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 20px;
+		div {width: 45%; height: 137px; position: relative; margin-top: 29px;
+			&:nth-child(-n+2) {margin-top: 0;}
+		}
+		a {position: absolute; width: 20px; height: 20px; background-color: $green; right: 4px; top: 4px; background-image: url('../img/icon_close.svg'); background-size: 12px 12px; background-repeat: no-repeat; background-position: center;}
+		img {width: 100%; height: 100%; object-fit: cover;}
+	}
+	&__technics-infomap {text-align: center; position: relative; margin-top: 20px;
+		p {line-height: 1.3em;}
+		input {background-color: rgba(#fff, 0.25); border: 1px solid #b7cfbc; position: absolute; left: 15px; top: 68px; z-index: 1; width: 290px; height: 45px; font-size: 16px; color: #fff; padding: 0 15px; box-sizing: border-box;}
+	}
+	&__technics-map {width: 100%; height: 300px; margin-top: 12px;}
 }
 
 /*-------------------------------------------------*/
