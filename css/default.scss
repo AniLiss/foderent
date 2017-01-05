@@ -1347,7 +1347,7 @@
 		p {text-transform: uppercase; color: $green; font-size: 16px; font-weight: 400; letter-spacing: 0.035em; margin-top: 10px;}
 		img {vertical-align: middle; margin-right: 10px;}
 	}
-	&__technics-info {text-align: left;
+	&__technics-info {text-align: left; display: none;
 		.button {width: 100%; margin-top: 16px;}
 	}
 	&__technics-infofield {margin-top: 12px;
@@ -1377,6 +1377,62 @@
 		input {background-color: rgba(#fff, 0.25); border: 1px solid #b7cfbc; position: absolute; left: 15px; top: 68px; z-index: 1; width: 290px; height: 45px; font-size: 16px; color: #fff; padding: 0 15px; box-sizing: border-box;}
 	}
 	&__technics-map {width: 100%; height: 300px; margin-top: 12px;}
+	&__operators {padding-top: 20px; display: none;
+		.button {width: 100%;}
+	}
+	&__operators-sorting {height: 43px; border: 1px solid #b7cfbc; margin-top: 20px; overflow: hidden;
+		p {display: inline-block; width: 50%; height: 100%; line-height: 45px;}
+		select {width: 50%; height: 100%; padding-left: 54px; color: $darkgreen; background-image: url('../img/icon_select_arrow.svg'); background-repeat: no-repeat; background-size: 11px 7px; background-position:  top 50% right 10px;}
+	}
+	&__operators-cards {background-color: $darkgreen; margin-top: 20px; padding-top: 15px; padding-bottom: 14px;
+		.button {margin-top: 13px;}
+	}
+	&__operators-card {background-color: #fff; display: flex; flex-wrap: wrap; margin-top: 14px;
+		&:first-child {margin-top: 0;}
+		.image {width: 44.5%; position: relative;
+			.status {position: absolute; left: 0; bottom: 0; right: 0; color: #fff; padding-bottom: 3px; width: 100%;
+				&_free {background-color: rgba($darkgreen, 0.8);}
+				&_busy {background-color: rgba($red, 0.8);}
+			}
+			img {width: 100%; height: 100%; object-fit: cover;}
+		}
+		.info {width: 55.5%; text-align: left; box-sizing: border-box; padding: 11px 16px;
+			p {font-size: 12px; color: #333333; line-height: 1.2em; margin-top: 8px;}
+			p.name {font-weight: 600; font-size: 14px; color: #000; margin-top: 0;}
+		}
+		.actions {display: flex; justify-content: space-between; width: 100%; border-top: 1px solid rgba(#cccccc, 0.5); padding: 2px 22px 8px;
+			a {text-decoration: underline;}
+			p.green {color: $green;}
+			p.red {color: $red;}
+		}
+	}
+	&__operators-info {text-align: left;
+		.button {margin-top: 19px; width: 100%;}
+	}
+	&__operators-infofield {margin-top: 15px;
+		&:first-of-type {margin-top: 19px;}
+		p {line-height: 1.3em;}
+		select, input, textarea {width: 100%; height: 45px; border: 1px solid #b7cfbc; margin-top: 9px; padding: 0 10px;}
+		select {background-image: url('../img/icon_select_arrow.svg'); background-size: 11px 7px; background-position: top 50% right 10px; background-repeat: no-repeat;}
+		textarea {resize: none; height: 136px;}
+		p.small {color: #999999; margin-top: 7px; line-height: 1.35em;}
+		&_cat {
+			input {width: 82%;}
+			a.plusicon {float: right; width: 45px; height: 45px; border: 1px solid $green; margin-top: 9px; font-size: 34px; font-weight: 300; color: $green; line-height: 35px; text-align: center;}
+		}
+	}
+	&__operators-file {border: 1px dashed #b7cfbc; line-height: 43px !important; position: relative; margin-top: 9px; padding: 0 18px;
+		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
+			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
+		}
+	}
+	&__operators-photos {display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 16px;
+		div {width: 45%; height: 137px; position: relative; margin-top: 29px;
+			&:nth-child(-n+2) {margin-top: 0;}
+		}
+		a {position: absolute; width: 20px; height: 20px; background-color: $green; right: 4px; top: 4px; background-image: url('../img/icon_close.svg'); background-size: 12px 12px; background-repeat: no-repeat; background-position: center;}
+		img {width: 100%; height: 100%; object-fit: cover;}
+	}
 }
 
 /*-------------------------------------------------*/
