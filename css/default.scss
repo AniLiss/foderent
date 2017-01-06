@@ -1117,28 +1117,59 @@
 		.container {position: relative; z-index: 2;}
 		h2 {color: #fff;}
 	}
-	&__orders-sorting {background-color: $darkgreen; margin-top: 15px; height: 38px;
+	&__orders-head {margin-top: 15px; background-color: $darkgreen;}
+	&__orders-head-desktop {display: inline-flex; align-items: center;
+		p {color: #fff; text-align: left;
+			&:first-child {width: 11.1%;}
+			&:nth-child(2) {width: 30.3%;}
+			&:nth-child(3) {width: 16.7%;}
+			&:nth-child(4) {width: 15.8%;}
+			&:last-child {flex: 1;}
+		}
+	}
+	&__orders-sorting {background-color: $darkgreen; height: 38px;
 		p {display: inline-block; width: 50%; color: #fff; height: 100%; line-height: 38px;}
 		select {width: 50%; height: 100%; background-color: $darkgreen; color: $green; padding-left: 28px; background-image: url('../img/icon_select_arrow.svg'); background-repeat: no-repeat; background-size: 11px 7px; background-position: top 50% right 39px;}
 	}
 	&__orders-status {margin-top: 17px; background-color: $darkgreen; padding-top: 14px; padding-bottom: 15px;}
 	&__orders-list {
-		li {background-color: #fff; text-align: left; padding-top: 5px; padding-bottom: 11px; margin-top: 15px;
+		li {background-color: #fff; text-align: left; padding-top: 43px; padding-bottom: 36px; margin-top: 15px; position: relative;
 			&:first-child {margin-top: 0;}
-			p:last-child {color: $green; text-decoration: underline; margin-top: 2px; padding-left: 10px;}
 		}
 	}
-	&__order-status {text-transform: uppercase; font-size: 19px; font-weight: 500; border-bottom: 1px solid rgba($darkgreen, 0.15); text-align: center; padding-bottom: 5px;
+	&__order-status {text-transform: uppercase; font-size: 19px; font-weight: 500; border-bottom: 1px solid rgba($darkgreen, 0.15); text-align: center; padding-bottom: 5px; position: absolute; left: 0; right: 0; top: 5px;
 		&_notpaid {color: $red;}
 		&_paid {color: $darkgreen;}
 		&_completed {color: #999999;}
+		&_needtopay {text-transform: uppercase !important; color: $green !important; font-size: 16px !important; background-image: url('../img/icon_payterminal.svg'); background-repeat: no-repeat; background-size: 19px 30px; padding-left: 30px !important; height: 30px;}
+		&_partpayment {position: relative !important; text-align: left; padding-left: 11px !important; width: 150px; line-height: 33px; top: 0; color: #645149;
+			span {position: absolute; right: 0; top: 0; bottom: 0; margin: auto; background-color: rgba(#fff, 0.75); font-size: 20px; font-weight: 300; padding-right: 7px; text-align: right; width: 65px; box-sizing: border-box;}
+		}
 	}
-	&__order-number {margin-top: 10px; padding-left: 10px;}
-	&__order-cost {display: inline-block; color: #333333; padding-left: 10px;}
+	&__order-number {margin-top: 10px; padding-left: 10px;
+		&:before {content: "Заказ #";}
+	}
+	&__order-cost {display: inline-block; color: #333333; padding-left: 10px; position: relative;
+		&:before {content: "Сумма: ";}
+		&:after {content: ""; display: block; width: 1px; height: 13px; background-color: #cccccc; position: absolute; right: -23px; top: 0; bottom: 0; margin: auto;}
+	}
 	&__order-date {float: right; color: #333333; padding-right: 9px; position: relative;
-		&:before {content: ""; display: block; width: 1px; height: 13px; background-color: #cccccc; position: absolute; left: -20px; top: 0; bottom: 0; margin: auto;}
+		&:before {content: "Дата: ";}
 	}
-	&__navigation {display: flex; margin-top: 21px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4); align-items: center; background-color: $darkgreen;
+	&__order-showinfo {position: absolute; left: 0; right: 0; bottom: 11px; color: $green; text-decoration: underline; margin-top: 2px; padding-left: 10px;
+		a.cancel {color: $red; position: relative; margin-left: 7px; padding-left: 14px;
+			&:before {content: ""; display: block; position: absolute; left: 0; top: 0; bottom: 0; margin: auto; width: 2px; height: 13px; background-color: #e0e0e0;}
+		}
+	}
+	&__order-docs {position: absolute; right: 40px; top: 0; bottom: 0; margin: auto !important; height: 23px;
+		a {color: $green; text-decoration: underline; transition: all 0.25s ease-in-out;
+			&:hover {color: $darkgreen;
+				img {opacity: 1;}
+			}
+		}
+		img {position: absolute; left: -30px; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;}
+	}
+	&__navigation_mobile {display: flex; margin-top: 21px; box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.4); align-items: center; background-color: $darkgreen;
 		li {background-color: $darkgreen; width: 33.3333%; height: 24px; display: inline-flex; justify-content: center; align-items: center; border-left: 1px solid rgba(#000, 0.15); border-right: 1px solid rgba(#000, 0.15);
 			&.active {background-color: #fff; height: 40px; box-shadow: 0 3px 0 3px $darkgreen;
 				svg path {fill: $darkgreen;}
@@ -1147,6 +1178,18 @@
 		li:nth-child(1) svg {width: 35px;}
 		li:nth-child(2) svg {width: 26px;}
 		li:nth-child(3) svg {width: 30px;}
+	}
+	&__navigation_desktop {position: relative; margin-top: 34px;
+		li {display: inline-block; opacity: 0.3; margin-left: 87px; transition: all 0.25s ease-in-out;
+			&:first-child, &:last-child {margin-left: 0;}
+			&:hover {opacity: 1;}
+			&.active {border-bottom: 2px solid #fff; opacity: 1;}
+		}
+		p {color: #fff; font-size: 16px; font-weight: 500;}
+	}
+	&__logout {position: absolute; right: 0; opacity: 1 !important; padding-left: 25px;
+		p {font-size: 14px; line-height: 30px;}
+		img {position: absolute; left: 0; top: 0; bottom: 0; margin: auto;}
 	}
 	p.toptext {text-transform: uppercase; color: $green; font-size: 16px; margin-top: 4px; margin-bottom: 11px; font-weight: 300; text-align: left;
 		a {display: inline-flex; justify-content: center; align-items: center;}
@@ -1158,6 +1201,7 @@
 			&:before {display: none;}
 		}
 	}
+	&__orderinfo-status {text-transform: uppercase; color: $green; border: 1px solid $green; opacity: 0.38; display: inline-block; font-size: 24px; font-weight: 300; margin-left: 24px; padding: 2px 36px;}
 	&__order-details {margin-top: 13px; background-color: $darkgreen; padding-top: 14px; padding-bottom: 15px;}
 	&__orders-list_info {
 		li {padding-top: 11px;}
@@ -1168,14 +1212,10 @@
 		}
 	}
 	&__order-cost_info {font-weight: 600; margin-top: 4px;}
-}
-
-
-
- /* НОВОЕ ###################### */
-
-.account {
 	&__orderinfo {display: none;}
+	&__orderinfo-head {background-color: $darkgreen; height: 59px;
+		p {font-size: 22px; color: #fff; line-height: 59px; display: inline-block; text-align: center; width: 25.7%;}
+	}
 	&__orderinfo .button {margin-top: 16px; width: 100%;}
 	&__orders-list_info {
 		.searchform__field_date {margin-top: 17px;
@@ -1188,12 +1228,12 @@
 		}
 		li {padding-bottom: 1px;}
 	}
-	&__order-fullpayment {margin-top: 17px;}
-	&__order-partpayment {margin-top: 17px; display: none;
+	&__order-fullpayment {margin-top: 17px; display: none !important;}
+	&__order-partpayment {margin-top: 17px;
 		.button {margin-top: 25px;}
 	}
 	&__order-cost_total {text-align: center; font-size: 20px; color: #666666; line-height: 1em;
-		& + p {font-size: 20px; font-weight: 700; text-align: center;}
+		span {color: #000; font-size: 20px; font-weight: 700; text-align: center; line-height: 1.7em;}
 	}
 	&__order-documents {text-align: center; margin-top: 16px;
 		> p {color: $green; text-decoration: underline; font-size: 16px; position: relative; transition: all 0.25s ease-in-out;
@@ -1313,7 +1353,6 @@
 		}
 	}
 	&__settings-infofield_file + .account__settings-infofield {margin-top: 48px;}
-	&__orders {display: none;}
 	&__technics {display: none;
 		.button {width: 100%; margin-top: 20px;}
 		select {width: 100%; height: 45px; border: 1px solid #b7cfbc; background-image: url('../img/icon_select_arrow.svg'); background-repeat: no-repeat; background-size: 11px 7px; background-position: top 50% right 10px; margin-top: 20px; padding: 0 13px;}
@@ -1406,7 +1445,7 @@
 			p.red {color: $red;}
 		}
 	}
-	&__operators-info {text-align: left;
+	&__operators-info {text-align: left; display: none;
 		.button {margin-top: 19px; width: 100%;}
 	}
 	&__operators-infofield {margin-top: 15px;
@@ -1514,9 +1553,6 @@
 		}
 	}
 }
-
-
- /* КОНЕЦ НОВОГО ###################### */
 
 // Секции, header, footer и т.д. //
 

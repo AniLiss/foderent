@@ -682,6 +682,52 @@ $twelve-col:$col*12+$col-m*11;
 	.about__formbutton {width: auto; margin-top: 29px;}
 	.about__formfield_file p.small {margin-top: 9px;}
 	
+	/*-----------ACCOUNT--------------*/
+	.account__navigation_mobile {display: none;}
+	.account .heading {padding: 37px 0 48px;}
+	.account__orders {position: relative; margin-top: -53px;}
+	.account__orders-sorting {background-color: #1c5422; flex: 1;}
+	.account__orders-sorting select {background-color: #1c5422;}
+	.account__orders-head {display: flex; position: relative;}
+	.account__orders-head-desktop {width: $nine-col; padding: 0 17px; box-sizing: border-box;}
+	.account__orders-status {margin-top: 0; padding-top: 0; background-color: transparent;}
+	.account__orders-status .container {box-shadow: 0px -5px 50px 0px rgba(35, 41, 50, 0.5);}
+	.account__orders-list li {margin-top: 0; border-bottom: 1px solid rgba(#cccccc, 0.25); padding: 0; padding-left: 18px; display: flex; align-items: center; height: 64px;}
+	.account__orders-list li p {display: inline-block; padding: 0; margin-top: 0;}
+	.account__order-date {float: none;}
+	.account__order-status {position: static; font-size: 14px; color: #333333; border: 0; text-transform: none;}
+	.account__order-showinfo {position: static; width: 22%;}
+	.account__orders .account__order-number:before {display: none;}
+	.account__order-cost:before {display: none;}
+	.account__order-date:before {display: none;}
+	.account__orders-list li:nth-child(1), .account__orders-list li:nth-child(3) {background-color: rgba(#dddddd, 0.1);}
+	.account__order-number {width: 8%;}
+	.account__order-cost {width: 12%;}
+	.account__order-date {width: 11%;}
+	.account__orders-list li:nth-child(1) .account__order-status_notpaid {display: none;}
+	.account__orders-list li:nth-child(3) .account__order-status_completed {display: none;}
+	.account__order-status_partpayment {border: 1px solid rgba(#ea6900, 0.5); background-color: rgba(#ea6900, 0.2);}
+	.account p.toptext {display: inline-block; margin: 0; width: 24.5%;}
+	.account__orderinfo .account__order-number {width: auto; font-size: 24px;}
+	.account__orderinfo .account__order-date {display: inline-block; position: absolute; right: 30px; font-weight: 300; font-size: 24px;}
+	.account__orders-list_info .searchform__field_date {display: none;}
+	.account__orderinfo {position: relative; margin-top: -38px; padding-bottom: 50px;}
+	.account__orderinfo .container {background-color: #fff;}
+	.account__orderinfo-prehead {box-sizing: border-box; padding: 0 22px; display: flex; align-items: center; height: 89px;}
+	.account__order-details {margin-top: 0; padding-top: 0; background-color: transparent;}
+	.account__orders-list_info {width: 25.7%;}
+	.account__orders-list_info li {flex-wrap: wrap; padding: 19px 19px 21px;}
+	.account__orders-list_info li p {width: 100%;}
+	.account__order-fullpayment {display: flex; align-items: center; margin-top: 24px;}
+	.account__order-partpayment {display: flex; align-items: center;}
+	.account__order-cost_total {text-align: left; width: 25.7%; font-size: 18px; padding-left: 20px; box-sizing: border-box;}
+	.account__order-cost_total span {font-size: 18px;}
+	.account__orderinfo .button {width: auto; margin-top: 0; padding: 12px 30px 14px;}
+	.account__order-documents {margin-top: -8px; margin-left: 30px;}
+	.account__order-documents > p img {left: 0;}
+	.account__order-progressbar {margin-top: 0; min-width: 260px;}
+	.account__order-partpayment .button {margin-left: 25px; min-width: 260px;}
+	
 	/*-----------SHOPPING BAGS--------------*/
 	.shoppingbag__order-forcheck {background-color: transparent; margin-top: -59px; padding-top: 0;}
 	.shoppingbag .heading {padding: 47px 0 102px;}
@@ -783,6 +829,15 @@ $twelve-col:$col*12+$col-m*11;
 	
 	/*-----------RECLAMNIE MATERIALS--------------*/
 	.reclame__bannerblock .container div:nth-of-type(-n+3) {display: none;}
+	
+	/*-----------ACCOUNT--------------*/
+	.account__navigation_desktop {display: none;}
+	.account__orders-head-desktop {display: none;}
+	.account__orders-list li:nth-child(n+4) {display: none;}
+	.account__order-docs {display: none;}
+	.account__orders-list li:nth-child(1) .account__order-status_needtopay {display: none;}
+	.account__orderinfo-status {display: none;}
+	.account__orderinfo-head {display: none;}
 	
 	/*-----------SHOPPING BAG--------------*/
 	.shoppingbag__listheading {display: none;}
