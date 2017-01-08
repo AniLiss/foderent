@@ -27,9 +27,16 @@
 			<h2>Личный кабинет</h2>
 			<ul class="account__navigation account__navigation_desktop">
 				<li class="active"><p><a href="#orders">Заказы</a></p></li>
-				<li><p><a href="#">Вся техника</a></p></li>
+				<li><p><a href="#alltechnics">Вся техника</a></p></li>
 				<li><p><a href="#messages">Обращения</a></p></li>
-				<li><p><a href="#">Личные данные</a></p></li>
+				<li><p><a href="#settings">Личные данные</a></p></li>
+				<li class="account__logout"><p><a href="#" class="fancybox"><img src="img/icon_logout.svg" alt="@@" width="18">Выход</a></p></li>
+			</ul>
+			<ul class="account__navigation account__navigation_desktop account-active" style="display:none;">
+				<li class="active"><p><a href="#technics">Техника</a></p></li>
+				<li><p><a href="#operators">Операторы</a></p></li>
+				<li><p><a href="#messages">Обращения</a></p></li>
+				<li><p><a href="#settings">Личные данные</a></p></li>
 				<li class="account__logout"><p><a href="#"><img src="img/icon_logout.svg" alt="@@" width="18">Выход</a></p></li>
 			</ul>
 		</div>
@@ -197,40 +204,151 @@
 				<a href="#" class="button button_green"><span class="button__border-top"></span>Оплатить<span class="button__border-bottom"></span></a>
 			</div>
 		</div>
+		<form class="account__order-partpaymentform">
+			<div class="container">
+				<p class="formheading">Оплата заказа</p>
+				<div class="formpart">
+					<p>Сумма оплаты</p>
+					<p class="total">210 000 руб.</p>
+				</div>
+				<div class="formpart">
+					<p>Введите сумму оплаты (предоплаты)</p>
+					<input type="text">
+					<p class="small">Не менее суммы N</p>
+				</div>
+				<div class="formpart radio">
+					<p>Выберите тип оплаты</p>
+					<div class="radiodiv">
+						<input name="paymenttype" type="radio" id="popupradio1" value="online">
+						<label for="popupradio1"><span></span></label>
+						<p>Онлайн</p>
+					</div>
+					<div class="radiodiv">
+						<input name="paymenttype" type="radio" id="popupradio2" value="count">
+						<label for="popupradio2"><span></span></label>
+						<p>Получить счет</p>
+					</div>
+				</div>
+				<p class="small formpart">*Фактом оплаты вы подтверждаете то, <br>
+				что вы ознакомились и согласны с условиями <br>
+				публичной оферты</p>
+				<button class="button button_green"><span class="button__border-top"></span>Оплатить<span class="button__border-bottom"></span></button>
+			</div>
+		</form>
+	</div>
+	
+	<!------------------------------------------------->
+	
+	<div class="account__alltechnics">
+		<div class="container account__alltechnics-prehead">
+			<div class="account__alltechnics-sorting">
+				<p>Сортировать по:</p>
+				<select name="" id="">
+					<option value="">дате</option>
+				</select>
+			</div>
+		</div>
+		<div class="account__order-details">
+			<div class="container">
+				<div class="account__alltechnics-head">
+					<p>Техника</p>
+				</div>
+				<ul class="account__alltechnics-list">
+					<li>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__alltechnics-order">Заказ #9379992</p>
+						<p class="account__alltechnics-showinfo"><a href="#orderinfo">Посмотреть заказ</a></p>
+					</li>
+					<li>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__alltechnics-order">Заказ #9379992</p>
+						<p class="account__alltechnics-showinfo"><a href="#orderinfo">Посмотреть заказ</a></p>
+					</li>
+					<li>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__alltechnics-order">Заказ #9379992</p>
+						<p class="account__alltechnics-showinfo"><a href="#orderinfo">Посмотреть заказ</a></p>
+					</li>
+					<li>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__alltechnics-order">Заказ #9379992</p>
+						<p class="account__alltechnics-showinfo"><a href="#orderinfo">Посмотреть заказ</a></p>
+					</li>
+					<li>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__alltechnics-order">Заказ #9379992</p>
+						<p class="account__alltechnics-showinfo"><a href="#orderinfo">Посмотреть заказ</a></p>
+					</li>
+					<li>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__alltechnics-order">Заказ #9379992</p>
+						<p class="account__alltechnics-showinfo"><a href="#orderinfo">Посмотреть заказ</a></p>
+					</li>
+				</ul>
+			</div>
+		</div>
 	</div>
 	
 	<!------------------------------------------------->
 	
 	<div class="account__messages">
-		<div class="container">
+		<div class="container account__messages-prehead">
 			<a href="#" class="button button_green"><span class="button__border-top"></span>Создать обращение<span class="button__border-bottom"></span></a>
 			<select name="" id="">
 				<option value="">Все 6</option>
 			</select>
+			<ul class="account__messages-categories">
+				<li class="active"><a href="#">Все<span>6</span></a></li>
+				<li><a href="#">Открыт<span>2</span></a></li>
+				<li><a href="#">Отвечен<span>1</span></a></li>
+				<li><a href="#">Закрыт<span>3</span></a></li>
+				<li><a href="#">Непрочитанные<span>3</span></a></li>
+			</ul>
 		</div>
 		<div class="account__message-listhead">
 			<div class="container">
 				<p>Тема</p>
 				<p>Состояние</p>
+				<p class="update">Обновление</p>
 			</div>
 		</div>
-		<div class="container">
+		<div class="container account-message-listbody">
 			<ul class="account__message-list">
 				<li>
 					<p class="account__message-theme"><span class="account__message-number">#568213</span><a href="#message-info">Увеличить допустимый размер загружаемых файлов...</a></p>
 					<p class="account__message-status account__message-status_red">Открыт<span class="account__message-count">1</span></p>
+					<p class="account__message-updatedate">19.09.2016 12:44</p>
 				</li>
 				<li>
 					<p class="account__message-theme"><span class="account__message-number">#568213</span><a href="#">Увеличить допустимый размер загружаемых файлов...</a></p>
-					<p class="account__message-status account__message-status_grey">Закрыт<span class="account__message-count"></span></p>
+					<p class="account__message-status account__message-status_grey">Закрыт</p>
+					<p class="account__message-updatedate">19.09.2016 12:44</p>
 				</li>
 				<li>
 					<p class="account__message-theme"><span class="account__message-number">#568213</span><a href="#">Увеличить допустимый размер загружаемых файлов...</a></p>
 					<p class="account__message-status account__message-status_red">Отвечен<span class="account__message-count">1</span></p>
+					<p class="account__message-updatedate">19.09.2016 12:44</p>
 				</li>
 				<li>
 					<p class="account__message-theme"><span class="account__message-number">#568213</span><a href="#">Увеличить допустимый размер загружаемых файлов...</a></p>
-					<p class="account__message-status account__message-status_grey">Закрыт<span class="account__message-count"></span></p>
+					<p class="account__message-status account__message-status_grey">Закрыт</p>
+					<p class="account__message-updatedate">19.09.2016 12:44</p>
+				</li>
+				<li>
+					<p class="account__message-theme"><span class="account__message-number">#568213</span><a href="#">Увеличить допустимый размер загружаемых файлов...</a></p>
+					<p class="account__message-status account__message-status_grey">Закрыт</p>
+					<p class="account__message-updatedate">19.09.2016 12:44</p>
+				</li>
+				<li>
+					<p class="account__message-theme"><span class="account__message-number">#568213</span><a href="#">Увеличить допустимый размер загружаемых файлов...</a></p>
+					<p class="account__message-status account__message-status_grey">Закрыт</p>
+					<p class="account__message-updatedate">19.09.2016 12:44</p>
 				</li>
 			</ul>
 		</div>
@@ -239,35 +357,42 @@
 	<!------------------------------------------------->
 	
 	<div class="account__message-info">
-		<div class="container">
-			<p class="toptext"><a href="#messages"><img src="img/arrow_green_left.svg" alt="@@" width="31" class="bounce">Все обращения</a></p>
-			<div class="account__message-details">
-				<p class="account__message-detailsheading">Детали:</p>
-				<p><span class="number">#568213</span>Увеличить допустимый размер загружаемых файлов</p>
-				<p><span>Статус:</span>Открыт</p>
-				<p><span>Последнее обновление:</span>25.09.2016</p>
+		<div class="container account__messages-infoparts">
+			<div class="account__messages-infopart">
+				<p class="toptext"><a href="#messages"><img src="img/arrow_green_left.svg" alt="@@" width="31" class="bounce">Все обращения</a></p>
+				<div class="account__message-details">
+					<p class="account__message-detailsheading">Детали:</p>
+					<p class="account__message-detailstheme"><span class="number">#568213</span>Увеличить допустимый размер загружаемых файлов</p>
+					<p><span>Статус:</span>Открыт</p>
+					<p><span>Последнее обновление:</span>25.09.2016</p>
+				</div>
+				<a href="#" class="account__close-dialogue"><img src="img/icon_close_dialogue.svg" alt="@@" width="20">Закрыть диалог</a>
 			</div>
-			<a href="#" class="account__close-dialogue"><img src="img/icon_close_dialogue.svg" alt="@@" width="20">Закрыть диалог</a>
-			<a href="#" class="account__add-answer"><span class="icon">+</span>Добавить ответ</a>
-			<textarea></textarea>
-			<div class="account__message-answer">
-				<div class="account__message-answerhead">
-					<p class="name">Admin</p>
-					<p>Сотрудник</p>
-					<p>25.09.2016,  12:03</p>
+			<div class="account__messages-infopart">
+				<a href="#" class="account__add-answer"><span class="icon">+</span>Добавить ответ</a>
+				<div class="account__add-answerfield">
+					<textarea></textarea>
+					<a href="" class="button button_green"><span class="button__border-top"></span>Отправить<span class="button__border-bottom"></span></a>
 				</div>
-				<div class="account__message-answerbody">
-					<p>Titan Machinery owns and operates a network of full-service agriculture and construction equipment stores in the United States and Europe. At our stores, we sell and rent new and used construction and agriculture equipment and provide superior parts and service support. We're proud to represent our manufacturing partner, the CNHi family of brands - including Case IH, Case Construction, New Holland Agriculture, and New Holland Construction.</p>
+				<div class="account__message-answer">
+					<div class="account__message-answerhead">
+						<p class="name">Admin</p>
+						<p>Сотрудник</p>
+						<p class="date">25.09.2016, 12:03</p>
+					</div>
+					<div class="account__message-answerbody">
+						<p>Titan Machinery owns and operates a network of full-service agriculture and construction equipment stores in the United States and Europe. At our stores, we sell and rent new and used construction and agriculture equipment and provide superior parts and service support. We're proud to represent our manufacturing partner, the CNHi family of brands - including Case IH, Case Construction, New Holland Agriculture, and New Holland Construction.</p>
+					</div>
 				</div>
-			</div>
-			<div class="account__message-answer">
-				<div class="account__message-answerhead">
-					<p class="name">Валентин Сорокин</p>
-					<p>Клиент</p>
-					<p>25.09.2016,  12:03</p>
-				</div>
-				<div class="account__message-answerbody">
-					<p>Titan Machinery owns and operates a network of full-service agriculture and construction equipment stores in the United States and Europe. At our stores, we sell and rent new and used construction and agriculture equipment and provide superior parts and service support. We're proud to represent our manufacturing partner, the CNHi family of brands - including Case IH, Case Construction, New Holland Agriculture, and New Holland Construction.</p>
+				<div class="account__message-answer">
+					<div class="account__message-answerhead">
+						<p class="name">Валентин Сорокин</p>
+						<p>Клиент</p>
+						<p class="date">25.09.2016, 12:03</p>
+					</div>
+					<div class="account__message-answerbody">
+						<p>Titan Machinery owns and operates a network of full-service agriculture and construction equipment stores in the United States and Europe. At our stores, we sell and rent new and used construction and agriculture equipment and provide superior parts and service support. We're proud to represent our manufacturing partner, the CNHi family of brands - including Case IH, Case Construction, New Holland Agriculture, and New Holland Construction.</p>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -281,105 +406,115 @@
 				<div class="account__settings-infoblock">
 					<p class="account__settings-infoheading">Сведения об организации:</p>
 					<div class="account__settings-infofield">
-						<p>Название компании <br>
+						<p class="fieldname">Название компании<br>
 						на русском языке</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Свидетельство о внесении <br>
-						в Единый государственный реестр <br>
+						<p class="fieldname">Свидетельство о внесении<br>
+						в Единый государственный реестр<br>
 						юр. лиц (дата, №, кем выдано)</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>ОГРН</p>
+						<p class="fieldname">ОГРН</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>ИНН</p>
+						<p class="fieldname">ИНН</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>КПП</p>
+						<p class="fieldname">КПП</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>ОКПО</p>
+						<p class="fieldname">ОКПО</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Расчетный счет -№</p>
+						<p class="fieldname">Расчетный счет -№</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Корреспондентский <br>
+						<p class="fieldname">Корреспондентский<br>
 						счет-№</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Код БИК</p>
+						<p class="fieldname">Код БИК</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Наименование и адрес <br>
+						<p class="fieldname">Наименование и адрес<br>
 						обслуживающего банка</p>
 						<input type="text">
 					</div>
-				</div>
-				<div class="account__settings-infoblock account__settings-infoblock_address">
-					<p class="account__settings-infoheading">Адресные данные:</p>
 					<div class="account__settings-infofield account__settings-infofield_file">
-						<p>Добавить файл</p>
+						<p class="fieldname">Добавить файл</p>
 						<p class="account__settings-file">Выберите файл<a href="#"></a></p>
-						<p class="small">Если необходимо, прикрепите подтверждающие <br>
+						<p class="small">Если необходимо, прикрепите подтверждающие<br>
 						документы</p>
 					</div>
+				</div>
+				<div class="account__settings-infoblock account__settings-infoblock_address" id="settings-address">
+					<p class="account__settings-infoheading">Адресные данные:</p>
 					<div class="account__settings-infofield">
-						<p>Юридический адрес</p>
+						<p class="fieldname">Юридический адрес</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Фактический адрес</p>
+						<p class="fieldname">Фактический адрес</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Телефон</p>
+						<p class="fieldname">Телефон</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Email</p>
+						<p class="fieldname">Email</p>
 						<input type="text">
 					</div>
 				</div>
-				<div class="account__settings-infoblock account__settings-infoblock_manager">
-					<p class="account__settings-infoheading">Сведения о руководителе, <br>
-					от имени которого <br>
+				<div class="account__settings-infoblock account__settings-infoblock_manager" id="settings-manager">
+					<p class="account__settings-infoheading">Сведения о руководителе,<br>
+					от имени которого<br>
 					заключается договор:</p>
 					<div class="account__settings-infofield">
-						<p>ФИО</p>
+						<p class="fieldname">ФИО</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Должность</p>
+						<p class="fieldname">Должность</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>На основании <br>
+						<p class="fieldname">На основании<br>
 						чего действует</p>
 						<input type="text">
 					</div>
 				</div>
-				<div class="checkdiv">
-					<input type="checkbox" id="settingscheck1" value="Да">
-					<label for="settingscheck1"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
-					<p>Получать уведомления по смс</p>
+				<div class="account__settings-checkdivblock">
+					<div class="checkdiv">
+						<input type="checkbox" id="jurcheck1" value="Да">
+						<label for="jurcheck1"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+						<p>Получать уведомления по смс</p>
+					</div>
+					<div class="checkdiv">
+						<input type="checkbox" id="jurcheck2" value="Да">
+						<label for="jurcheck2"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+						<p>Получать уведомления по email</p>
+					</div>
 				</div>
-				<div class="checkdiv">
-					<input type="checkbox" id="settingscheck2" value="Да">
-					<label for="settingscheck2"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
-					<p>Получать уведомления по email</p>
+				<div class="account__settings-buttonblock">
+					<button class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></button>
 				</div>
-				<button class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></button>
+				<div class="account__settings-formnav">
+					<p class="account__settings-navlink"><a href="#settings-address">Адресные данные:</a></p>
+					<p class="account__settings-navlink"><a href="#settings-manager">Сведения о руководителе,<br>
+					от имени которого<br>
+					заключается договор:</a></p>
+				</div>
 			</form>
 		</div>
 	</div>
@@ -391,15 +526,15 @@
 			<form action="" class="account__settings-form">
 				<div class="account__settings-infoblock">
 					<div class="account__settings-infofield">
-						<p>ФИО</p>
+						<p class="fieldname">ФИО</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Дата рождения</p>
+						<p class="fieldname">Дата рождения</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield account__settings-infofield_passport">
-						<p>Паспорт</p>
+						<p class="fieldname">Паспорт</p>
 						<input type="text" placeholder="Серия" name="series">
 						<input type="text" placeholder="Номер" name="number">
 						<input type="text" placeholder="Кем выдан" name="issuedby">
@@ -407,34 +542,38 @@
 						<input type="text" placeholder="Дата выдачи" name="dateofissue">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Адрес регистрации</p>
+						<p class="fieldname">Адрес регистрации</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Номер телефона</p>
+						<p class="fieldname">Номер телефона</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield">
-						<p>Email</p>
+						<p class="fieldname">Email</p>
 						<input type="text">
 					</div>
 					<div class="account__settings-infofield account__settings-infofield_file">
-						<p>Добавить файл</p>
+						<p class="fieldname">Добавить файл</p>
 						<p class="account__settings-file">Выберите файл<a href="#"></a></p>
 						<p class="small">Добавить сканкопию паспорта</p>
 					</div>
 				</div>
-				<div class="checkdiv">
-					<input type="checkbox" id="settingscheck1" value="Да">
-					<label for="settingscheck1"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
-					<p>Получать уведомления по смс</p>
+				<div class="account__settings-checkdivblock">
+					<div class="checkdiv">
+						<input type="checkbox" id="fizcheck1" value="Да">
+						<label for="fizcheck1"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+						<p>Получать уведомления по смс</p>
+					</div>
+					<div class="checkdiv">
+						<input type="checkbox" id="fizcheck2" value="Да">
+						<label for="fizcheck2"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
+						<p>Получать уведомления по email</p>
+					</div>
 				</div>
-				<div class="checkdiv">
-					<input type="checkbox" id="settingscheck2" value="Да">
-					<label for="settingscheck2"><img src="img/icon_check_2.svg" alt="@@" width="14"></label>
-					<p>Получать уведомления по email</p>
+				<div class="account__settings-buttonblock">
+					<button class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></button>
 				</div>
-				<button class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></button>
 			</form>
 		</div>
 	</div>
@@ -442,7 +581,7 @@
 	<!------------------------------------------------->
 	
 	<div class="account__technics">
-		<div class="container">
+		<div class="container account__technics-prehead">
 			<a href="#" class="button button_green"><span class="button__border-top"></span>Оплатить<span class="button__border-bottom"></span></a>
 			<div class="account__technics-searchfield">
 				<input type="text" value="VIN">
@@ -454,6 +593,9 @@
 		</div>
 		<div class="account__technics-cards">
 			<div class="container">
+				<div class="account__alltechnics-head">
+					<p>Техника</p>
+				</div>
 				<ul class="account__technics-list">
 					<li class="account__technics-card">
 						<a href="#" class="sideicon"></a>
@@ -461,10 +603,11 @@
 						KOMATSU D85ESS-2A</p>
 						<p class="account__technics-vin">VIN 2354659864</p>
 						<div class="account__technics-card-edit">
-							<p><a href="#">Редактировать</a></p>
+							<p><a href="#technics-info">Редактировать</a></p>
+							<p class="account__technics-note-reserve desktop"><a href="#">Отметить бронь</a></p>
 							<p><a href="#">+ Оператор</a></p>
 						</div>
-						<div class="account__technics-note-reserve">
+						<div class="account__technics-note-reserve mobile">
 							<p><img src="img/icon_calendar.svg" alt="@@" width="31">Отметить бронь</p>
 						</div>
 					</li>
@@ -475,9 +618,24 @@
 						<p class="account__technics-vin">VIN 2354659864</p>
 						<div class="account__technics-card-edit">
 							<p><a href="#">Редактировать</a></p>
+							<p class="account__technics-save desktop"><a href="#">Сохранить</a></p>
 							<p><a href="#"><img src="img/icon_edit.svg" alt="@@" width="15">Виталий Валерьевич</a></p>
 						</div>
-						<div class="account__technics-note-reserve">
+						<div class="account__technics-note-reserve mobile">
+							<p><img src="img/icon_calendar.svg" alt="@@" width="31">Отметить бронь</p>
+						</div>
+					</li>
+					<li class="account__technics-card">
+						<a href="#" class="sideicon"></a>
+						<p>Бульдозер гусеничный <br>
+						KOMATSU D85ESS-2A</p>
+						<p class="account__technics-vin">VIN 2354659864</p>
+						<div class="account__technics-card-edit">
+							<p><a href="#technics-info">Редактировать</a></p>
+							<p class="account__technics-note-reserve desktop"><a href="#">Отметить бронь</a></p>
+							<p><a href="#">+ Оператор</a></p>
+						</div>
+						<div class="account__technics-note-reserve mobile">
 							<p><img src="img/icon_calendar.svg" alt="@@" width="31">Отметить бронь</p>
 						</div>
 					</li>
@@ -496,54 +654,54 @@
 	
 	<div class="account__technics-info">
 		<div class="container">
-			<p class="toptext"><a href="#"><img src="img/arrow_green_left.svg" alt="@@" width="31" class="bounce">Вся техника</a></p>
+			<p class="toptext"><a href="#technics"><img src="img/arrow_green_left.svg" alt="@@" width="31" class="bounce">Вся техника</a></p>
 			<div class="account__technics-infofield">
-				<p>Тип техники</p>
+				<p class="fieldname">Тип техники</p>
 				<select name="" id="">
 					<option value=""></option>
 				</select>
 			</div>
 			<div class="account__technics-infofield">
-				<p>Категория допуска</p>
+				<p class="fieldname">Категория допуска</p>
 				<input type="text">
 			</div>
 			<div class="account__technics-infofield">
-				<p>Марка</p>
+				<p class="fieldname">Марка</p>
 				<input type="text">
 			</div>
 			<div class="account__technics-infofield">
-				<p>Модель</p>
+				<p class="fieldname">Модель</p>
 				<input type="text">
 			</div>
 			<div class="account__technics-infofield">
-				<p>VIN</p>
+				<p class="fieldname">VIN</p>
 				<input type="text">
 			</div>
 			<div class="account__technics-infofield">
-				<p>Год выпуска</p>
+				<p class="fieldname">Год выпуска</p>
 				<input type="text">
 			</div>
 			<div class="account__technics-infofield">
-				<p>Эксплуатационная масса (кг)</p>
+				<p class="fieldname">Эксплуатационная масса (кг)</p>
 				<input type="text">
 			</div>
 			<div class="account__technics-infofield">
-				<p>Мощьность двигателя (л. с.)</p>
+				<p class="fieldname">Мощьность двигателя (л. с.)</p>
 				<input type="text">
 			</div>
 			<div class="account__technics-infofield">
-				<p>Тип отвала</p>
+				<p class="fieldname">Тип отвала</p>
 				<input type="text">
 			</div>
 			<div class="account__technics-infofield account__technics-infofield_mod">
-				<p>Модификации</p>
+				<p class="fieldname">Модификации</p>
 				<select>
 					<option value=""></option>
 				</select>
 				<a href="#" class="plusicon">+</a>
 			</div>
 			<div class="account__technics-infofield account__technics-infofield_file">
-				<p>Добавить фото</p>
+				<p class="fieldname">Добавить фото</p>
 				<p class="account__technics-file">Выберите файл<a href="#"></a></p>
 				<p class="small">Необходимо загрузка фотографий техники с 4-х сторон, кабины изнутри и счетчика моточасов. Разрешение изображений должно быть не менее 1200х900 px</p>
 			</div>
@@ -565,13 +723,13 @@
 					<img src="img/account_technics_1.jpg" alt="@@">
 				</div>
 			</div>
-			<div class="account__technics-infofield account__technics-infofield_file">
-				<p>Добавить файл</p>
+			<div class="account__technics-infofield account__technics-infofield_file bottom">
+				<p class="fieldname">Добавить файл</p>
 				<p class="account__technics-file">Выберите файл<a href="#"></a></p>
 				<p class="small">Прикрепите скан паспорта самоходной машины и свидетельства о регистрации в технадзоре</p>
 			</div>
-			<div class="account__technics-infofield">
-				<p>Описание</p>
+			<div class="account__technics-infofield account__technics-infofield_description">
+				<p class="fieldname">Описание</p>
 				<textarea></textarea>
 			</div>
 		</div>
@@ -589,7 +747,7 @@
 	<!------------------------------------------------->
 	
 	<div class="account__operators">
-		<div class="container">
+		<div class="container account__operators-prehead">
 			<a href="#" class="button button_green"><span class="button__border-top"></span>Добавить оператора<span class="button__border-bottom"></span></a>
 			<div class="account__operators-sorting">
 				<p>Сортировать по:</p>
@@ -600,7 +758,7 @@
 		</div>
 		<div class="account__operators-cards">
 			<div class="container">
-				<ul>
+				<ul class="account__operators-list">
 					<li class="account__operators-card">
 						<div class="image">
 							<img src="img/operator_1.jpg" alt="@@">
@@ -613,7 +771,7 @@
 							<p>Водительские права, кат. D</p>
 						</div>
 						<div class="actions">
-							<p class="green"><a href="#">Редактировать</a></p>
+							<p class="green"><a href="#operators-info">Редактировать</a></p>
 							<p class="red"><a href="#">Уволить</a></p>
 						</div>
 					</li>
@@ -649,8 +807,87 @@
 							<p class="red"><a href="#">Уволить</a></p>
 						</div>
 					</li>
+					<li class="account__operators-card">
+						<div class="image">
+							<img src="img/operator_1.jpg" alt="@@">
+							<p class="status status_free">Свободен</p>
+						</div>
+						<div class="info">
+							<p class="name">Ковалев Валерий Константинович</p>
+							<p>36 лет</p>
+							<p>тел. 8 (876) 342 56 73</p>
+							<p>Водительские права, кат. D</p>
+						</div>
+						<div class="actions">
+							<p class="green"><a href="#">Редактировать</a></p>
+							<p class="red"><a href="#">Уволить</a></p>
+						</div>
+					</li>
+					<li class="account__operators-card">
+						<div class="image">
+							<img src="img/operator_1.jpg" alt="@@">
+							<p class="status status_free">Свободен</p>
+						</div>
+						<div class="info">
+							<p class="name">Ковалев Валерий Константинович</p>
+							<p>36 лет</p>
+							<p>тел. 8 (876) 342 56 73</p>
+							<p>Водительские права, кат. D</p>
+						</div>
+						<div class="actions">
+							<p class="green"><a href="#">Редактировать</a></p>
+							<p class="red"><a href="#">Уволить</a></p>
+						</div>
+					</li>
+					<li class="account__operators-card">
+						<div class="image">
+							<img src="img/operator_1.jpg" alt="@@">
+							<p class="status status_free">Свободен</p>
+						</div>
+						<div class="info">
+							<p class="name">Ковалев Валерий Константинович</p>
+							<p>36 лет</p>
+							<p>тел. 8 (876) 342 56 73</p>
+							<p>Водительские права, кат. D</p>
+						</div>
+						<div class="actions">
+							<p class="green"><a href="#">Редактировать</a></p>
+							<p class="red"><a href="#">Уволить</a></p>
+						</div>
+					</li>
+					<li class="account__operators-card">
+						<div class="image">
+							<img src="img/operator_1.jpg" alt="@@">
+							<p class="status status_free">Свободен</p>
+						</div>
+						<div class="info">
+							<p class="name">Ковалев Валерий Константинович</p>
+							<p>36 лет</p>
+							<p>тел. 8 (876) 342 56 73</p>
+							<p>Водительские права, кат. D</p>
+						</div>
+						<div class="actions">
+							<p class="green"><a href="#">Редактировать</a></p>
+							<p class="red"><a href="#">Уволить</a></p>
+						</div>
+					</li>
+					<li class="account__operators-card disabled">
+						<div class="image">
+							<img src="img/operator_1.jpg" alt="@@">
+						</div>
+						<div class="info">
+							<p class="name">Ковалев Валерий Константинович</p>
+							<p>36 лет</p>
+							<p>тел. 8 (876) 342 56 73</p>
+							<p>Водительские права, кат. D</p>
+						</div>
+						<div class="actions">
+							<p class="green"><a href="#">Редактировать</a></p>
+							<p class="red"><a href="#">Принять на работу</a></p>
+						</div>
+					</li>
 				</ul>
-				<a href="#" class="button"><span class="button__border-top"></span>Показать еще<span class="button__border-bottom"></span></a>
+				<a href="#" class="button button_green"><span class="button__border-top"></span>Показать еще<span class="button__border-bottom"></span></a>
 			</div>
 		</div>
 	</div>
@@ -659,35 +896,36 @@
 	
 	<div class="account__operators-info">
 		<div class="container">
-			<p class="toptext"><a href="#"><img src="img/arrow_green_left.svg" alt="@@" width="31" class="bounce">Все операторы</a></p>
+			<p class="toptext"><a href="#operators"><img src="img/arrow_green_left.svg" alt="@@" width="31" class="bounce">Все операторы</a></p>
 			<div class="account__operators-infofield">
-				<p>ФИО</p>
+				<p class="fieldname">ФИО</p>
 				<input type="text">
 			</div>
 			<div class="account__operators-infofield">
-				<p>Номер телефона</p>
+				<p class="fieldname">Номер телефона</p>
 				<input type="text">
 			</div>
 			<div class="account__operators-infofield">
-				<p>Возраст</p>
+				<p class="fieldname">Возраст</p>
 				<input type="text">
 			</div>
 			<div class="account__operators-infofield">
-				<p>Документ, подтверждающий <br>
+				<p class="fieldname">Документ, подтверждающий <br>
 				право управления</p>
 				<input type="text">
 			</div>
 			<div class="account__operators-infofield account__operators-infofield_file">
-				<p>Добавить файл</p>
+				<p class="fieldname">Добавить файл</p>
 				<p class="account__operators-file">Выберите файл<a href="#"></a></p>
+				<p class="small">Документы, подтверждающие право управления техникой</p>
 			</div>
 			<div class="account__operators-infofield account__operators-infofield_cat">
-				<p>Категория</p>
+				<p class="fieldname">Категория</p>
 				<input type="text">
 				<a href="#" class="plusicon">+</a>
 			</div>
 			<div class="account__operators-infofield account__operators-infofield_file">
-				<p>Добавить фото</p>
+				<p class="fieldname">Добавить фото</p>
 				<p class="account__operators-file">Выберите файл<a href="#"></a></p>
 				<p class="small">Размер файла не должен превышать 500 Kb</p>
 			</div>
@@ -697,7 +935,9 @@
 					<img src="img/operator_1.jpg" alt="@@">
 				</div>
 			</div>
-			<a href="#" class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></a>
+			<div class="account__operators-buttonblock">
+				<a href="#" class="button button_green"><span class="button__border-top"></span>Сохранить изменения<span class="button__border-bottom"></span></a>
+			</div>
 		</div>
 	</div>
 	

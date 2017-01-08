@@ -21,6 +21,12 @@
 	<a href="" class="button button_green"><span class="button__border-top"></span>Подобрать технику<span class="button__border-bottom"></span></a>
 </div>
 
+<!-- Окно "закрывающие документы" !-->
+<div class="popup closedocs" id="closedocs">
+	<p class="huge">Закрывающие документы</p>
+	<a href="" class="button button_green"><span class="button__border-top"></span>Запросить<span class="button__border-bottom"></span></a>
+</div>
+
 <!-- Окно "спасибо за заявку" !-->
 <div class="popup" id="success">
 	<p class="huge">Спасибо!</p>
@@ -35,6 +41,41 @@
 	<p>У вас хотят забронировать технику Бульдозер <span>KOMATSU D65-E12</span> <br> с <span>12.09.2016</span> по <span>24.09.2016</span></p>
 	<a href="" class="button button_green"><span class="button__border-top"></span>Подтвердить<span class="button__border-bottom"></span></a>
 	<a href="" class="button button_grey"><span class="button__border-top"></span>Отказать<span class="button__border-bottom"></span></a>
+</div>
+
+<!-- Окно "получить счет" !-->
+<div class="popup getbill" id="get-bill">
+	<p class="huge">Получить счет</p>
+	<div class="formfield">
+		<p>Введите email</p>
+		<input type="text">
+	</div>
+	<a href="#" class="button button_green button_noborder"><img src="img/icon_download.svg" alt="@@" width="29">Скачать</a>
+	<a href="#" class="button button_green button_noborder"><img src="img/icon_print.svg" alt="@@" width="28">Распечатать</a>
+	<div class="buttonblock">
+		<a href="#" class="button button_green"><span class="button__border-top"></span>Готово<span class="button__border-bottom"></span></a>
+	</div>
+</div>
+
+<!-- Окно "удалить технику" !-->
+<div class="popup deletetechnics" id="delete-technics">
+	<p class="huge">Удалить технику</p>
+	<div class="formfield">
+		<p>Выберите действие</p>
+		<div class="radiodiv">
+			<input name="action" type="radio" id="delradio1" value="delete">
+			<label for="delradio1"><span></span></label>
+			<p>Удалить</p>
+		</div>
+		<div class="radiodiv">
+			<input name="action" type="radio" id="delradio2" value="toarchive">
+			<label for="delradio2"><span></span></label>
+			<p>В архив</p>
+		</div>
+	</div>
+	<p class="small">В случае удаления, технику нельзя будет восстановить<br>
+	и ее придется добавлять вручную</p>
+	<a href="#" class="button button_green"><span class="button__border-top"></span>Готово<span class="button__border-bottom"></span></a>
 </div>
 
 <!-- Окно "порверить наличие" !-->
@@ -163,6 +204,35 @@
 		</form>
 	</div>
 </div>
+
+<!-- Окно "создать обращение" !-->
+<form class="popup createmessage" id="createmessage">
+	<div class="container">
+		<p class="huge">Создать обращение</p>
+		<div class="formfield">
+			<p>Имя</p>
+			<input type="text">
+		</div>
+		<div class="formfield">
+			<p>Email</p>
+			<input type="text">
+		</div>
+		<div class="formfield">
+			<p>Тема</p>
+			<input type="text">
+		</div>
+		<div class="formfield">
+			<p>Сообщение</p>
+			<textarea></textarea>
+		</div>
+		<div class="formfield formfield_file">
+			<p>Прикрепить файл</p>
+			<p class="file">Выберите файл<a href="#"></a></p>
+			<p class="small">Разрешенные расширения: .jpg, .png, .jpeg, .gif</p>
+		</div>
+		<button class="button button_green"><span class="button__border-top"></span>Отправить<span class="button__border-bottom"></span></button>
+	</div>
+</form>
 
 <!-- Авторизация -->
 <div class="authorization">

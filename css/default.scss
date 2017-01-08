@@ -1180,7 +1180,7 @@
 		li:nth-child(3) svg {width: 30px;}
 	}
 	&__navigation_desktop {position: relative; margin-top: 34px;
-		li {display: inline-block; opacity: 0.3; margin-left: 87px; transition: all 0.25s ease-in-out;
+		li {display: inline-block; opacity: 0.3; margin-left: 87px; border-bottom: 2px solid transparent; transition: all 0.25s ease-in-out;
 			&:first-child, &:last-child {margin-left: 0;}
 			&:hover {opacity: 1;}
 			&.active {border-bottom: 2px solid #fff; opacity: 1;}
@@ -1232,6 +1232,30 @@
 	&__order-partpayment {margin-top: 17px;
 		.button {margin-top: 25px;}
 	}
+	&__order-partpaymentform {padding: 15px 0 35px; background-color: $darkgreen; margin-top: 49px;
+		.container {width: 750px; background-color: transparent !important; display: flex; justify-content: space-between; flex-wrap: wrap;}
+		p {margin-top: 0;}
+		p.small {font-size: 12px !important; color: #999999 !important; margin-top: 44px; line-height: 1.4em;}
+		.formheading {font-size: 36px; color: #fff; font-weight: 600; margin-top: 0; text-align: center; width: 100%;}
+		.formpart {text-align: left; margin-top: 47px; width: 48%; display: inline-block;
+			&.radio {margin-top: 40px;}
+			p {font-size: 18px; font-weight: 500; color: #fff;}
+			p.total {font-size: 44px; font-weight: 600; line-height: 1.25em;}
+			p.small {margin-top: 4px; line-height: 1.7em;}
+			input[type="text"] {background-color: rgba(#fff, 0.15); border: 1px solid #b7cfbc; width: 100%; margin-top: 14px; height: 45px;}
+			.radiodiv {display: inline-block; min-width: 45%; margin-top: 15px;
+				&:last-child {float: right;}
+				p {font-weight: 400; display: inline-block; vertical-align: middle; margin-left: 6px; font-size: 16px;}
+				label {width: 20px; height: 20px; border: 1px solid #b7cfbc; border-radius: 1000px; display: inline-block; vertical-align: middle; position: relative; cursor: pointer; transition: all 0.25s ease-in-out;
+					span {width: 12px; height: 12px; border-radius: 1000px; background-color: $green; display: inline-block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;}
+				}
+				input:checked + label {border-color: $green;
+					span {opacity: 1;}
+				}
+			}
+		}
+		.button {margin-top: 30px; padding: 12px 40px 14px;}
+	}
 	&__order-cost_total {text-align: center; font-size: 20px; color: #666666; line-height: 1em;
 		span {color: #000; font-size: 20px; font-weight: 700; text-align: center; line-height: 1.7em;}
 	}
@@ -1256,25 +1280,43 @@
 			&.percents {font-size: 20px; font-weight: 300;}
 		}
 	}
+	&__alltechnics {display: none;}
 	&__messages {padding-top: 15px; display: none;
 		.button {width: 100%;}
 		select {border: 1px solid #d1d1d1; height: 45px; width: 100%; font-size: 16px; color: $green; background-image: url('../img/icon_select_arrow.svg'); background-repeat: no-repeat; background-size: 11px 7px; background-position: top 50% right 12px; margin-top: 19px; padding: 0 15px;}
 	}
+	&__messages-categories {display: inline-block; margin-left: 46px;
+		li {display: inline-block; margin-left: 23px; transition: all 0.25s ease-in-out; padding: 12px 14px; border: 1px solid transparent;
+			&:first-child {margin-left: 0;}
+			&.active {border: 1px solid #d1d1d1;
+				a {color: $darkgreen;}
+			}
+			&:hover {background-color: $darkgreen;
+				a {color: #fff;}
+			}
+			a {font-size: 16px; color: $green; transition: all 0.25s ease-in-out;}
+			span {color: #999999; margin-left: 10px;}
+		}
+	}
 	&__message-listhead {background-color: $darkgreen; color: #fff; text-align: justify; margin-top: 19px; padding: 2px 0;
 		p:first-child {display: inline-block; width: $eight-col;}
-		p:last-child {display: inline-block; width: $four-col; float: right;}
+		p:nth-child(2) {display: inline-block; width: $four-col; float: right;}
+		p:last-child {display: inline-block;}
 	}
 	&__message-list {
 		p {font-size: 12px;}
 		li {text-align: justify; border-bottom: 1px solid #f2f2f2; padding: 16px 0;}
 	}
 	&__message-theme {display: inline-block; color: $green; width: 65%;
-		a {text-decoration: underline;}
+		a {text-decoration: underline; transition: all 0.25s ease-in-out;
+			&:hover {color: $darkgreen; text-decoration: none;}
+		}
 	}
 	&__message-number {color: #000; text-decoration: none; margin-right: 8px;}
 	&__message-status {display: inline-block; width: $four-col; float: right;}
 	&__message-status_red {color: $red;}
 	&__message-status_grey {color: #999999;}
+	&__message-updatedate {display: inline-block; width: 10.3%;}
 	&__message-count {float: right; color: #fff; background-color: $red; padding: 0 6px;}
 	&__message-info {text-align: left; display: none;
 		p.toptext {margin-bottom: 0;}
@@ -1289,9 +1331,15 @@
 	&__close-dialogue {display: block; font-size: 16px; color: $green; text-transform: uppercase; margin-top: 9px;
 		img {vertical-align: middle; margin-right: 10px;}
 	}
-	&__add-answer {display: block; border: 1px solid $green; position: relative; height: 45px; font-size: 16px; line-height: 42px; color: $green; text-transform: uppercase; font-weight: 300; margin-top: 23px; padding-left: 60px;
-		span {position: absolute; left: 0; top: 0; width: 45px; height: 100%; background-color: $green; color: #fff; font-size: 24px; text-align: center; font-weight: 400;}
-		& + textarea {resize: none; border: 1px solid #b7cfbc; height: 146px; width: 100%; padding: 5px; margin-top: 18px; display: none;}
+	&__add-answer {display: block; border: 1px solid $green; position: relative; height: 45px; font-size: 16px; line-height: 42px; color: $green; text-transform: uppercase; font-weight: 300; margin-top: 23px; padding-left: 60px; transition: all 0.25s ease-in-out;
+		span {position: absolute; left: 0; top: 0; width: 45px; height: 100%; background-color: $green; color: #fff; font-size: 24px; text-align: center; font-weight: 400; transition: all 0.25s ease-in-out;}
+		&:hover {color: $darkgreen; border-color: $darkgreen;
+			span {background-color: $darkgreen;}
+		}
+	}
+	&__add-answerfield {margin-top: 18px; display: none; text-align: right;
+		textarea {resize: none; border: 1px solid #b7cfbc; height: 146px; width: 100%; padding: 5px;}
+		.button {margin-top: 22px; padding: 12px 83px 14px;}
 	}
 	&__message-answer {border: 1px solid rgba(#2a2c28, 0.2); margin-top: 17px;}
 	&__message-answerhead {background-color: #2a2c28; padding: 2px 22px 11px;
@@ -1303,7 +1351,7 @@
 		p {line-height: 1.6em;}
 	}
 	&__settings {text-align: left; display: none;
-		&_jur {display: none; padding-top: 7px;}
+		&_jur {display: none !important; padding-top: 7px;}
 		&_fiz {padding-top: 10px;}
 	}
 	&__settings-infoblock {margin-top: 44px;
@@ -1334,8 +1382,9 @@
 			input:nth-of-type(2) {width: 68%; margin-top: 9px;}
 		}
 	}
-	&__settings-form {
+	&__settings-form {position: relative;
 		.checkdiv {position: relative; margin-top: 19px;
+			&:first-child {margin-top: 0;}
 			input[type="checkbox"]:not(old) {left:0; top:0;
 				& + label {width: 18px; height: 18px; border: 1px solid #b7cfbc; display: inline-block; vertical-align: middle; transition: all 0.25s ease-in-out; position: relative;}
 				&:checked + label {border-color: $green;
@@ -1345,8 +1394,16 @@
 			p {display: inline-block; vertical-align: middle; margin-left: 10px;}
 			img {opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto;}
 		}
-		.button {margin-top: 18px; width: 100%;}
+		.button {width: 100%;}
 	}
+	&__settings-formnav {position: absolute; right: 0; top: 131px; text-align: right; width: 262px;}
+	&__settings-navlink {font-size: 16px; color: #2a2c28; font-weight: 600; border-bottom: 1px solid rgba(#2a2c28, 0.21); line-height: 1.3em; padding-bottom: 11px; margin-top: 24px;
+		&:first-child {margin-top: 0;}
+		a {opacity: 0.3;}
+		a:hover {color: $darkgreen; opacity: 1;}
+	}
+	&__settings-checkdivblock {margin-top: 19px;}
+	&__settings-buttonblock {margin-top: 18px;}
 	&__settings-file {border: 1px dashed #b7cfbc; line-height: 43px !important; position: relative; margin-top: 9px; padding: 0 18px;
 		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
 			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
@@ -1428,6 +1485,9 @@
 	}
 	&__operators-card {background-color: #fff; display: flex; flex-wrap: wrap; margin-top: 14px;
 		&:first-child {margin-top: 0;}
+		&.disabled {
+			.image, .info {opacity: 0.46;}
+		}
 		.image {width: 44.5%; position: relative;
 			.status {position: absolute; left: 0; bottom: 0; right: 0; color: #fff; padding-bottom: 3px; width: 100%;
 				&_free {background-color: rgba($darkgreen, 0.8);}
@@ -1446,8 +1506,9 @@
 		}
 	}
 	&__operators-info {text-align: left; display: none;
-		.button {margin-top: 19px; width: 100%;}
+		.button {width: 100%;}
 	}
+	&__operators-buttonblock {margin-top: 19px;}
 	&__operators-infofield {margin-top: 15px;
 		&:first-of-type {margin-top: 19px;}
 		p {line-height: 1.3em;}
@@ -1702,6 +1763,47 @@
 		.formfield {margin-top: 37px;}
 		.button {margin-top: 40px; padding: 12px 35px 14px;}
 	}
+}
+
+.getbill {
+	p {margin-top: 0;}
+	.formfield {text-align: left; width: 360px; margin: auto; margin-top: 48px;
+		p {font-weight: 500;}
+	}
+	input {height: 45px; border: 1px solid #b7cfbc; width: 100%; padding: 0 10px; margin-top: 18px;}
+	.button_noborder {display: inline-block; border: 0;
+		img {vertical-align: middle; margin-right: 10px;}
+	}
+}
+
+.deletetechnics {
+	.formfield {text-align: left; width: 360px; margin: auto;}
+	.radiodiv {display: inline-block; min-width: 45%; margin-top: 15px;
+		&:last-child {float: right;}
+		p {font-weight: 400; display: inline-block; vertical-align: middle; margin-left: 6px; font-size: 16px; color: #000; margin-top: 0;}
+		label {width: 20px; height: 20px; border: 1px solid #b7cfbc; border-radius: 1000px; display: inline-block; vertical-align: middle; position: relative; cursor: pointer; transition: all 0.25s ease-in-out;
+			span {width: 12px; height: 12px; border-radius: 1000px; background-color: $green; display: inline-block; position: absolute; left: 0; right: 0; top: 0; bottom: 0; margin: auto; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;}
+		}
+		input:checked + label {border-color: $green;
+			span {opacity: 1;}
+		}
+	}
+	p.small {font-size: 12px; color: #999999;}
+}
+
+.createmessage {
+	.container {width: 360px;}
+	p.huge {text-align: center;}
+	p {margin-top: 0; text-align: left;}
+	.formfield {text-align: left; margin-top: 35px;}
+	input {height: 45px; border: 1px solid #b7cfbc; width: 100%; padding: 0 10px;}
+	textarea {height: 105px; border: 1px solid #b7cfbc; width: 100%; padding: 0 10px; resize: none;}
+	.file {text-align: left; border: 1px dashed #b7cfbc; line-height: 43px !important; position: relative; margin-top: 9px; padding: 0 18px;
+		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
+			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
+		}
+	}
+	p.small {font-size: 12px; color: #999999;}
 }
 
 .authorization {position: absolute; left: 0; top: 42px; width: 100%; background-color: $darkgreen; text-align: center; z-index: 10; color: #fff; padding: 25px 0 97px; opacity: 0; pointer-events: none; transition: all 0.25s ease-in-out;
