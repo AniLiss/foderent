@@ -29,7 +29,8 @@
 			<span>аренды спецтехники</span></h1>
 			<form class="searchform">
 				<div class="searchform__field">
-					<select name="type" id="technictype">
+					<select name="type" class="technictype">
+						<option value="">Тип техники</option>
 						<option value="">Тип техники</option>
 					</select>
 				</div>
@@ -37,7 +38,8 @@
 					<p class="huge">24.10</p>
 					<img src="img/icon_arrow_right.png" alt="@@">
 					<p class="huge">02.11</p>
-					<a href="#"><img src="img/icon_calendar.svg" alt="@@"></a>
+					<a href="#" class="calendar"><img src="img/icon_calendar.svg" alt="@@"></a>
+					<div class="datepicker"></div>
 				</div>
 				<div class="searchform__field">
 					<input type="text" name="workplace" placeholder="Место работ">

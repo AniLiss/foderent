@@ -218,9 +218,10 @@ $twelve-col:$col*12+$col-m*11;
 	.firstscreen .searchform > * {display: inline-flex; align-items: center; border: 0; background-color: transparent; margin-top: 0; height: 100%; vertical-align: top;}
 	.firstscreen .searchform__field p {font-size: 20px; font-weight: 300;}
 	.firstscreen .searchform__field_date > img {margin-right: -1px;}
-	.firstscreen .searchform__field_date a {right: 25px;}
-	.firstscreen .searchform__field {padding: 0 22px;}
+	.firstscreen .searchform__field_date > a {right: 25px;}
 	.firstscreen .searchform__field_date {padding: 0 22px;}
+	.ui-selectmenu-text, .ui-menu .ui-menu-item-wrapper {padding: 0 22px !important; font-size: 20px !important;}
+	.firstscreen .searchform select, .firstscreen .searchform input {padding: 0 22px;}
 	.firstscreen .searchform__field:first-child {width: 240px;}
 	.firstscreen .searchform__field:nth-child(2) {width: 242px;}
 	.firstscreen .searchform__field:nth-child(3) {width: 240px;}
