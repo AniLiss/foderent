@@ -57,30 +57,37 @@
 	<!-------------------------------------------------->
 	
 	<!-- Desktop -->
-	<section class="technics" style="display:none;">
+	<section class="technics">
 		<div>
 			<img src="img/nut2.png" alt="@@" class="light">
 			<p>Выберите тип техники <img src="img/arrow_right_medium.png" alt="@@"></p>
 		</div>
-		<div>
+		<div class="technics__category">
+			<img src="img/technics_1.jpg" alt="@@">
 			<p>Землеройная</p>
 		</div>
-		<div>
+		<div class="technics__category">
+			<img src="img/technics_2.jpg" alt="@@">
 			<p>Погрузочная</p>
 		</div>
-		<div>
+		<div class="technics__category">
+			<img src="img/technics_3.jpg" alt="@@">
 			<p>Дорожная</p>
 		</div>
-		<div>
+		<div class="technics__category">
+			<img src="img/technics_4.jpg" alt="@@">
 			<p>Карьерная</p>
 		</div>
-		<div>
+		<div class="technics__category">
+			<img src="img/technics_5.jpg" alt="@@">
 			<p>Мини техника</p>
 		</div>
-		<div>
+		<div class="technics__category">
+			<img src="img/technics_6.jpg" alt="@@">
 			<p>Коммунальная</p>
 		</div>
-		<div>
+		<div class="technics__category">
+			<img src="img/technics_7.jpg" alt="@@">
 			<p>Подъемная</p>
 		</div>
 		<div>
@@ -144,16 +151,18 @@
 		<div class="container">
 			<h2>Новости</h2>
 			<div class="newsblocks">
-				<div>
+				<a href="newspage.php" class="news-linkblock">
 					<div class="bg"></div>
+					<img src="img/news_1.jpg" alt="@@">
 					<p class="small">16/09/16</p>
 					<p>Специалисты <br>проводят работы <br>по объекту</p>
-				</div>
-				<div>
+				</a>
+				<a href="newspage.php" class="news-linkblock">
 					<div class="bg"></div>
+					<img src="img/news_2.jpg" alt="@@">
 					<p class="small">03/09/16</p>
 					<p>Специалисты <br>проводят работы <br>по объекту</p>
-				</div>
+				</a>
 			</div>
 			<p class="news__link"><a href="#">Все новости <img src="img/icon_arrow_right_2.svg" alt="@@" width="31" class="bounce"></a></p>
 		</div>
