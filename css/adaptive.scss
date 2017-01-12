@@ -311,6 +311,19 @@ $twelve-col:$col*12+$col-m*11;
 	.burgermenu .button {margin-top: 0; width: 262px; float: right;}
 	.burgermenu .lists, .burgermenu.rent {display: none;}
 	
+	.bottom-contact-form {padding-top: 37px; padding-bottom: 37px;}
+	.bottom-contact-form .container {width: 750px;}
+	.bottom-contact-form__heading {font-size: 36px !important;}
+	.bottom-contact-form__fields {margin-top: 27px;}
+	.bottom-contact-form__field {width: 48%; margin-top: 9px;}
+	.bottom-contact-form__field p {font-size: 16px;}
+	.bottom-contact-form__field_message {position: absolute; right: 0; top: 0; margin: 0;}
+	.bottom-contact-form__field textarea {height: 309px;}
+	.bottom-contact-form__button {width: auto; margin-top: 29px;}
+	.bottom-contact-form__field_file p.small {margin-top: 9px;}
+	
+	.small-page-heading {padding: 45px 0;}
+	
 	/*-----------NEWS--------------*/
 	.pagenews .top {padding-left: 4px;}
 	.pagenews .newsblocks div:hover .bg:before {left: -206px;}
@@ -463,14 +476,12 @@ $twelve-col:$col*12+$col-m*11;
 	
 	/*-----------CONTACTS--------------*/
 	.contacts .heading {padding: 47px 0 43px;}
-	.contacts__heading + p {font-size: 16px; line-height: 1.4em;}
-	.contacts__heading + p:nth-child(6) {margin-top: 3px;}
-	.contacts__heading + p:nth-child(8) {margin-top: 2px;}
-	.contacts__heading + p:nth-child(10) {margin-top: 6px;}
+	.contacts__text {font-size: 16px; line-height: 1.4em;}
 	.contacts__info {line-height: 1.4em; letter-spacing: 0.08em;}
 	.contacts__mainblock {margin-top: 35px; padding-bottom: 52px;}
-	.contacts__mainblock p {padding-right: $eight-col;}
-	.contacts__map {position: absolute; right: 30px; top: 10px; width: 682px; margin: 0; height: 513px;}
+	.contacts__textblock {padding-right: $eight-col;}
+	.contacts .container__contacts-map {position: absolute; top: 0; left: 0; right: 0; margin: auto; width: 990px;}
+	.contacts__map {position: absolute; right: 0px; top: 10px; width: 682px; margin: 0; height: 513px;}
 	.contacts__formheading {font-size: 36px;}
 	.contacts__formblock .container {width: 62.3%;}
 	.contacts__formfield {width: 48%; margin-top: 8px;}
@@ -639,7 +650,6 @@ $twelve-col:$col*12+$col-m*11;
 	.about__differenceslist {display: flex; justify-content: flex-start; align-content: space-between; flex-wrap: wrap; flex-direction: column; height: 280px; margin-top: 62px;}
 	.about__differenceslist li {width: $six-col; padding-left: 49px; margin-top: 24px;}
 	.about__differenceslist li:nth-child(4) {margin-top: 0;}
-	.about .heading {padding: 46px 0 43px;}
 	.about__differences {padding-top: 42px;}
 	.about__differenceslist li p {font-size: 16px; line-height: 1.5em;}
 	.about__targets {margin-top: 7px; padding-bottom: 33px;}
@@ -668,16 +678,6 @@ $twelve-col:$col*12+$col-m*11;
 	.about__contacts .about__blockheading {width: 100%;}
 	.about__contacts .container div {margin-top: 41px !important; width: 17%;}
 	.about__map {height: 330px;}
-	.about__formheading {font-size: 36px !important;}
-	.about__form {padding-top: 37px; padding-bottom: 37px;}
-	.about__formblock .container {width: 750px;}
-	.about__formfield p {font-size: 16px;}
-	.about__formfield {width: 48%; margin-top: 9px;}
-	.about__formfield_message {position: absolute; right: 0; top: 0; margin: 0;}
-	.about__formfield textarea {height: 309px;}
-	.about__formfields {margin-top: 27px;}
-	.about__formbutton {width: auto; margin-top: 29px;}
-	.about__formfield_file p.small {margin-top: 9px;}
 	
 	/*-----------ACCOUNT--------------*/
 	.account__navigation_mobile {display: none;}
@@ -1016,6 +1016,9 @@ $twelve-col:$col*12+$col-m*11;
 	.banners__block:last-child img {height: auto;}
 	.footer__bottom-part .container {width: 1140px;}
 	
+	/*-----------CONTACTS--------------*/
+	.contacts .container__contacts-map {width: 1140px;}
+	
 	/*-----------NEWS--------------*/
 	.pagenews .newsblocks div:hover .bg:before {left: -306px;}
 	
@@ -1070,6 +1073,9 @@ $twelve-col:$col*12+$col-m*11;
 	.banners__block:last-child img {height: 103px;}
 	.footer__bottom-part .container {width: 1410px;}
 	.footer__top-part img {padding-right: 116px;}
+	
+	/*-----------CONTACTS--------------*/
+	.contacts .container__contacts-map {width: 1410px;}
 	
 	/*-----------NEWS--------------*/
 	.pagenews .newsblocks div:hover .bg:before {left: -446px;}
@@ -1180,6 +1186,8 @@ $twelve-col:$col*12+$col-m*11;
     
 	.burgermenu {padding: 20px 0 236px;}
 	
+	.small-page-heading {padding: 40px 0;}
+	
 	/*-----------NEWS--------------*/
 	.pagenews .newsblocks div .bg:before {left: -286px;}
 	.pagenews .newsblocks div:hover .bg:before {left: -496px; height: 300%;}
@@ -1254,6 +1262,7 @@ $twelve-col:$col*12+$col-m*11;
 	.contacts__formblock .container {width: 39%;}
 	.contacts__formbutton {margin-top: 36px;}
 	.contacts__form {padding-bottom: 40px;}
+	.contacts .container__contacts-map {width: 100%; height: 100%;}
 	
 	/*-----------PISMA--------------*/
 	.letters {padding-bottom: 38px;}
@@ -1279,7 +1288,6 @@ $twelve-col:$col*12+$col-m*11;
 	.reclame__termsofuseblock {padding-bottom: 79px;}
 	
 	/*-----------ABOUT COMPANY--------------*/
-	.about .heading {padding: 44px 0 37px;}
 	.about__differences {padding-top: 82px;}
 	.about__targets {margin-top: 18px;}
 	.about__targets .container {width: 1530px;}
