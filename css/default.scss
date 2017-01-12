@@ -211,11 +211,6 @@
 /*-------------------------------------------------*/
 
 .pagenews {padding-bottom: 18px;
-	.heading {background-image: url('../img/news_heading_bg.jpg'); position: relative; padding: 24px 0; background-size: cover;
-		.gradient {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: linear-gradient(122deg, #ffffff 0%,#23692b 100%); opacity: .64;}
-		.container {position: relative; z-index: 2;}
-		h2 {color: #fff;}
-	}
 	.top {text-align: left;}
 	p.toptext {font-size: 16px; font-weight: 500; display: inline-block; margin-right: 15px;}
 	select {font-size: 16px; font-weight: 500; color: #000; padding: 10px 8px; border: 1px solid #b7cfbc; width: 100%; margin-top: 19px; display: inline-block;}
@@ -242,8 +237,7 @@
 		img {margin-right: 11px;}
 	}
 	.top {display: flex; flex-wrap: wrap; margin-top: 11px;
-		.heading {width: 100%; background-image: url('../img/news_2.jpg'); background-size: cover; position: relative; text-align: center; padding: 23px 20px 30px; box-sizing: border-box;
-			.bg {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: #000; opacity: .5;}
+		.heading {width: 100%; background-image: url('../img/news_2_black.jpg'); background-size: cover; position: relative; text-align: center; padding: 23px 20px 30px; box-sizing: border-box;
 			p.date {font-size: 14px; color: #cccccc; letter-spacing: 0.1em; margin-top: 0;}
 			p {font-size: 20px; color: #fff; position: relative; z-index: 2; margin-top: 3px; line-height: 1.2em;}
 		}
@@ -263,7 +257,7 @@
 			&:after {background-color: #fff;}
 		}
 	}
-	.subscribe {background-color: #000; text-align: center; padding-top: 43px; padding-bottom: 84px;
+	.subscribe {background-image: url('../img/bg_feedback.jpg'); background-size: cover; background-position: top; text-align: center; padding-top: 43px; padding-bottom: 84px;
 		form {position: relative; margin: 0 auto; width: 750px;
 			p {color: #fff; font-weight: 600; font-size: 36px;}
 			input {background-color: transparent; width: 360px; border-bottom: 1px solid #b7cfbc; margin-top: 90px; padding-bottom: 12px; font-size: 16px;}
@@ -651,14 +645,14 @@
 		.container {position: relative; z-index: 2;}
 		h2 {color: #fff;}
 	}
-	&__searchfield {position: relative; padding-top: 27px;
+	&__searchfield {position: relative; margin-top: 27px;
 		input {width: 100%; font-size: 20px; font-weight: 300; color: #999999; height: 50px; padding: 0 50px 0 20px; border: 1px solid #b7cfbc; }
 		::-webkit-input-placeholder {color:#999999}
 		::-moz-placeholder {color:#999999}
 		:-ms-input-placeholder {color:#999999}
 		:-moz-placeholder {color:#999999}
 		a {position: absolute; right: 12px; width: 23px; height: 22px; bottom: 13px;}
-		&_desktop {padding-top: 49px;
+		&_desktop {margin-top: 49px;
 			input {background-color: rgba(#fff, 0.15); color: #f0f0f0; height: 80px; padding: 0 60px 0 25px;}
 			::-webkit-input-placeholder {color:#f0f0f0}
 			::-moz-placeholder {color:#f0f0f0}
@@ -681,7 +675,9 @@
 	}
 	&__hiddenlist {display: none; padding-top: 10px; padding-left: 3px;
 		li {margin-top: 8px !important;}
-		p {font-size: 16px; color: #333333; line-height: 1em;}
+		a {font-size: 16px !important; color: #333333; line-height: 1em;
+			&:hover {color: #333333; opacity: 0.7;}
+		}
 	}
 	&__popular {text-align: left; margin-top: 15px; padding-bottom: 28px;}
 	&__popularheading {font-size: 20px; font-weight: 600; color: $darkgreen;}
@@ -1628,7 +1624,7 @@
 .bottom-contact-form {background-image: url('../img/bg_feedback.jpg'); background-size: cover; background-position: center; padding-top: 25px; padding-bottom: 24px;
 	p {color: #fff;}
 	span {color: $green;}
-	p.small {font-size: 12px; color: #999999;}
+	p.small {font-size: 12px; color: #999999; text-align: left; margin-top: 3px;}
 	&__heading {font-size: 22px; font-weight: 600; line-height: 1.1em;}
 	&__fields {margin-top: 11px; position: relative;}
 	&__field {text-align: left; margin-top: 13px; width: 100%;

@@ -78,15 +78,11 @@ $twelve-col:$col*12+$col-m*11;
 	
 	/*-----------NEWS--------------*/
 	.pagenews select {width: 262px;}
-	.pagenews .newsblocks > div {width: $six-col;}
-	.pagenews .newsblocks div:nth-child(2) {margin-top: 0;}
-	.pagenews .newsblocks div .bg {background-size: cover;}
-	.pagenews .newsblocks div .bg:before {width: 120%;
+	.newsblocks_pagenews .news-linkblock {width: $six-col;}
+	.newsblocks_pagenews .news-linkblock:nth-child(2) {margin-top: 0;}
+	.newsblocks_pagenews .news-linkblock .bg:before {width: 120%;
     left: -127px;}
-	.pagenews .newsblocks div:hover .bg:before {left: -156px;
-    height: 250%;
-    bottom: -240px;
-    width: 240%;}
+	.newsblocks_pagenews .news-linkblock:hover .bg:before {left: -156px; height: 250%; bottom: -240px; width: 240%;}
 	.pagenews .button {width: auto; padding: 12px 21px 14px;}
 	
 	/*-----------NEWS PAGE--------------*/
@@ -312,7 +308,7 @@ $twelve-col:$col*12+$col-m*11;
 	.burgermenu .lists, .burgermenu.rent {display: none;}
 	
 	.bottom-contact-form {padding-top: 37px; padding-bottom: 37px;}
-	.bottom-contact-form .container {width: 750px;}
+	.bottom-contact-form .container {width: 750px !important;}
 	.bottom-contact-form__heading {font-size: 36px !important;}
 	.bottom-contact-form__heading br {display: none;}
 	.bottom-contact-form__fields {margin-top: 27px;}
@@ -323,21 +319,21 @@ $twelve-col:$col*12+$col-m*11;
 	.bottom-contact-form__button {width: auto; margin-top: 29px;}
 	.bottom-contact-form__field_file p.small {margin-top: 9px;}
 	.bottom-contact-form_request textarea {height: 64px;}
+	.bottom-contact-form_question textarea {height: 222px;}
 	
 	.small-page-heading {padding: 45px 0;}
 	
 	/*-----------NEWS--------------*/
 	.pagenews .top {padding-left: 4px;}
-	.pagenews .newsblocks div:hover .bg:before {left: -206px;}
-	.pagenews .heading h2 {font-size: 36px;}
-	.pagenews .heading {padding: 42px 0;}
+	.newsblocks_pagenews .news-linkblock
+	.newsblocks_pagenews .news-linkblock:hover .bg:before {left: -206px;}
 	.pagenews select {margin-top: 29px;}
-	.pagenews .newsblocks {margin-top: 30px;}
-	.pagenews .newsblocks div {min-height: 270px; padding: 19px 24px; margin-top: 31px;}
-	.pagenews .newsblocks > div {width: $six-col;}
-	.pagenews .newsblocks div p {font-size: 24px; line-height: 1.4em;}
-	.pagenews .newsblocks div p.small {font-size: 14px; font-weight: 400;}
-	.pagenews .newsblocks div .bg:before {left: -248px;}
+	.newsblocks_pagenews {margin-top: 30px;}
+	.newsblocks_pagenews .news-linkblock {min-height: 270px; padding: 19px 24px; margin-top: 31px;}
+	.newsblocks_pagenews .news-linkblock {width: $six-col;}
+	.newsblocks_pagenews .news-linkblock p {font-size: 24px; line-height: 1.4em;}
+	.newsblocks_pagenews .news-linkblock p.small {font-size: 14px; font-weight: 400;}
+	.newsblocks_pagenews .news-linkblock .bg:before {left: -248px;}
 	.pagenews .button {margin-top: 30px;}
 	.pagenews {padding-bottom: 25px;}
 	
@@ -520,12 +516,6 @@ $twelve-col:$col*12+$col-m*11;
 	.faq__popularlist li:nth-child(3) svg {width: 38px;}
 	.faq__popularlist li:last-child svg {width: 46px;}
 	.faq__popularlist svg {left: 5px;}
-	.faq__form {padding-top: 44px; padding-bottom: 51px;}
-	.faq__formblock .container {width: 62.5%;}
-	.faq__formfields {margin-top: 42px;}
-	.faq__form p.small {margin-top: 10px;}
-	.faq__formfield textarea {height: 221px;}
-	.faq__formbutton {margin-top: 14px; width: auto;}
 	.faq__detailstoptext {display: none;}
 	.faq__detailsheading {font-size: 24px !important; margin-top: 21px !important; margin-bottom: 3px;}
 	.faq__details p {font-size: 16px; line-height: 1.5em; margin-top: 24px;}
@@ -904,7 +894,7 @@ $twelve-col:$col*12+$col-m*11;
 	.burgermenu .desktop_links {display: none;}
 	
 	/*-----------NEWS--------------*/
-	.pagenews .newsblocks >div:nth-child(n+5) {display: none;}
+	.newsblocks_pagenews .news-linkblock:nth-child(n+5) {display: none;}
 	
 	/*-----------NEWS PAGE--------------*/
 	.pagenewspage .subscribe {display: none;}
@@ -999,7 +989,7 @@ $twelve-col:$col*12+$col-m*11;
 	.contacts .container__contacts-map {width: 1140px;}
 	
 	/*-----------NEWS--------------*/
-	.pagenews .newsblocks div:hover .bg:before {left: -306px;}
+	.newsblocks_pagenews .news-linkblock:hover .bg:before {left: -306px;}
 	
 	/*-----------SEARCH--------------*/
 	.searchresult .searchform__field_date p {font-size: 18px;}
@@ -1057,7 +1047,7 @@ $twelve-col:$col*12+$col-m*11;
 	.contacts .container__contacts-map {width: 1410px;}
 	
 	/*-----------NEWS--------------*/
-	.pagenews .newsblocks div:hover .bg:before {left: -446px;}
+	.newsblocks_pagenews .news-linkblock:hover .bg:before {left: -446px;}
 	
 	/*-----------SEARCH--------------*/
 	.searchresult .cards > div p {margin-top: 10px; padding: 0 55px;}
@@ -1163,8 +1153,9 @@ $twelve-col:$col*12+$col-m*11;
 	.small-page-heading {padding: 40px 0;}
 	
 	/*-----------NEWS--------------*/
-	.pagenews .newsblocks div .bg:before {left: -286px;}
-	.pagenews .newsblocks div:hover .bg:before {left: -496px; height: 300%;}
+	.newsblocks_pagenews .news-linkblock {min-height: 420px;}
+	.newsblocks_pagenews .news-linkblock .bg:before {left: -286px; bottom: -160px;}
+	.newsblocks_pagenews .news-linkblock:hover .bg:before {left: -496px; height: 300%;}
 	
 	/*-----------SEARCH--------------*/
 	.searchresult .searchform select, .searchresult .searchform input {font-size: 20px;}

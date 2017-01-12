@@ -28,7 +28,7 @@
 				<p class="bottom-contact-form__file">Выберите файл<a href="#"></a></p>
 				<p class="small">Разрешенные расширения: .jpg, .png, .jpeg, .gif</p>
 			</div>
-			<p class="purchase-sale__formtext small"><span>*</span>- поля обязательные для заполнения</p>
+			<p class="small"><span>*</span>- поля обязательные для заполнения</p>
 		</div>
 		<button class="button bottom-contact-form__button"><span class="button__border-top"></span>отправить<span class="button__border-bottom"></span></button>
 	</div>
