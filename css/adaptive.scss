@@ -475,22 +475,12 @@ $twelve-col:$col*12+$col-m*11;
 	.purchase-sale__formbutton {margin-top: 26px; width: auto;}
 	
 	/*-----------CONTACTS--------------*/
-	.contacts .heading {padding: 47px 0 43px;}
 	.contacts__text {font-size: 16px; line-height: 1.4em;}
 	.contacts__info {line-height: 1.4em; letter-spacing: 0.08em;}
 	.contacts__mainblock {margin-top: 35px; padding-bottom: 52px;}
 	.contacts__textblock {padding-right: $eight-col;}
 	.contacts .container__contacts-map {position: absolute; top: 0; left: 0; right: 0; margin: auto; width: 990px;}
 	.contacts__map {position: absolute; right: 0px; top: 10px; width: 682px; margin: 0; height: 513px;}
-	.contacts__formheading {font-size: 36px;}
-	.contacts__formblock .container {width: 62.3%;}
-	.contacts__formfield {width: 48%; margin-top: 8px;}
-	.contacts__formfield_message {position: absolute; right: 0; top: 0; margin: 0;}
-	.contacts__formfield textarea {height: 306px;}
-	.contacts__form {padding-top: 36px; padding-bottom: 43px;}
-	.contacts__formfield p {font-size: 16px;}
-	.contacts__formfields {margin-top: 27px;}
-	.contacts__formbutton {width: auto;}
 	
 	/*-----------OFERTS--------------*/
 	.oferts .heading {padding: 47px 0 98px;}
@@ -1256,12 +1246,8 @@ $twelve-col:$col*12+$col-m*11;
 	.productcard__topay {top: 759px; width: 49.2%;}
 	
 	/*-----------CONTACTS--------------*/
-	.contacts .heading {padding: 40px 0 40px;}
 	.contacts__mainblock {margin-top: 0; padding-top: 35px; padding-bottom: 41px;}
 	.contacts__map {right: 0; top: 0; width: 62.7%; height: 100%;}
-	.contacts__formblock .container {width: 39%;}
-	.contacts__formbutton {margin-top: 36px;}
-	.contacts__form {padding-bottom: 40px;}
 	.contacts .container__contacts-map {width: 100%; height: 100%;}
 	
 	/*-----------PISMA--------------*/
