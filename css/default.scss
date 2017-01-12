@@ -519,42 +519,19 @@
 		h2 {color: #fff;}
 	}
 	&__container {width: 100%;}
-	&__block {text-align: left;
-		img {width: 100%; height: 227px; object-fit: cover;}
-		p {margin: 0 auto; margin-top: 10px; line-height: 1.3em; width: 290px;
-			&:nth-child(n+3) {margin-top: 17px;}
-		}
+	&__block {text-align: left; position: relative; box-sizing: border-box;
+		p {width: 290px;}
 		&_top {}
 		&_bottom {margin-top: 30px;
 			.purchase-sale__blocktitle {margin-top: 21px;}
 		}
 	}
-	&__blocktitle {font-size: 20px; font-weight: 500; line-height: 1.2em !important;}
-	&__requestblock {margin-top: 38px; background-color: #000;}
-	&__form {padding-top: 24px; padding-bottom: 23px;
-		p {color: #fff;}
-		span {color: $green;}
-		p.small {font-size: 12px; color: #999999;}
+	&__image {height: 227px; overflow: hidden; position: relative;
+		img {position:absolute; top:0; left:0; min-width:100%; min-height:100%; object-fit:cover; width:0}
 	}
-	&__formheading {font-size: 22px; font-weight: 600; line-height: 1.1em;}
-	&__formfield {text-align: left; margin-top: 16px;
-		&:first-of-type {margin-top: 23px;}
-		input, textarea {width: 100%; border: 1px solid #b7cfbc; background-color: rgba(#fff, 0.15); height: 45px; color: #fff; margin-top: 7px; padding: 0 16px;
-			&:focus {border-color: $green; background-color: rgba(#fff, 0.05);}
-		}
-		&_message {margin-top: 13px;}
-		&_file {margin-top: 13px;
-			p.small {margin-top: 6px;}
-		}
-		textarea {resize: none;}
-	}
-	&__formfile {border: 1px dashed #b7cfbc; line-height: 43px; position: relative; margin-top: 6px; padding: 0 18px;
-		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
-			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
-		}
-	}
-	&__formtext {text-align: left;}
-	&__formbutton {margin-top: 25px; width: 100%;}
+	&__blocktitle {font-size: 20px; font-weight: 500; line-height: 1.2em; margin: auto; margin-top: 10px;}
+	&__text {margin: auto; margin-top: 17px; line-height: 1.3em;}
+	.bottom-contact-form {margin-top: 49px;}
 }
 
 
@@ -576,30 +553,6 @@
 	&__info {font-weight: 600; color: #000; margin-top: 18px; line-height: 1.25em;}
 	.container__contacts-map {width: 100%; margin-top: 23px;}
 	&__map {height: 300px;}
-	&__formblock {background-color: #000;}
-	&__form {padding-top: 25px; padding-bottom: 24px;
-		p {color: #fff;}
-		p.small {font-size: 12px; color: #999999;}
-	}
-	&__formheading {font-size: 22px; font-weight: 600; line-height: 1.1em;}
-	&__formfields {margin-top: 24px; position: relative;}
-	&__formfield {text-align: left; margin-top: 13px;
-		&:first-of-type {margin-top: 0;}
-		input, textarea {width: 100%; border: 1px solid #b7cfbc; background-color: rgba(#fff, 0.15); height: 45px; color: #fff; margin-top: 7px; padding: 0 16px;
-			&:focus {border-color: $green; background-color: rgba(#fff, 0.05);}
-		}
-		&_message {margin-top: 9px;}
-		&_file {margin-top: 13px;
-			p.small {margin-top: 3px;}
-		}
-		textarea {resize: none;}
-	}
-	&__formfile {border: 1px dashed #b7cfbc; line-height: 43px; position: relative; margin-top: 6px; padding: 0 18px;
-		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
-			&:after {content: ""; width: 25px; height: 25px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_close_formfile.svg'); background-repeat: no-repeat;}
-		}
-	}
-	&__formbutton {margin-top: 30px; width: 100%;}
 }
 
 /*-------------------------------------------------*/
@@ -1674,28 +1627,34 @@
 
 .bottom-contact-form {background-image: url('../img/bg_feedback.jpg'); background-size: cover; background-position: center; padding-top: 25px; padding-bottom: 24px;
 	p {color: #fff;}
+	span {color: $green;}
 	p.small {font-size: 12px; color: #999999;}
 	&__heading {font-size: 22px; font-weight: 600; line-height: 1.1em;}
-	&__fields {margin-top: 24px; position: relative;}
-	&__field {text-align: left; margin-top: 13px;
-		&:first-of-type {margin-top: 0;}
-		input, textarea {width: 100%; border: 1px solid #b7cfbc; background-color: rgba(#fff, 0.15); height: 45px; color: #fff; margin-top: 7px; padding: 0 16px;
-			&:focus {border-color: $green; background-color: rgba(#fff, 0.05);}
-		}
-		&_message {margin-top: 9px;}
+	&__fields {margin-top: 11px; position: relative;}
+	&__field {text-align: left; margin-top: 13px; width: 100%;
 		&_file {margin-top: 13px;
 			p.small {margin-top: 3px;}
 		}
-		textarea {resize: none; padding: 12px 16px;}
 	}
+	input, textarea {width: 100%; border: 1px solid #b7cfbc; background-color: rgba(#fff, 0.15); height: 45px; color: #fff; margin-top: 7px; padding: 0 16px;
+		&:focus {border-color: $green; background-color: rgba(#fff, 0.05);}
+	}
+	textarea {resize: none; padding: 12px 16px;}
 	&__file {border: 1px dashed #b7cfbc; line-height: 43px; position: relative; margin-top: 6px; padding: 0 18px;
 		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
 			&:after {content: ""; width: 25px; height: 25px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_close_formfile.svg'); background-repeat: no-repeat;}
 		}
 	}
 	&__button {margin-top: 30px; width: 100%;}
+	
+	&_request {
+		.bottom-contact-form__fields {display: flex; justify-content: space-between; flex-wrap: wrap;}
+		.bottom-contact-form__field_message {position: static !important;}
+		.bottom-contact-form__field_file {
+			a:after {background-image: url('../img/icon_clip.svg');}
+		}
+	}
 }
-
 
 
 //Попапы

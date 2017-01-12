@@ -44,7 +44,7 @@ $twelve-col:$col*12+$col-m*11;
 	.productcard__sliderdots {top: 394px;}
 	
 	/*-----------CUPLYA PRODAGA--------------*/
-	.purchase-sale__block img {height: 340px;}
+	.purchase-sale__image {height: 340px;}
 	.purchase-sale__container {width: 100%;}
 	.purchase-sale__block p {width: 450px;}
 	
@@ -116,7 +116,7 @@ $twelve-col:$col*12+$col-m*11;
 	.pagesalespage .share .container {padding-top: 3px; border-top: 1px solid rgba(#2a2c28, 0.7);}
 	
 	/*-----------CUPLYA PRODAGA--------------*/
-	.purchase-sale__block img {height: 540px;}
+	.purchase-sale__image {height: 540px;}
 	.purchase-sale__container {width: 100%;}
 	.purchase-sale__block p {width: 755px;}
 	
@@ -314,13 +314,15 @@ $twelve-col:$col*12+$col-m*11;
 	.bottom-contact-form {padding-top: 37px; padding-bottom: 37px;}
 	.bottom-contact-form .container {width: 750px;}
 	.bottom-contact-form__heading {font-size: 36px !important;}
+	.bottom-contact-form__heading br {display: none;}
 	.bottom-contact-form__fields {margin-top: 27px;}
 	.bottom-contact-form__field {width: 48%; margin-top: 9px;}
 	.bottom-contact-form__field p {font-size: 16px;}
-	.bottom-contact-form__field_message {position: absolute; right: 0; top: 0; margin: 0;}
-	.bottom-contact-form__field textarea {height: 309px;}
+	.bottom-contact-form__field_message {position: absolute; right: 0; top: -10px;}
+	.bottom-contact-form textarea {height: 309px;}
 	.bottom-contact-form__button {width: auto; margin-top: 29px;}
 	.bottom-contact-form__field_file p.small {margin-top: 9px;}
+	.bottom-contact-form_request textarea {height: 64px;}
 	
 	.small-page-heading {padding: 45px 0;}
 	
@@ -444,35 +446,22 @@ $twelve-col:$col*12+$col-m*11;
 	.productcard__similarcard {width: $three-col;}
 	
 	/*-----------CUPLYA PRODAGA--------------*/
-	.purchase-sale__block img {height: 400px; width: $six-col; position: absolute;}
-	.purchase-sale__block p {width: auto; margin: 0; font-size: 16px; line-height: 1.5em;}
+	
+	.purchase-sale__image {height: 400px; width: $six-col; position: absolute; left: 0;}
+	.purchase-sale__block p {width: auto;}
 	.purchase-sale__block {position: relative;}
-	.purchase-sale__block_top {padding-left: $six-col; margin-top: 48px; padding-bottom: 79px;}
-	.purchase-sale__block_top img {left: 0; top: 0;}
+	.purchase-sale__block_top {padding-left: $six-col; margin-top: 48px; min-height: 400px;}
 	.purchase-sale__block_top p {padding-left: 30px;}
 	.purchase-sale__block_top p:last-child {display: none;}
 	.purchase-sale__block_bottom p:last-child {display: none;}
 	.purchase-sale__block_middle {display: flex; justify-content: space-between; margin-top: 43px;}
-	.purchase-sale__block_middle p {width: $six-col;}
-	.purchase-sale__block_bottom {padding-right: $six-col; margin-top: 44px; padding-bottom: 69px;}
-	.purchase-sale__block_bottom img {right: 0; top: 0;}
+	.purchase-sale__block_middle p {width: $six-col; margin: 0;}
+	.purchase-sale__block_bottom {padding-right: $six-col; margin-top: 44px; min-height: 400px;}
+	.purchase-sale__block_bottom .purchase-sale__image {right: 0; left: auto;}
 	.purchase-sale__block_bottom p {padding-right: 30px;}
-	.purchase-sale .heading {padding: 48px 0 43px;}
-	.purchase-sale__blocktitle {font-size: 24px !important;}
-	.purchase-sale__block p:nth-child(3) {margin-top: 5px; line-height: 1.5em;}
-	.purchase-sale__block p:nth-child(4) {margin-top: 24px; line-height: 1.5em;}
-	.purchase-sale__block_bottom p:nth-child(3) {margin-top: 25px;}
-	.purchase-sale__requestblock .container {width: $eight-col;}
-	.purchase-sale__formheading {font-size: 36px;}
-	.purchase-sale__formheading br {display: none;}
-	.purchase-sale__formfield {display: inline-block; vertical-align: top; width: 45.57%; margin-top: 9px;}
-	.purchase-sale__formfield:nth-child(even) {margin-right: 30px;}
-	.purchase-sale__form {padding-top: 43px; padding-bottom: 50px;}
-	.purchase-sale__formfield:nth-of-type(-n+2) {margin-top: 50px;}
-	.purchase-sale__formfield p {font-size: 16px; font-weight: 300;}
-	.purchase-sale__formfield textarea {height: 64px;}
-	.purchase-sale__formtext {padding-left: 21px; margin-top: 3px;}
-	.purchase-sale__formbutton {margin-top: 26px; width: auto;}
+	.purchase-sale__blocktitle {font-size: 24px;}
+	.purchase-sale__blocktitle + p {margin-top: 5px;}
+	.purchase-sale__text {font-size: 16px; line-height: 1.5em; margin-top: 24px;}
 	
 	/*-----------CONTACTS--------------*/
 	.contacts__text {font-size: 16px; line-height: 1.4em;}
@@ -1080,11 +1069,6 @@ $twelve-col:$col*12+$col-m*11;
 	/*-----------PRODUCT CARD--------------*/
 	.productcard__content .container {width: 1410px;}
 	.productcard__similarcard p {padding: 0 50px;}
-	
-	/*-----------CUPLYA PRODAGA--------------*/
-	.purchase-sale__block_top {padding-bottom: 130px;}
-	.purchase-sale__block_bottom {padding-bottom: 130px;}
-	.purchase-sale__formtext {padding-left: 30px;}
 	
 	/*-----------PRESS--------------*/
 	.pagepress .newsblocks div:hover .bg:before {left: -446px;}
