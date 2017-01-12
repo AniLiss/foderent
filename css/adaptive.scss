@@ -53,20 +53,17 @@ $twelve-col:$col*12+$col-m*11;
 }
 
 @media (min-width:640px) {
-	/*-----------MAIN--------------*/
-	.firstscreen {background-position: top -81px left 770px;}
-	
 	/*-----------404--------------*/
-	.pagenotfound p.large {font-size: 169px;}
-	.pagenotfound p.large img {width: 174px; margin: 0 -10px;}
-	.pagenotfound p.large + p {font-size: 34px;}
+	.firstscreen_pagenotfound__large-text {font-size: 169px;}
+	.firstscreen_pagenotfound__large-text img {width: 174px; margin: 0 -10px;}
+	.firstscreen_pagenotfound__large-text + p {font-size: 34px;}
 }
 
 @media (min-width:769px) {
 	/*-----------MAIN--------------*/
 	.container, .sale__mobileblock {width: 755px;}
 	.container.small {width: 555px;}
-	.firstscreen {text-align: left; background-position: center;}
+	.firstscreen {text-align: left;}
 	.advantages__list li {width: $three-col;}
 	.news .newsblocks {justify-content: flex-end;}
 	.news .newsblocks .news-linkblock {width: 280px; margin-top: 0; min-height: 175px;}
@@ -101,7 +98,7 @@ $twelve-col:$col*12+$col-m*11;
 	.pagenewspage .share .container {width: 750px; padding-top: 3px; border-top: 1px solid rgba(#2a2c28, 0.7);}
 	
 	/*-----------404--------------*/
-	.pagenotfound.firstscreen {padding-top: 130px; padding-bottom: 122px; text-align: center;}
+	.firstscreen_pagenotfound {padding-top: 130px !important; padding-bottom: 122px !important; text-align: center !important;}
 	
 	/*-----------SEARCH--------------*/
 	.searchresult .cards > div .image {height: 307px;}
@@ -212,7 +209,7 @@ $twelve-col:$col*12+$col-m*11;
 	header .searchform .firstscreen__button {display: none;}
 	header .searchform div select, header .searchform div input {font-size: 20px;}
 	
-	.firstscreen {background-image: url('../img/bg_1_screen_medium.jpg'); background-position: 0px -9px; text-align: left; padding-top: 150px; padding-bottom: 220px;}
+	.firstscreen {text-align: left; padding-top: 150px; padding-bottom: 220px;}
 	.firstscreen h1 span {font-size: 52px;}
 	.firstscreen .searchform {margin-top: 23px; border: 1px solid #b7cfbc; background-color: rgba(#fff, .15); box-sizing: border-box; height: 80px; padding: 0;}
 	.firstscreen .searchform > * {display: inline-flex; align-items: center; border: 0; background-color: transparent; margin-top: 0; height: 100%; vertical-align: top;}
@@ -917,7 +914,7 @@ $twelve-col:$col*12+$col-m*11;
 	.header__icons .button {display: none;}
 	.firstscreen .desktop {display: none;}
 	.firstscreen__mouseicon {display: none;}
-	.firstscreen__vert-line {display: none;}
+	.firstscreen__bg:before, .firstscreen__bg:after {display: none;}
 	.technics {display: none;}
 	.sale__desktopblock {display: none;}
 	.banners__block:nth-child(-n+3) {display: none;}
@@ -1054,7 +1051,6 @@ $twelve-col:$col*12+$col-m*11;
 
 @media (min-width:1250px) {
 	/*-----------MAIN--------------*/
-	.firstscreen {background-size: cover;}
 	.technics {height: 760px;}
 }
 
@@ -1124,7 +1120,7 @@ $twelve-col:$col*12+$col-m*11;
 	h1 {font-size: 76px; line-height: 1em;}
 	h2 {font-size: 40px;}
 	
-	.firstscreen {background-image: url('../img/bg_1_screen.jpg'); background-position: center; background-size: cover; padding-top: 171px; padding-bottom: 320px;}
+	.firstscreen {padding-top: 171px; padding-bottom: 320px;}
 	.firstscreen h1 span {font-size: 64px;}
 	.firstscreen .searchform {margin-top: 35px; height: 100px;}
 	.firstscreen .searchform__field:first-child {padding: 0 30px;}

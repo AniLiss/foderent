@@ -21,9 +21,9 @@
 	<!-------------------------------------------------->
 	
 	<section class="firstscreen">
-			<div class="firstscreen__vert-line"></div>
-			<div class="firstscreen__vert-line"></div>
-			<div class="firstscreen__vert-line"></div>
+		<div class="firstscreen__bg">
+			<img src="img/bg_1_screen.jpg" alt="@@" class="firstscreen__bg-image">
+		</div>
 		<div class="container small">
 			<h1>Лучший сервис <br>
 			<span>аренды спецтехники</span></h1>
