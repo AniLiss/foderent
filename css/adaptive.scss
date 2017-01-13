@@ -125,12 +125,12 @@ $twelve-col:$col*12+$col-m*11;
 	.pagepresspage .share .container {width: 750px; padding-top: 3px; border-top: 1px solid rgba(#2a2c28, 0.7);}
 	
 	/*-----------PRESS--------------*/
-	.pagepress .newsblocks > div {width: $six-col;}
-	.pagepress .newsblocks div:nth-child(2) {margin-top: 0;}
-	.pagepress .newsblocks div .bg {background-size: cover;}
-	.pagepress .newsblocks div .bg:before {width: 120%;
+	.newsblocks_pagepress .news-linkblock {width: $six-col;}
+	.newsblocks_pagepress .news-linkblock:nth-child(2) {margin-top: 0;}
+	.newsblocks_pagepress .news-linkblock .bg {background-size: cover;}
+	.newsblocks_pagepress .news-linkblock .bg:before {width: 120%;
     left: -127px;}
-	.pagepress .newsblocks div:hover .bg:before {left: -156px;
+	.newsblocks_pagepress .news-linkblock:hover .bg:before {left: -156px;
     height: 250%;
     bottom: -240px;
     width: 240%;}
@@ -320,8 +320,14 @@ $twelve-col:$col*12+$col-m*11;
 	.bottom-contact-form__field_file p.small {margin-top: 9px;}
 	.bottom-contact-form_request textarea {height: 64px;}
 	.bottom-contact-form_question textarea {height: 222px;}
+	.bottom-contact-form_support textarea {height: 80px;}
 	
 	.small-page-heading {padding: 45px 0;}
+	
+	.icons_bottom {margin-top: 0; display: inline-flex;}
+	.icons_bottom a {margin-right: 17px;
+		&:last-child {margin-right: 0;}
+	}
 	
 	/*-----------NEWS--------------*/
 	.pagenews .top {padding-left: 4px;}
@@ -389,7 +395,10 @@ $twelve-col:$col*12+$col-m*11;
 	.pagesales .salesblocks .container {width: 990px;}
 	.pagesales .salesblocks .sales__bg {width: $six-col;}
 	.pagesales .salesblocks .sales__block p {font-size: 24px;}
-	.pagesales .salesblocks .sales__block p.small {font-size: 14px;}
+	.pagesales .salesblocks .sales__block p.small {font-size: 14px; letter-spacing: 0.1em;}
+	.pagesales .sale__bg-gradients span:nth-of-type(1):before, .pagesales .sale__bg-gradients span:nth-of-type(2):before {right:210px;}
+    .pagesales .sale__bg-gradients span:nth-of-type(2):before {height:540px}
+    .pagesales .sale__bg-gradients span:nth-of-type(1):after {right:290px;}
 	
 	/*-----------SALES PAGE--------------*/
 	.pagesalespage .sale__bg {min-height: 450px; background-position: 0 -270px;}
@@ -399,13 +408,9 @@ $twelve-col:$col*12+$col-m*11;
 	.pagesalespage .content p {margin-top: 10px;}
 	.pagesalespage .content .container {width: $eight-col;}
 	.pagesalespage .share p {display: inline-block; font-size: 24px; margin-right: 14px;}
-	.pagesalespage .share .icons {margin-top: 0; display: inline-flex;}
 	.pagesalespage .share .button {margin-top: 0; width: 262px; float: right;}
 	.pagesalespage .share {text-align: left; margin-top: 63px;}
 	.pagesalespage .share .container {padding-top: 58px; padding-bottom: 52px; width: $eight-col;}
-	.pagesalespage .share .icons a {margin-right: 17px;
-		&:last-child {margin-right: 0;}
-	}
 	.pagesalespage {padding-bottom: 0;}
 	.pagesalespage .sale__bg {margin-top: 20px; background-size: cover;}
 	
@@ -468,8 +473,8 @@ $twelve-col:$col*12+$col-m*11;
 	.contacts__map {position: absolute; right: 0px; top: 10px; width: 682px; margin: 0; height: 513px;}
 	
 	/*-----------OFERTS--------------*/
-	.oferts .heading {padding: 47px 0 98px;}
-	.oferts__text {padding: 45px 0;}
+	.oferts .small-page-heading {padding-bottom: 98px;}
+	.oferts__text {padding: 45px 0; margin-top: -56px; box-shadow: 0px -5px 50px 0px rgba(35, 41, 50, 0.5);}
 	.oferts__text p {width: $eight-col; font-size: 16px;}
 	.oferts__mainblock {padding-bottom: 90px;}
 	
@@ -521,12 +526,13 @@ $twelve-col:$col*12+$col-m*11;
 	.faq__details p {font-size: 16px; line-height: 1.5em; margin-top: 24px;}
 	
 	/*-----------PISMA--------------*/
-	.letters .heading h2 {font-size: 32px;}
+	.letters .small-page-heading {padding: 45px 0;}
+	.letters .small-page-heading h2 {font-size: 32px;}
+	.letters .small-page-heading h2 br {display: none;}
 	.letters__main {display: flex; justify-content: space-between; padding-top: 21px;}
 	.letters__main p {width: $six-col; margin-top: 0; font-size: 16px; line-height: 1.5em;}
 	.letters__slider {display: none;}
 	.letters__images .image {width: $three-col;}
-	.letters .heading {padding: 47px 0 43px;}
 	
 	/*-----------PRESS PAGE--------------*/
 	.pagepresspage p.toptext {margin-top: 19px;}
@@ -536,29 +542,21 @@ $twelve-col:$col*12+$col-m*11;
 	.pagepresspage .top .image {height: auto;}
 	.pagepresspage .content p {font-size: 16px; line-height: 1.5em;}
 	.pagepresspage .content {padding-top: 45px;}
-	.pagepresspage .content img {margin: 57px 0 9px;}
 	.pagepresspage .share p {display: inline-block; font-size: 24px; margin-right: 14px;}
-	.pagepresspage .share .icons {margin-top: 0; display: inline-flex;}
 	.pagepresspage .share .button {margin-top: 0; width: 262px; float: left;}
 	.pagepresspage .share {text-align: right;}
 	.pagepresspage .share .container {padding-top: 58px; padding-bottom: 52px;}
-	.pagepresspage .share .icons a {margin-right: 17px;
-		&:last-child {margin-right: 0;}
-	}
 	.pagepresspage {padding-bottom: 0;}
 	
 	/*-----------PRESS--------------*/
 	.pagepress .top {padding-top: 43px;}
-	.pagepress .newsblocks div:hover .bg:before {left: -206px;}
-	.pagepress .heading h2 {font-size: 32px;}
-	.pagepress .heading {padding: 47px 0 43px;}
-	.pagepress select {margin-top: 29px;}
+	.newsblocks_pagepress .news-linkblock:hover .bg:before {left: -206px;}
 	.pagepress .newsblocks {margin-top: 47px;}
-	.pagepress .newsblocks div {min-height: 270px; padding: 19px 24px; margin-top: 31px;}
-	.pagepress .newsblocks > div {width: $six-col;}
-	.pagepress .newsblocks div p {font-size: 24px; line-height: 1.4em;}
-	.pagepress .newsblocks div p.small {font-size: 14px; font-weight: 400;}
-	.pagepress .newsblocks div .bg:before {left: -248px;}
+	.newsblocks_pagepress .news-linkblock {min-height: 270px; padding: 19px 24px; margin-top: 31px;}
+	.newsblocks_pagepress .news-linkblock {width: $six-col;}
+	.newsblocks_pagepress .news-linkblock p {font-size: 24px; line-height: 1.4em;}
+	.newsblocks_pagepress .news-linkblock p.small {font-size: 14px; font-weight: 400;}
+	.newsblocks_pagepress .news-linkblock .bg:before {left: -248px;}
 	.pagepress .button {margin-top: 30px;}
 	.pagepress {padding-bottom: 36px;}
 	.pagepress .top p {display: inline-block; width: $six-col; font-size: 16px; margin-top: 21px; line-height: 1.5em;}
@@ -606,7 +604,7 @@ $twelve-col:$col*12+$col-m*11;
 	.partners__formbutton {width: auto; margin-top: 10px;}
 	.partners .heading {padding: 46px 0 43px;}
 	.partners__textblock {padding: 46px 0 46px;}
-	.partners__advantages {padding-top: 32px;}
+	.partners__advantages {padding-top: 32px; padding-bottom: 82px;}
 	.partners__advantageslist {margin-top: 34px;}
 	.partners__advantageslist .image {width: 74px; left: 47px; top: 0;}
 	.partners__form {padding-top: 100px; padding-bottom: 35px;}
@@ -906,7 +904,7 @@ $twelve-col:$col*12+$col-m*11;
 	.searchresult .cards > div:nth-child(n+7) {display: none;}
 	
 	/*-----------SALES--------------*/
-	.pagesales .sale__bg:nth-child(n+5) {display: none;}
+	.pagesales .sales__bg:nth-child(n+5) {display: none;}
 	
 	/*-----------SALES PAGE--------------*/
 	.pagesalespage .subscribe {display: none;}
@@ -923,7 +921,7 @@ $twelve-col:$col*12+$col-m*11;
 	.investors__textblock .desktop {display: none;}
 	.investors__graphicslist {display: none;}
 	.investors__contactsblock {display: none;}
-	.investors__formblock {display: none;}
+	.investors .bottom-contact-form {display: none;}
 	
 	/*-----------FAQ--------------*/
 	.faq__searchfield_desktop {display: none;}
@@ -936,7 +934,7 @@ $twelve-col:$col*12+$col-m*11;
 	.pagepresspage .subscribe {display: none;}
 	
 	/*-----------PRESS--------------*/
-	.pagepress .newsblocks >div:nth-child(n+5) {display: none;}
+	.newsblocks_pagepress .news-linkblock:nth-child(n+5) {display: none;}
 	.pagepress .top p.topheading {display: none;}
 	
 	/*-----------RECLAMNIE MATERIALS--------------*/
@@ -1012,7 +1010,7 @@ $twelve-col:$col*12+$col-m*11;
 	.productcard__content .container {width: 1140px;}
 	
 	/*-----------PRESS--------------*/
-	.pagepress .newsblocks div:hover .bg:before {left: -306px;}
+	.newsblocks_pagepress .news-linkblock:hover .bg:before {left: -306px;}
 	
 	/*-----------RECLAMNIE MATERIALS--------------*/
 	.reclame__bannerblock .container {width: 1140px;}
@@ -1056,12 +1054,15 @@ $twelve-col:$col*12+$col-m*11;
 	/*-----------SALES--------------*/
 	.pagesales .salesblocks .container {width: 1410px;}
 	
+	/*-----------PARTNERS--------------*/
+	.partners__advantageslist .image + p br {display: none;}
+	
 	/*-----------PRODUCT CARD--------------*/
 	.productcard__content .container {width: 1410px;}
 	.productcard__similarcard p {padding: 0 50px;}
 	
 	/*-----------PRESS--------------*/
-	.pagepress .newsblocks div:hover .bg:before {left: -446px;}
+	.newsblocks_pagepress .news-linkblock:hover .bg:before {left: -446px;}
 	
 	/*-----------ABOUT COMPANY--------------*/
 	.about__differenceslist {height: 230px;}
@@ -1152,6 +1153,8 @@ $twelve-col:$col*12+$col-m*11;
 	
 	.small-page-heading {padding: 40px 0;}
 	
+	.icons_bottom, p.share-text {display: none !important;}
+	
 	/*-----------NEWS--------------*/
 	.newsblocks_pagenews .news-linkblock {min-height: 420px;}
 	.newsblocks_pagenews .news-linkblock .bg:before {left: -286px; bottom: -160px;}
@@ -1183,6 +1186,9 @@ $twelve-col:$col*12+$col-m*11;
 	.pagesales select {width: 360px;}
 	.pagesales .salesblocks {margin-top: 40px;}
 	.pagesales .salesblocks .sales__bg {padding: 22px 24px; margin-top: 33px;}
+	.pagesales .sale__bg-gradients span:nth-of-type(1):before, .pagesales .sale__bg-gradients span:nth-of-type(2):before {right:330px;}
+    .pagesales .sale__bg-gradients span:nth-of-type(2):before {height:540px}
+    .pagesales .sale__bg-gradients span:nth-of-type(1):after {right:380px;}
 	
 	/*-----------SALES PAGE--------------*/
 	.pagesalespage .sale__bg {width: 1530px; margin: 16px auto 0; min-height: 604px;}
@@ -1192,7 +1198,6 @@ $twelve-col:$col*12+$col-m*11;
 	.pagesalespage .share .container {width: 1530px; border: 0; padding-top: 0;}
 	.pagesalespage .content p {box-sizing: border-box; width: $six-col; padding-right: 140px; margin-top: 0;}
 	.pagesalespage .content {padding-top: 41px; padding-bottom: 47px;}
-	.pagesalespage .share .icons, .pagesalespage .share p {display: none;}
 	.pagesalespage .share {text-align: center; margin-top: 40px;}
 	.pagesalespage .share .button {float: none;}
 	
@@ -1228,16 +1233,24 @@ $twelve-col:$col*12+$col-m*11;
 	/*-----------PISMA--------------*/
 	.letters {padding-bottom: 38px;}
 	.letters__images .image {width: 17%; margin-top: 0 !important;}
-	.letters .heading {padding: 38px  0 39px;}
+	.letters .small-page-heading {padding: 40px 0;}
+	.letters .small-page-heading h2 {font-size: 40px;}
 	.letters__images .image:nth-child(n+6) {display: none;}
-	.letters .heading h2 {font-size: 40px;}
 	.letters__blockheading {margin-top: 43px;}
 	.letters__images {margin-top: 69px;}
 	.letters__button {margin-top: 41px;}
 	
 	/*-----------PRESS--------------*/
-	.pagepress .newsblocks div .bg:before {left: -286px;}
-	.pagepress .newsblocks div:hover .bg:before {left: -496px; height: 300%;}
+	.newsblocks_pagepress .news-linkblock .bg:before {left: -286px;}
+	.newsblocks_pagepress .news-linkblock:hover .bg:before {left: -496px; height: 300%;}
+	
+	/*-----------PRESS PAGE--------------*/
+	.pagepresspage .content .container {width: 1530px; display: flex; justify-content: space-between;}
+	.pagepresspage .share .container {width: 1530px; border: 0; padding-top: 0;}
+	.pagepresspage .content p {box-sizing: border-box; width: $six-col; padding-right: 140px; margin-top: 0;}
+	.pagepresspage .content {padding-top: 41px; padding-bottom: 47px;}
+	.pagepresspage .share {text-align: center; margin-top: 40px;}
+	.pagepresspage .share .button {float: none;}
 	
 	/*-----------RECLAMNIE MATERIALS--------------*/
 	.reclame__logoblock .container {justify-content: space-between;}
@@ -1281,7 +1294,7 @@ $twelve-col:$col*12+$col-m*11;
 
 @media (max-width:1599px) {
 	.searchresult .cards > div:nth-child(n+9) {display: none;}
-	.pagesalespage .content .icons {display: none;}
+	.icons_aside {display: none;}
 	.productcard__similarcard:nth-child(n+5) {display: none;}
 }
 

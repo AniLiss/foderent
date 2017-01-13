@@ -268,33 +268,33 @@
 		<div class="letters__wrapper wrapper">
 			<div class="letters__slide slide active" data-slide="1">
 				<div class="image">
-					<img src="img/letter_2.png" alt="@@">
+					<img src="img/letter_1.png" alt="@@">
 				</div>
-				<p>Свидетельсьвто о лучшей аренде спецтехники</p>
+				<p>Свидетельство о лучшей аренде спецтехники</p>
 			</div>
 			<div class="letters__slide slide active" data-slide="2">
 				<div class="image">
 					<img src="img/letter_2.png" alt="@@">
 				</div>
-				<p>Свидетельсьвто о лучшей аренде спецтехники</p>
+				<p>Свидетельство о лучшей аренде спецтехники</p>
 			</div>
 			<div class="letters__slide slide active" data-slide="3">
 				<div class="image">
-					<img src="img/letter_2.png" alt="@@">
+					<img src="img/letter_1.png" alt="@@">
 				</div>
-				<p>Свидетельсьвто о лучшей аренде спецтехники</p>
+				<p>Свидетельство о лучшей аренде спецтехники</p>
 			</div>
 			<div class="letters__slide slide active" data-slide="4">
 				<div class="image">
 					<img src="img/letter_2.png" alt="@@">
 				</div>
-				<p>Свидетельсьвто о лучшей аренде спецтехники</p>
+				<p>Свидетельство о лучшей аренде спецтехники</p>
 			</div>
 			<div class="letters__slide slide active" data-slide="5">
 				<div class="image">
-					<img src="img/letter_2.png" alt="@@">
+					<img src="img/letter_1.png" alt="@@">
 				</div>
-				<p>Свидетельсьвто о лучшей аренде спецтехники</p>
+				<p>Свидетельство о лучшей аренде спецтехники</p>
 			</div>
 		</div>
 		<div class="letters__sliderarrows">

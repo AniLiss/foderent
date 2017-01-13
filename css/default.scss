@@ -213,7 +213,7 @@
 .pagenews {padding-bottom: 18px;
 	.top {text-align: left;}
 	p.toptext {font-size: 16px; font-weight: 500; display: inline-block; margin-right: 15px;}
-	select {font-size: 16px; font-weight: 500; color: #000; padding: 10px 8px; border: 1px solid #b7cfbc; width: 100%; margin-top: 19px; display: inline-block;}
+	select {font-size: 16px; font-weight: 500; color: #000; padding: 10px 8px; border: 1px solid #b7cfbc; width: 100%; margin-top: 19px; display: inline-block; background-image: url('../img/icon_select_arrow.svg'); background-size: 19px 11px; background-position: top 50% right 10px; background-repeat: no-repeat;}
 	.newsblocks {margin-top: 20px; justify-content: space-between;
 		div {margin-top: 19px;
 			&:first-child {margin-top: 0;}
@@ -255,13 +255,6 @@
 		.button {margin-top: 18px; width: 100%;
 			&:before {background-color: #fff;}
 			&:after {background-color: #fff;}
-		}
-	}
-	.subscribe {background-image: url('../img/bg_feedback.jpg'); background-size: cover; background-position: top; text-align: center; padding-top: 43px; padding-bottom: 84px;
-		form {position: relative; margin: 0 auto; width: 750px;
-			p {color: #fff; font-weight: 600; font-size: 36px;}
-			input {background-color: transparent; width: 360px; border-bottom: 1px solid #b7cfbc; margin-top: 90px; padding-bottom: 12px; font-size: 16px;}
-			button {border: 0; padding: 0; background-color: transparent; position: absolute; right: 193px; bottom: 18px;}
 		}
 	}
 }
@@ -340,20 +333,16 @@
 /*-------------------------------------------------*/
 
 .pagesales {padding-bottom: 18px;
-	.heading {background-image: url('../img/news_heading_bg.jpg'); position: relative; padding: 24px 0; background-size: cover;
-		.gradient {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: linear-gradient(122deg, #ffffff 0%,#23692b 100%); opacity: .64;}
-		.container {position: relative; z-index: 2;}
-		h2 {color: #fff;}
-	}
 	.top {text-align: left;}
 	p.toptext {font-size: 16px; font-weight: 500; display: inline-block; margin-right: 15px;}
-	select {font-size: 16px; font-weight: 500; color: #000; padding: 10px 8px; border: 1px solid #b7cfbc; width: 100%; margin-top: 19px; display: inline-block;}
+	select {font-size: 16px; font-weight: 500; color: #000; padding: 10px 8px; border: 1px solid #b7cfbc; width: 100%; margin-top: 19px; display: inline-block; background-image: url('../img/icon_select_arrow.svg'); background-size: 19px 11px; background-position: top 50% right 10px; background-repeat: no-repeat;}
 	.salesblocks {margin-top: 20px;
 		.container {width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;}
-		.sales__bg {background-image: url('../img/bg_sale.jpg'); background-size: cover; min-height: 127px; background-position: 0 -70px; display: flex; align-items: flex-end; padding: 8px 14px; color: #fff; box-sizing: border-box; position: relative; margin-top: 19px; width: 100%;
+		.sales__bg {background-image: url('../img/bg_sale.jpg'); background-size: cover; min-height: 127px; background-position: 0 -70px; display: flex; align-items: flex-end; padding: 8px 14px; color: #fff; box-sizing: border-box; position: relative; margin-top: 19px; width: 100%; overflow: hidden;
 			&:nth-child(1) {margin-top: 0;}
+			img {max-width: 100%; max-height: 100%; object-fit: cover;}
 		}
-		.sales__block {
+		.sales__block {position: relative; z-index: 2;
 			p {text-align: left; line-height: 1.45em;}
 			p.small {color: #999999;}
 		}
@@ -384,27 +373,12 @@
 		p {line-height: 1.3em; margin-top: 0;
 			&:first-child {margin-top: 0;}
 		}
-		.icons { position: absolute; right: 0; top: 8px; border-left: 1px solid rgba(42, 44, 40, 0.7); padding-left: 56px;
-			a {width: 45px; height: 45px; border: 1px solid $green; display: flex; justify-content: center; align-items: center; margin-top: 20px;
-				&:first-child {margin-top: 0;}
-			}
-		}
 	}
 	.share {text-align: center; margin-top: 27px; border-top: 1px solid rgba(#2a2c28, 0.7); padding-top: 3px;
 		p {font-size: 20px; font-weight: 500;}
-		.icons {display: flex; justify-content: space-between; margin-top: 16px;
-			a {width: 45px; height: 45px; border: 1px solid $green; display: flex; justify-content: center; align-items: center;}
-		}
 		.button {margin-top: 18px; width: 100%;
 			&:before {background-color: #fff;}
 			&:after {background-color: #fff;}
-		}
-	}
-	.subscribe {background-color: #000; text-align: center; padding-top: 43px; padding-bottom: 84px;
-		form {position: relative; margin: 0 auto; width: 750px;
-			p {color: #fff; font-weight: 600; font-size: 36px;}
-			input {background-color: transparent; width: 360px; border-bottom: 1px solid #b7cfbc; margin-top: 90px; padding-bottom: 12px; font-size: 16px;}
-			button {border: 0; padding: 0; background-color: transparent; position: absolute; right: 193px; bottom: 18px;}
 		}
 	}
 }
@@ -554,15 +528,10 @@
 /*-------------------------------------------------*/
 
 .oferts {
-	.heading {background-image: url('../img/news_heading_bg.jpg'); position: relative; padding: 23px 0 83px; background-size: cover;
-		.gradient {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: linear-gradient(122deg, #ffffff 0%,#23692b 100%); opacity: .64;}
-		.container {position: relative; z-index: 2;}
-		h2 {color: #fff;}
-	}
 	&__mainblock {padding-bottom: 60px;}
-	&__text {text-align: left; box-shadow: 0px -5px 50px 0px rgba(35, 41, 50, 0.5); margin-top: -56px; position: relative; z-index: 3; background-color: #fff; padding: 30px 0;
+	&__text {text-align: left; position: relative; z-index: 3; background-color: #fff; padding: 30px 0;
 		p.oferts__textheading {font-weight: 500; font-size: 24px; margin-top: 0;}
-		p {color: #333333; width: $ten-col; margin: 0 auto; margin-top: 18px; line-height: 1.5em;}
+		p {color: #333333; margin: 0 auto; margin-top: 18px; line-height: 1.5em;}
 	}
 }
 
@@ -571,11 +540,6 @@
 /*-------------------------------------------------*/
 
 .investors {
-	.heading {background-image: url('../img/news_heading_bg.jpg'); position: relative; padding: 23px 0; background-size: cover;
-		.gradient {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: linear-gradient(122deg, #ffffff 0%,#23692b 100%); opacity: .64;}
-		.container {position: relative; z-index: 2;}
-		h2 {color: #fff;}
-	}
 	&__textblock {text-align: left; color: #333333; padding: 17px 0 23px;
 		.desktop {margin-top: 22px;}
 		p {line-height: 1.35em;}
@@ -586,7 +550,7 @@
 		}
 	}
 	&__textheading {font-size: 20px; font-weight: 500; color: #000; margin-bottom: 8px;}
-	&__advantages {background-color: #000; color: #fff; padding-top: 7px; padding-bottom: 20px;}
+	&__advantages {background-image: url('../img/bg_feedback.jpg'); background-size: cover; background-position: top; color: #fff; padding-top: 7px; padding-bottom: 20px;}
 	&__advantagesheading {font-size: 22px; font-weight: 600;}
 	&__advantageslist {margin-top: 12px;
 		li {text-align: left; display: flex; align-items: center; height: 52px;}
@@ -608,31 +572,8 @@
 	&__contactheading {font-size: 18px; font-weight: 700; color: $darkgreen;
 		& + p {font-size: 16px; margin-top: 7px; line-height: 1.5em;}
 	}
-	&__formblock {margin-top: 44px; background-color: #000;
-		.container {width: 62.5%;}
-	}
-	&__form {padding-top: 50px; padding-bottom: 38px;
-		p {color: #fff; font-size: 16px;}
-		span {color: $green;}
-		p.small {font-size: 12px; color: #999999; margin-top: 10px;}
-	}
-	&__formheading {font-size: 36px !important; font-weight: 600; line-height: 1.1em;}
-	&__formfields {display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 43px;}
-	&__formfield {text-align: left; margin-top: 9px; width: 48%; display: inline-block;
-		&:nth-child(-n+2) {margin-top: 0;}
-		input, textarea {width: 100%; border: 1px solid #b7cfbc; background-color: rgba(#fff, 0.15); height: 45px; color: #fff; margin-top: 7px; padding: 0 16px;
-			&:focus {border-color: $green; background-color: rgba(#fff, 0.05);}
-		}
-		&_message {width: 100%;}
-		textarea {resize: none; height: 80px;}
-	}
-	&__formfile {border: 1px dashed #b7cfbc; line-height: 43px; position: relative; margin-top: 6px; padding: 0 18px;
-		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
-			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
-		}
-	}
-	&__formtext {text-align: left;}
-	&__formbutton {margin-top: 9px;}
+	.bottom-contact-form {margin-top: 44px;}
+	.bottom-contact-form__heading_partners {display: none;}
 }
 
 /*-------------------------------------------------*/
@@ -742,10 +683,8 @@
 /*-------------------------------------------------*/
 
 .letters {padding-bottom: 31px;
-	.heading {background-image: url('../img/news_heading_bg.jpg'); position: relative; padding: 16px 0 9px; background-size: cover;
-		.gradient {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: linear-gradient(122deg, #000000 0%,#23692b 100%); opacity: .64;}
-		.container {position: relative; z-index: 2;}
-		h2 {color: #fff; font-size: 18px;}
+	.small-page-heading {padding: 13px 0;
+		h2 {font-size: 18px;}
 	}
 	&__blockheading {font-size: 24px; font-weight: 500; text-align: left; margin-top: 39px;}
 	&__main {color: #333; text-align: left; padding-top: 18px;
@@ -754,8 +693,11 @@
 		}
 	}
 	&__slider {position: relative; overflow: hidden; margin-top: 26px; padding-bottom: 21px;
-		&.popup {background-color: transparent; width: 290px; padding: 0;
-			p {color: #fff; padding: 0 40px; margin-top: 35px;}
+		&.popup {background-color: transparent; width: 750px; padding: 0;
+			p {color: #fff; padding: 0 40px; margin-top: 35px; font-size: 24px;}
+			.image {height: 610px;
+				img {height: 100%;}
+			}
 		}
 	}
 	&__wrapper {position: relative; left: 0; transition: all 0.25s ease-in-out;}
@@ -774,8 +716,12 @@
 	&__images {display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 50px;
 		.image {position: relative; display: inline-block; height: 377px;
 			&:nth-child(n+5) {margin-top: 29px;}
-			&:hover .bg {opacity: 0;}
-			.bg {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: rgba(#000, 0.64); transition: all 0.25s ease-in-out;}
+			&:hover .bg {background: linear-gradient(to bottom, rgba(51,51,51,0) 1%,rgba(51,51,51,1) 100%);
+				img {opacity: 0;}
+			}
+			.bg {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: linear-gradient(to bottom, rgba(54,170,122,0.8) 0%,rgba(101,101,101,0.8) 100%), rgba(#000, 0.64); background-blend-mode: multiply; transition: all 0.25s ease-in-out;
+				img {width: 63.4%; opacity: 0.12; transition: all 0.25s ease-in-out;}
+			}
 			img {width: 100%; height: 100%;}
 			p {position: absolute; left: 0; right: 0; bottom: 43px; line-height: 1.2em; padding: 0 25px; color: #fff;}
 		}
@@ -793,7 +739,7 @@
 		img {margin-right: 11px;}
 	}
 	.top {display: flex; flex-wrap: wrap; margin-top: 11px;
-		.heading {width: 100%; background-image: url('../img/news_2.jpg'); background-size: cover; position: relative; text-align: center; padding: 23px 20px 30px; box-sizing: border-box;
+		.heading {width: 100%; background-image: url('../img/news_2_black.jpg'); background-size: cover; position: relative; text-align: center; padding: 23px 20px 30px; box-sizing: border-box;
 			.bg {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background-color: #000; opacity: .5;}
 			p.date {font-size: 14px; color: #cccccc; letter-spacing: 0.1em; margin-top: 0;}
 			p {font-size: 20px; color: #fff; position: relative; z-index: 2; margin-top: 3px; line-height: 1.2em;}
@@ -801,16 +747,13 @@
 		.image {width: 100%; height: 213px; background-image: url('../img/press_1.jpg'); background-size: cover; box-sizing: border-box;}
 	}
 	.content {color: #333333; padding-top: 16px;
+		.container {position: relative;}
 		p {line-height: 1.3em; margin-top: 10px;
 			&:first-child {margin-top: 0;}
 		}
-		img {display: inline-block; width: 100%; margin: 16px 0;}
 	}
 	.share {text-align: center; margin-top: 27px; border-top: 1px solid rgba(#2a2c28, 0.7); padding-top: 3px;
 		p {font-size: 20px; font-weight: 500;}
-		.icons {display: flex; justify-content: space-between; margin-top: 16px;
-			a {width: 45px; height: 45px; border: 1px solid $green; display: flex; justify-content: center; align-items: center;}
-		}
 		.button {margin-top: 18px; width: 100%;
 			&:before {background-color: #fff;}
 			&:after {background-color: #fff;}
@@ -911,11 +854,6 @@
 /*-------------------------------------------------*/
 
 .partners {
-	.heading {background-image: url('../img/news_heading_bg.jpg'); position: relative; padding: 23px 0; background-size: cover;
-		.gradient {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: linear-gradient(122deg, #ffffff 0%,#23692b 100%); opacity: .64;}
-		.container {position: relative; z-index: 2;}
-		h2 {color: #fff;}
-	}
 	&__textblock {text-align: left; color: #333333; padding: 17px 0 34px;
 		.desktop {margin-top: 22px;}
 		p {line-height: 1.35em; margin-top: 18px;
@@ -923,7 +861,7 @@
 		}
 	}
 	&__textheading {font-size: 20px; font-weight: 500; color: #000; margin-bottom: 12px; line-height: 1.15em !important;}
-	&__advantages {background-color: #000; color: #fff; padding-top: 11px; padding-bottom: 20px;}
+	&__advantages {background-image: url('../img/bg_feedback.jpg'); background-size: cover; background-position: top; color: #fff; padding-top: 11px; padding-bottom: 20px;}
 	&__advantagesheading {font-size: 22px; font-weight: 600;}
 	&__advantageslist {margin-top: 28px; display: flex; flex-wrap: wrap;
 		li {text-align: left; position: relative; padding-left: 56px; margin-top: 30px; padding-right: 5px; box-sizing: border-box;
@@ -947,29 +885,7 @@
 	&__contactheading {font-size: 18px; font-weight: 700; color: $darkgreen;
 		& + p {font-size: 16px; margin-top: 7px; line-height: 1.5em;}
 	}
-	&__formblock {background-color: #000;}
-	&__form {padding-top: 26px; padding-bottom: 38px;
-		p {color: #fff;}
-		span {color: $green;}
-		p.small {font-size: 12px; color: #999999; margin-top: 10px;}
-	}
-	&__formheading {font-size: 22px !important; font-weight: 600; line-height: 1.1em;}
-	&__formfields {display: flex; justify-content: space-between; flex-wrap: wrap; margin-top: 24px;}
-	&__formfield {text-align: left; margin-top: 13px; width: 100%; display: inline-block;
-		&:first-child {margin-top: 0;}
-		input, textarea {width: 100%; border: 1px solid #b7cfbc; background-color: rgba(#fff, 0.15); height: 45px; color: #fff; margin-top: 7px; padding: 0 16px;
-			&:focus {border-color: $green; background-color: rgba(#fff, 0.05);}
-		}
-		&_message {width: 100%;}
-		textarea {resize: none;}
-	}
-	&__formfile {border: 1px dashed #b7cfbc; line-height: 43px; position: relative; margin-top: 6px; padding: 0 18px;
-		a {position: absolute; top: -1px; right: -1px; width: 45px; height: 45px; background-color: $green;
-			&:after {content: ""; width: 20px; height: 21px; position: absolute; top: 0; bottom: 0; left: 0; right: 0; margin: auto; transform: rotate(-90deg); background-image: url('../img/icon_clip.svg'); background-repeat: no-repeat;}
-		}
-	}
-	&__formtext {text-align: left;}
-	&__formbutton {margin-top: 9px; width: 100%;}
+	.bottom-contact-form__heading_investors {display: none;}
 }
 
 /*-------------------------------------------------*/
@@ -1643,12 +1559,16 @@
 	}
 	&__button {margin-top: 30px; width: 100%;}
 	
-	&_request {
+	&_request, &_support {
 		.bottom-contact-form__fields {display: flex; justify-content: space-between; flex-wrap: wrap;}
 		.bottom-contact-form__field_message {position: static !important;}
 		.bottom-contact-form__field_file {
 			a:after {background-image: url('../img/icon_clip.svg');}
 		}
+	}
+	
+	&_support {
+		.bottom-contact-form__field_message {width: 100%;}
 	}
 }
 
@@ -1900,6 +1820,23 @@
 	h2 {color: #fff;}
 }
 
+.subscribe {background-image: url('../img/bg_feedback.jpg'); background-size: cover; background-position: top; text-align: center; padding-top: 43px; padding-bottom: 84px;
+	form {position: relative; margin: 0 auto; width: 750px;
+		p {color: #fff; font-weight: 600; font-size: 36px;}
+		input {background-color: transparent; width: 360px; border-bottom: 1px solid #b7cfbc; margin-top: 90px; padding-bottom: 12px; font-size: 16px;}
+		button {border: 0; padding: 0; background-color: transparent; position: absolute; right: 193px; bottom: 18px;}
+	}
+}
+
+.icons {
+	a {width: 45px; height: 45px; border: 1px solid $green; display: flex; justify-content: center; align-items: center;}
+	&_aside {position: absolute; right: 0; top: 8px; border-left: 1px solid rgba(42, 44, 40, 0.7); padding-left: 56px;
+		a {margin-top: 20px;
+			&:first-child {margin-top: 0;}
+		}
+	}
+	&_bottom {display: flex; justify-content: space-between; margin-top: 16px;}
+}
 
 @keyframes bounce {
 	from {
