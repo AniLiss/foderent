@@ -42,12 +42,12 @@
 	</form>
 	<div class="container searchresult__buttons">
 		<a href="#" class="button">Фильтр</a>
-		<a href="#" class="button">Карта</a>
-		<a href="#" class="button" style="display:none;">Список</a>
+		<a href="#map" class="button">Карта</a>
+		<a href="#list" class="button" style="display:none;">Список</a>
 	</div>
-	<div class="main">
+	<div class="searchresult__main">
 		<div class="container">
-			<div class="cards">
+			<div class="searchresult__cards">
 				<div>
 					<div class="image">
 						<div class="overlay">
@@ -156,11 +156,11 @@
 					</div>
 					<p>Бульдозер <br>гусеничный <br>KOMATSU D85ESS-2A <span>от&nbsp;10000 руб/смена</span></p>
 				</div>
-				<a href="" class="button button_green"><span class="button__border-top"></span>Показать еще<span class="button__border-bottom"></span></a>
+				<a href="#" class="button button_green"><span class="button__border-top"></span>Показать еще<span class="button__border-bottom"></span></a>
 			</div>
 		</div>
-		<div id="searchresultmap"></div>
-		<div class="mapcard" style="display:none;">
+		<div class="searchresult__map" id="searchresultmap"></div>
+		<div class="searchresult__mapcard">
 			<div class="image"><img src="img/product.jpg" alt="@@"></div>
 			<p>Бульдозер гусеничный <br>KOMATSU D85ESS-2A <span>от&nbsp;10000 руб/смена</span></p>
 		</div>

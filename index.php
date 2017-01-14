@@ -29,7 +29,7 @@
 			<span>аренды спецтехники</span></h1>
 			<form class="searchform">
 				<div class="searchform__field">
-					<select name="type" class="technictype">
+					<select name="type" class="selectmenu">
 						<option value="">Тип техники</option>
 						<option value="">Тип техники</option>
 					</select>

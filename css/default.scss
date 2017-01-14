@@ -287,15 +287,15 @@
 				a {right: 0;}
 			}
 		}
-		select, input {height: 100%; font-size: 14px; font-weight: 300;}
-		select {background-size: 16px 9px;}
+		select, input {height: 100%; font-size: 14px; font-weight: 300; padding: 0;}
+		select {background-size: 16px 9px; background-position: top 50% right 0;}
 		.button {position: absolute; top: 9px; right: 30px; margin: 0; width: auto; padding: 12px 48px 14px;}
 	}
 	.searchresult__buttons {margin-top: 18px; display: flex; justify-content: space-between;
-		.button {border: 0; padding: 0; background-color: $green; text-transform: uppercase; width: $six-col; color: #fff; font-size: 16px; display: inline-block; line-height: 45px;}
+		.button {border: 0; padding: 0; background-color: $green; text-transform: uppercase; width: $six-col; color: #fff; font-size: 16px; display: inline-block; line-height: 45px; margin-top: 0;}
 	}
-	.main {margin-top: 19px; min-height: 720px; position: relative;}
-	.cards {display: flex; justify-content: space-between; flex-wrap: wrap;
+	&__main {margin-top: 19px; min-height: 720px; position: relative;}
+	&__cards {display: flex; justify-content: space-between; flex-wrap: wrap;
 		> div {width: $six-col; margin-top: 29px;
 			&:nth-child(-n+2) {margin-top: 0;}
 			.image {height: 118px; position: relative;
@@ -309,9 +309,9 @@
 			span {font-weight: 600; color: $darkgreen;}
 		}
 	}
-	.button {margin-top: 29px; width: 100%;}
-	#searchresultmap {position: absolute; right: 0; top: 0; width: 100%; height: 345px;}
-	.mapcard {position: absolute; left: 68px; top: 71px; background-color: $green; width: 192px; padding: 2px; box-sizing: border-box;
+	.button {margin-top: 39px; width: 100%;}
+	&__map {position: absolute; right: 0; top: 0; width: 100%; height: 345px;}
+	&__mapcard {position: absolute; left: 68px; top: 71px; background-color: $green; width: 192px; padding: 2px; box-sizing: border-box; display: none;
 		&:after {content: ""; display: block; border: 10px solid; border-color: $green transparent transparent transparent; position: absolute; bottom: -20px; left: 50%; transform: translateX(-50%);}
 		.image {height: 172px;
 			img {width: 100%; height: 100%;}
@@ -325,7 +325,7 @@
 	.container {width: 100%; position: relative;
 		&:before {content: ""; display: block; width: 100%; height: 1px; background-color: rgba(#2a2c28, 0.7); position: absolute; top: -17px; left: 0;}
 	}
-	p {text-align: center;}
+	p {text-align: center; padding-right: 50px;}
 }
 
 /*-------------------------------------------------*/
@@ -1401,11 +1401,6 @@
 /*-------------------------------------------------*/
 
 .shoppingbag {
-	.heading {background-image: url('../img/news_heading_bg.jpg'); position: relative; padding: 25px 0 23px; background-size: cover;
-		.gradient {position: absolute; width: 100%; height: 100%; left: 0; top: 0; background: linear-gradient(122deg, #ffffff 0%,#23692b 100%); opacity: .64;}
-		.container {position: relative; z-index: 2;}
-		h2 {color: #fff;}
-	}
 	&__order-forcheck {background-color: $darkgreen; padding-top: 14px; padding-bottom: 15px;}
 	&__listheading {background-color: $darkgreen; position: relative; padding: 11px 0;
 		p {font-size: 22px; color: #fff;}
@@ -1413,7 +1408,9 @@
 	&__orders-list {
 		li {background-color: #fff; text-align: left; padding-top: 11px; margin-top: 15px; position: relative;
 			&:first-child {margin-top: 0;}
-			.deleteicon {position: absolute; right: 10px; top: 10px;}
+			.deleteicon {position: absolute; right: 10px; top: 10px; z-index: 5;
+				&:hover {opacity: 0.7;}
+			}
 			p {font-size: 16px; line-height: 1.3em; padding-left: 9px;}
 			p:last-child {color: $green; text-decoration: underline; margin-top: 2px; padding-left: 10px;}
 			.searchform__field_date {border-bottom: 0; border-left: 0; border-right: 0; padding: 0; height: 42px; margin-top: 17px;
@@ -1433,6 +1430,7 @@
 		p {font-size: 14px !important; color: $red; opacity: 1;}
 		a {font-size: 14px; color: $green; text-decoration: underline; margin-left: 10px; line-height: 2em;
 			&:last-child {margin-left: 24px;}
+			&:hover {opacity: 0.7;}
 		}
 	}
 	&__order-cost_info {font-weight: 600; margin-top: 4px;}
@@ -1447,10 +1445,12 @@
 			&:first-of-type {margin-top: 17px;}
 			&.red {color: $red;}
 			img {vertical-align: middle; margin-right: 13px;}
-			a {vertical-align: middle;}
+			a {vertical-align: middle;
+				&:hover {opacity: 0.7;}
+			}
 		}
 	}
-	&__order-payment {background-color: $darkgreen; color: #fff; padding-top: 23px; padding-bottom: 15px;
+	&__order-payment {background: linear-gradient(122deg, rgba(255,255,255,0.64) 0%,rgba(35,105,43,0.64) 100%), $darkgreen; background-blend-mode: multiply; color: #fff; padding-top: 23px; padding-bottom: 15px;
 		.button {width: 100%; margin-top: 43px;
 			& + p.small {line-height: 1.35em; margin-top: 16px;}
 		}
@@ -1463,7 +1463,7 @@
 		&:nth-of-type(3) {margin-top: 23px;}
 		p {font-size: 16px; font-weight: 500;}
 		p.shoppingbag__total {font-size: 34px; font-weight: 600; line-height: 1.25em;}
-		input[type="text"] {background-color: rgba(#fff, 0.15); border: 1px solid #b7cfbc; width: 100%; margin-top: 14px; height: 45px;}
+		input[type="text"] {background-color: rgba(#fff, 0.15); border: 1px solid #b7cfbc; width: 100%; margin-top: 14px; height: 45px; padding: 0 15px;}
 		.radiodiv {display: inline-block; min-width: 45%; margin-top: 18px;
 			p {font-weight: 400; display: inline-block; vertical-align: middle; margin-left: 6px;}
 			label {width: 20px; height: 20px; border: 1px solid #b7cfbc; border-radius: 1000px; display: inline-block; vertical-align: middle; position: relative; cursor: pointer; transition: all 0.25s ease-in-out;

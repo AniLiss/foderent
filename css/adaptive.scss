@@ -32,8 +32,8 @@ $twelve-col:$col*12+$col-m*11;
 	.newsblocks .news-linkblock p {font-size: 16px;}
 	
 	/*-----------SEARCH--------------*/
-	.searchresult .cards > div .image {height: 183px;}
-	.searchresult .cards > div p {font-size: 14px; padding: 0 5px;}
+	.searchresult__cards > div .image {height: 183px;}
+	.searchresult__cards > div p {font-size: 14px; padding: 0 5px;}
 	
 	/*-----------SALES--------------*/
 	.pagesales .salesblocks .container {width: 450px;}
@@ -97,7 +97,7 @@ $twelve-col:$col*12+$col-m*11;
 	.firstscreen_pagenotfound {padding-top: 130px !important; padding-bottom: 122px !important; text-align: center !important;}
 	
 	/*-----------SEARCH--------------*/
-	.searchresult .cards > div .image {height: 307px;}
+	.searchresult__cards > div .image {height: 307px;}
 	
 	/*-----------SALES--------------*/
 	.pagesales .salesblocks .container {width: 755px;}
@@ -377,14 +377,14 @@ $twelve-col:$col*12+$col-m*11;
 	.searchresult .searchform__field_date a img {width: 31px;}
 	.searchresult .searchform select {background-size: 27px 15px; background-position: top 50% right 30px; padding: 0 30px;}
 	.searchresult__buttons {display: none !important;}
-	.searchresult .main {display: flex; margin-top: 0;}
-	.searchresult .cards {width: $six-col; margin-top: 29px;}
-	.searchresult .cards > div {width: 47.3%; margin-top: 25px;}
-	.searchresult .cards > div .image {height: 77%;}
-	.searchresult .cards > div p {font-size: 16px; padding: 0 20px; margin-top: 0;}
-	.searchresult .cards > div span {font-size: 18px; line-height: 2em;}
-	.searchresult .cards > div p br {display: none;}
-	.searchresult #map {width: 48.75%; height: 540px;}
+	.searchresult__main {display: flex; margin-top: 0;}
+	.searchresult__cards {width: $six-col; margin-top: 29px;}
+	.searchresult__cards > div {width: 47.3%; margin-top: 25px;}
+	.searchresult__cards > div .image {height: 77%;}
+	.searchresult__cards > div p {font-size: 16px; padding: 0 20px; margin-top: 0;}
+	.searchresult__cards > div span {font-size: 18px; line-height: 2em;}
+	.searchresult__cards > div p br {display: none;}
+	.searchresult__map {width: 48.75%; height: 540px;}
 	.searchresult .button {display: block; margin: 55px auto 0; width: auto; padding: 12px 21px 14px;}
 	.search.accordion {padding: 31px 0 29px;}
 	.search.accordion .container {width: 990px;}
@@ -423,6 +423,7 @@ $twelve-col:$col*12+$col-m*11;
 	.productcard__sliderdots {top: auto; right: auto; left: 31px; bottom: 44px;}
 	.productcard__sliderdots .dot {background-color: #fff; opacity: 0.6;}
 	.productcard__sliderdots .dot.active {background-color: $green;}
+	.productcard__slideimage .mobile {display: none;}
 	.productcard__content .container {width: 990px;}
 	.productcard__block:before {width: 100%;}
 	.productcard__block {width: $six-col; padding: 0; text-align: left;}
@@ -840,7 +841,7 @@ $twelve-col:$col*12+$col-m*11;
 	
 	/*-----------SHOPPING BAGS--------------*/
 	.shoppingbag__order-forcheck {background-color: transparent; margin-top: -59px; padding-top: 0;}
-	.shoppingbag .heading {padding: 47px 0 102px;}
+	.shoppingbag .small-page-heading {padding: 47px 0 102px;}
 	.shoppingbag__order-forcheck .container {box-shadow: 0px -5px 50px 0px rgba(35, 41, 50, 0.5); display: flex;}
 	.shoppingbag__technicblock {width: 25.8%;}
 	.shoppingbag__orders-list li .deleteicon {right: 15px; top: 15px;}
@@ -900,8 +901,8 @@ $twelve-col:$col*12+$col-m*11;
 	/*-----------SEARCH--------------*/
 	.searchresult .searchform__field:after {display: none;}
 	.searchresult .searchform .button {display: none;}
-	.searchresult #map {display: none;}
-	.searchresult .cards > div:nth-child(n+7) {display: none;}
+	.searchresult__map {display: none;}
+	.searchresult__cards > div:nth-child(n+7) {display: none;}
 	
 	/*-----------SALES--------------*/
 	.pagesales .sales__bg:nth-child(n+5) {display: none;}
@@ -913,6 +914,7 @@ $twelve-col:$col*12+$col-m*11;
 	.productcard__sliderarrows {display: none;}
 	.productcard__description {display: none;}
 	.productcard__similarmodels {display: none;}
+	.productcard__slideimage .desktop {display: none;}
 	
 	/*-----------CUPLYA PRODAGA--------------*/
 	.purchase-sale__block_middle {display: none;}
@@ -1048,7 +1050,7 @@ $twelve-col:$col*12+$col-m*11;
 	.newsblocks_pagenews .news-linkblock:hover .bg:before {left: -446px;}
 	
 	/*-----------SEARCH--------------*/
-	.searchresult .cards > div p {margin-top: 10px; padding: 0 55px;}
+	.searchresult__cards > div p {margin-top: 10px; padding: 0 55px;}
 	.search.accordion .container {width: 1410px;}
 	
 	/*-----------SALES--------------*/
@@ -1168,12 +1170,12 @@ $twelve-col:$col*12+$col-m*11;
 	.searchresult .searchform__field_date {width: 18.61%; padding: 0 37px;}
 	.searchresult .searchform__field_date > img {margin-left: 30px; margin-right: 23px;}
 	.searchresult .searchform__field:last-of-type {padding: 0 8px;}
-	.searchresult #map {width: 49.05%; height: 780px;}
-	.searchresult .cards {width: 49.185%;}
-	.searchresult .cards > div {width: 28.7%; margin-top: 18px;}
-	.searchresult .cards > div .image {height: 73%;}
-	.searchresult .cards > div:nth-child(-n+3) {margin-top: 0;}
-	.searchresult .cards > div p {padding: 0 20px; margin-top: 7px;}
+	.searchresult__map {width: 49.05%; height: 780px;}
+	.searchresult__cards {width: 49.185%;}
+	.searchresult__cards > div {width: 28.7%; margin-top: 18px;}
+	.searchresult__cards > div .image {height: 73%;}
+	.searchresult__cards > div:nth-child(-n+3) {margin-top: 0;}
+	.searchresult__cards > div p {padding: 0 20px; margin-top: 7px;}
 	.search.accordion {width: 50%; padding: 24px 0 30px;}
 	.search.accordion .container {width: 780px;}
 	
@@ -1300,14 +1302,14 @@ $twelve-col:$col*12+$col-m*11;
 
 @media (min-width:1800px) {
 	/*-----------SEARCH--------------*/
-	.searchresult .main .container {width: 1740px;}
+	.searchresult__main .container {width: 1740px;}
 	.searchresult .searchform__field_date a {right: 52px;}
 	.search.accordion .container {width: 850px;}
 }
 
 @media (min-width:1920px) {
 	/*-----------SEARCH--------------*/
-	.searchresult .main .container {width: 1860px;}
+	.searchresult__main .container {width: 1860px;}
 	.search.accordion {width: 50%;}
 	.search.accordion .container {width: 915px;}
 }

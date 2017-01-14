@@ -21,8 +21,7 @@
 <!-------------------------------------------------->
 
 <section class="shoppingbag">
-	<div class="heading">
-		<div class="gradient"></div>
+	<div class="small-page-heading">
 		<div class="container">
 			<h2>Корзина</h2>
 		</div>
@@ -132,13 +131,13 @@
 					<div class="shoppingbag__formpart">
 						<p>Выберите тип оплаты</p>
 						<div class="radiodiv">
-							<input name="paymenttype" type="radio" id="radio1" value="online">
-							<label for="radio1"><span></span></label>
+							<input name="paymenttype" type="radio" id="radio11" value="online">
+							<label for="radio11"><span></span></label>
 							<p>Онлайн</p>
 						</div>
 						<div class="radiodiv">
-							<input name="paymenttype" type="radio" id="radio2" value="count">
-							<label for="radio2"><span></span></label>
+							<input name="paymenttype" type="radio" id="radio12" value="count">
+							<label for="radio12"><span></span></label>
 							<p>Получить счет</p>
 						</div>
 					</div>
