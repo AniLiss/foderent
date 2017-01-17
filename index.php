@@ -38,11 +38,16 @@
 				</div>
 
 				<div class="searchform__field searchform__field_date">
-					<input class="huge" id="input1"/>
-					<img src="img/icon_arrow_right.png" alt="@@">
-					<input class="huge" id="input2" />
+//					<input class="huge" name="startDate"/>
+//					<img src="img/icon_arrow_right.png" alt="@@">
+//					<input class="huge"  name="endDate" />
 					<a href="#" class="calendar"><img src="img/icon_calendar.svg" alt="@@"></a>
-					<div class="datepicker"></div>
+//					<div class="datepicker" id="date_range"></div>
+
+//					<div id="date_range"></div>
+//                    <br>
+//                    <input name="startDate">
+//                    <input name="endDate">
 				</div>
 
 				<div class="searchform__field">

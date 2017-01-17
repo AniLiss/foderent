@@ -5360,6 +5360,9 @@ a:hover .bounce {
   animation-duration: 1.2s;
   animation-name: bounce; }
 
+.ui-selectmenu-button-open .ui-selectmenu-icon {
+  transform: rotate(180deg); }
+
 .ui-menu .ui-menu-item {
   border-bottom: 1px solid #fff;
   padding-bottom: 5px; }

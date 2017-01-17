@@ -1867,7 +1867,14 @@ a:hover .bounce {
   	animation-name: bounce;
 }
 
-//jquiryUI
+
+.ui-selectmenu-button-open {
+	.ui-selectmenu-icon {
+		transform: rotate(180deg);
+	}
+}
+
+//jquiryUI calendar
 
 .ui-menu .ui-menu-item {border-bottom: 1px solid #fff; padding-bottom: 5px;}
 
