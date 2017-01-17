@@ -32,15 +32,19 @@
 					<select name="type" class="selectmenu">
 						<option value="">Тип техники</option>
 						<option value="">Тип техники</option>
+						<option value="">Тип техники</option>
+						<option value="">Тип техники</option>
 					</select>
 				</div>
+
 				<div class="searchform__field searchform__field_date">
-					<p class="huge">24.10</p>
+					<input class="huge" id="input1"/>
 					<img src="img/icon_arrow_right.png" alt="@@">
-					<p class="huge">02.11</p>
+					<input class="huge" id="input2" />
 					<a href="#" class="calendar"><img src="img/icon_calendar.svg" alt="@@"></a>
 					<div class="datepicker"></div>
 				</div>
+
 				<div class="searchform__field">
 					<input type="text" name="workplace" placeholder="Место работ">
 				</div>

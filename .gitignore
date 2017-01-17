@@ -1,1 +1,10 @@
 *.map
+DS_Store
+.idea
+*.log
+css/*.css
+node_modules/
+Thumbs.db
+build/
+package.json
+gulpfile.js

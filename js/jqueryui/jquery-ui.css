@@ -111,10 +111,11 @@
 }
 .ui-menu {
 	list-style: none;
-	padding: 0;
+	padding: 0 25px;
 	margin: 0;
 	display: block;
 	outline: 0;
+	box-sizing: border-box;
 }
 .ui-menu .ui-menu {
 	position: absolute;
@@ -126,9 +127,10 @@
 	list-style-image: url("data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7");
 	height: 60px;
 	line-height: 60px;
-	color: #2ca346;
-	
+	color: #b7cfbc;
+	position: relative;
 }
+
 .ui-menu .ui-menu-item-wrapper {
 	position: relative;
 	font-size: 18px;
@@ -964,7 +966,7 @@ body .ui-tooltip {
 	*/
 }
 .ui-widget-content {
-	background: #ffffff;
+	background: #1f5c26;
 	color: #333333;
 }
 .ui-widget-content a {
@@ -1039,8 +1041,8 @@ a.ui-button:active,
 .ui-button:active,
 .ui-button.ui-state-active:hover {
 	font-weight: normal;
-	color: #ffffff;
-	background-color: #2ca346;
+	color: #fff;
+	/*background-color: #2ca346;*/ /*Didn't find it in the mockup*/
 }
 .ui-icon-background,
 .ui-state-active .ui-icon-background {
