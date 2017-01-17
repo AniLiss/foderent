@@ -1800,11 +1800,14 @@
 }
 
 
+
+
+
 .newsblocks {display: flex; flex-wrap: wrap;
 	.news-linkblock {width: 100%; position: relative; min-height: 162px; display: flex; justify-content: flex-end; align-items: flex-start; padding: 8px; box-sizing: border-box; flex-direction: column; color: #fff; margin-top: 15px;
-		&:hover .bg:before {left: -105px; height: 250%; bottom: -240px; width: 240%;}
-		.bg {position: absolute; width: 100%; height: 100%; left: 0; top: 0; padding: 0 !important; overflow: hidden; background: linear-gradient(to bottom, rgba(#31423b, 0) 0%, rgba(#31423b, 1) 100%); z-index: 1;
-			&:before {content: ""; display: block; width: 100%; height: 100%; position: absolute; background-color: #2e2e2e; opacity: .7; transform: rotate(45deg); left: -76px; bottom: -40px; transition: all 0.25s ease-in-out;}
+		&:hover .bg:before {transform: skewX(45deg) translate3d(0,0,0);}
+		.bg {position: absolute; width: 100%; height: 100%; left: 0; top: 0; padding: 0 !important; overflow: hidden; background: linear-gradient(to bottom, rgba(#161f1b, 0) 0%, rgba(#161f1b, 1) 100%); z-index: 1;
+			&:before {content: ""; display: block; width: 100%; height: 100%; position: absolute; background-color: #060606; opacity: .7; left: -166%; bottom: 0; transform: skewX(45deg) translate3d(0,0,0); width: 200%; transition: all 0.25s ease-in-out;}
 		}
 		&:first-child {margin-top: 0;
 			.bg {margin-top: 0;}
@@ -1839,20 +1842,17 @@
 }
 
 @keyframes bounce {
-	from {
-		transform:translateX(0);
+    0% {
+		transform:translateX(0px);
 	}
 	20% {
-		transform:translateX(0);
+		transform:translateX(10px);
 	}
 	40% {
-		transform:translateX(-10px);
-	}
-	50% {
 		transform:translateX(0);
 	}
 	60% {
-	    transform:translateX(-5px);
+	    transform:translateX(5px);
 	}
 	80% {
 		transform:translateX(0);
@@ -1863,10 +1863,10 @@
 }
 
 a:hover .bounce {
-	animation-duration: 2s;
+	animation-duration: 1.2s;
   	animation-name: bounce;
-  	animation-iteration-count: infinite;
 }
 // Всплывающие окна и другие элементы сайта //
 
 @import "adaptive.scss";
+

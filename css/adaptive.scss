@@ -27,8 +27,8 @@ $twelve-col:$col*12+$col-m*11;
 	.sale .container {width: 100%;}
 	.sale__bg {min-height: 210px;}
 	.newsblocks .news-linkblock {min-height: 240px;}
-	.newsblocks .news-linkblock .bg:before {height: 120%; left: -117px; bottom: -100px;}
-	.newsblocks .news-linkblock:hover .bg:before {left: -175px; height: 250%; bottom: -240px; width: 240%;}
+	.newsblocks .news-linkblock .bg:before {}
+	.newsblocks .news-linkblock:hover .bg:before {}
 	.newsblocks .news-linkblock p {font-size: 16px;}
 	
 	/*-----------SEARCH--------------*/
@@ -65,12 +65,12 @@ $twelve-col:$col*12+$col-m*11;
 	.container.small {width: 555px;}
 	.firstscreen {text-align: left;}
 	.advantages__list li {width: $three-col;}
-	.news .newsblocks {justify-content: flex-end;}
-	.news .newsblocks .news-linkblock {width: 280px; margin-top: 0; min-height: 175px;}
-	.news .newsblocks .news-linkblock:last-child {margin-left: 122px;}
+	.news .newsblocks {justify-content: space-between;}
+	.news .newsblocks .news-linkblock {width: 310px; margin-top: 0; min-height: 175px; margin-left:45px;}
+	.news .newsblocks .news-linkblock:last-child {margin-left: 0;}
 	.news .newsblocks .news-linkblock p {line-height: 1.4em;}
 	.news .newsblocks .news-linkblock p.small {color: #cccccc; font-size: 24px; position: absolute; left: -95px; top: 42px; transform: rotate(-90deg); letter-spacing: 0.1em;}
-	.news .newsblocks .news-linkblock .bg:before {left: -89px; bottom: -55px; height: 100%;}
+
 	.banners__block:last-child {justify-content: space-between;}
 	.banners__block:last-child  img {margin-bottom: 0;}
 	.accordion p {text-align: center;}
@@ -238,12 +238,11 @@ $twelve-col:$col*12+$col-m*11;
     .sale__bg-gradients span:nth-of-type(1):after {right:800px;}
     
 	.news {padding-top: 48px;}
-	.news .newsblocks {justify-content: flex-end; margin-top: 70px;}
+	.news .newsblocks {margin-top: 70px;}
 	.news .newsblocks .news-linkblock {width: 410px; margin-top: 0; min-height: 271px; padding: 18px 23px;}
-	.news .newsblocks .news-linkblock:last-child {margin-left: 122px;}
 	.news .newsblocks .news-linkblock p {font-size: 24px; line-height: 1.4em;}
 	.news .newsblocks .news-linkblock p.small {font-family: 'Gotham Pro'; color: #cccccc; font-size: 24px; position: absolute; left: -95px; top: 42px; transform: rotate(-90deg); letter-spacing: 0.1em;}
-	.news .newsblocks .news-linkblock .bg:before {left: -190px; height: 100%; width: 120%;}
+    .newsblocks .news-linkblock .bg:before {left:-149%}
 	.news__link {text-align: right; margin-top: 38px;}
 	.banners {margin-top: 42px;}
 	.banners .container {padding: 34px 0;}
@@ -339,7 +338,6 @@ $twelve-col:$col*12+$col-m*11;
 	.newsblocks_pagenews .news-linkblock {width: $six-col;}
 	.newsblocks_pagenews .news-linkblock p {font-size: 24px; line-height: 1.4em;}
 	.newsblocks_pagenews .news-linkblock p.small {font-size: 14px; font-weight: 400;}
-	.newsblocks_pagenews .news-linkblock .bg:before {left: -248px;}
 	.pagenews .button {margin-top: 30px;}
 	.pagenews {padding-bottom: 25px;}
 	
@@ -1035,9 +1033,6 @@ $twelve-col:$col*12+$col-m*11;
 	.sale .container {width: 1410px;}
 	.sale__bg {min-height: 520px; background-size: cover; background-position: center;}
 	.news .newsblocks .news-linkblock {width: 547px;}
-	.news .newsblocks .news-linkblock .bg:before {left: -232px;}
-	.news .newsblocks .news-linkblock:last-child {margin-left: 260px;}
-	.news .newsblocks .news-linkblock:hover .bg:before {left: -295px; height: 250%; bottom: -240px; width: 240%;}
 	.banners .container {padding: 34px 170px; box-sizing: border-box;}
 	.banners__block:last-child img {height: 103px;}
 	.footer__bottom-part .container {width: 1410px;}
@@ -1116,13 +1111,9 @@ $twelve-col:$col*12+$col-m*11;
 	.sale__link {font-size: 18px; margin-top: 19px;}
 	.news {padding-top: 67px;}
 	.news .newsblocks {margin-top: 80px;}
-	.news .newsblocks .news-linkblock {width: 619px; min-height: 345px; padding: 20px 28px;}
-	.news .newsblocks .news-linkblock:last-child {margin-left: 232px;}
-	.news .newsblocks .news-linkblock:last-child {margin-left: 232px;}
+	.news .newsblocks .news-linkblock {width: 619px; min-height: 345px; padding: 20px 28px; margin-left:59px;}
 	.news .newsblocks .news-linkblock p.small {font-size: 32px; left: -126px; top: 60px;}
 	.news .newsblocks .news-linkblock p {font-size: 28px;}
-	.news .newsblocks .news-linkblock .bg:before {left: -257px;}
-	.news .newsblocks .news-linkblock:hover .bg:before {left: -355px; height: 250%; bottom: -240px; width: 240%;}
 	.news__link {font-size: 18px; margin-top: 20px;}
 	.banners {margin-top: 94px;}
 	.banners .container {padding: 34px 195px;}
